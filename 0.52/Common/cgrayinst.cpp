@@ -160,7 +160,8 @@ VERFILE_TYPE CGrayInstall::OpenFiles( DWORD dwMask )
 	// Now open all the required files.
 	// REUTRN: VERFILE_QTY = all open success.
 
-	for ( int i=0; i<VERFILE_QTY; i++ )
+	int i;
+	for ( i=0; i<VERFILE_QTY; i++ )
 	{
 		if ( ! ( dwMask & ( 1 << i ))) 
 			continue;

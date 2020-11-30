@@ -388,7 +388,7 @@ void CChar::NPC_OnHear( const TCHAR * pCmd, CChar * pSrc )
 		if ( NPC_OnHearTrigger( s, pCmd, pSrc ))
 			return;
 	}
-	for ( i=0; i<m_pDef->m_Speech.GetCount(); i++ )
+	for ( int i=0; i<m_pDef->m_Speech.GetCount(); i++ )
 	{
 		CScriptLock s;
 		if ( ! m_pDef->m_Speech[i]->OpenFrag( s ))

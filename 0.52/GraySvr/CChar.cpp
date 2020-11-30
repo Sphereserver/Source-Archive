@@ -4819,7 +4819,7 @@ bool CChar::OnTrigger( const TCHAR * pszTrigName, CTextConsole * pSrc, int iArg 
 
 	if ( m_pNPC )
 	{
-		for ( i=0; i<m_pDef->m_Events.GetCount(); i++ )
+		for ( int i=0; i<m_pDef->m_Events.GetCount(); i++ )
 		{
 			CScriptLock s;
 			if ( ! m_pDef->m_Events[i]->OpenFrag( s ))

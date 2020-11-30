@@ -240,7 +240,7 @@ public:
 			return;
 		m_pszExeName = szFileName;
         
-        LPSTR pszTmp = strrchr( m_pszExeName, '\\' );	// Get title
+        LPSTR pszTmp = strrchr( const_cast<TCHAR *>(m_pszExeName.GetPtr()), '\\' );	// Get title
         lstrcpy( szFileName, ( pszTmp == NULL ) ? m_pszExeName : ( pszTmp + 1 ));
 		pszTmp = strrchr( szFileName, '.' );	// Get extension.
 		if ( pszTmp != NULL )

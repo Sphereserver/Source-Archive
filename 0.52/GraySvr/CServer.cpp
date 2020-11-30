@@ -526,7 +526,8 @@ CSkillDef::CSkillDef( SKILL_TYPE skill, CScript & s )
 	CValStr val;
 	val.SetValues( skill, GetKey());
 
-	for ( int j=0; j<g_Serv.m_SkillKeySort.GetCount(); j++ )
+	int j;
+	for ( j=0; j<g_Serv.m_SkillKeySort.GetCount(); j++ )
 	{
 		const TCHAR * pszName = g_Serv.m_SkillKeySort[j].m_pszName;
 		int iCompare = strcmpi( GetKey(), pszName );
@@ -3481,8 +3482,10 @@ void CServer::Unload()
 {
 	// Close all the files we opened.
 
+	int j;
+
 	g_Install.CloseFiles();
-	for ( int j=0; j<SCPFILE_QTY; j++ )
+	for ( j=0; j<SCPFILE_QTY; j++ )
 	{
 		CScript * pFile = GetScpFile((SCPFILE_TYPE)j);
 		if ( pFile == NULL )
@@ -3547,7 +3550,7 @@ bool CServer::IsValidEmailAddressFormat( const TCHAR * pszEmail ) // static
 	if ( len2 != len1 )
 		return( false );
 
-	TCHAR * pszAt = strchr( pszEmail, '@' );
+	TCHAR * pszAt = const_cast<TCHAR*>(strchr( pszEmail, '@' ));
 	if ( ! pszAt )
 		return( false );
 	if ( pszAt == pszEmail )

@@ -841,7 +841,8 @@ int CScriptObj::ParseText( TCHAR * pszResponse, CTextConsole * pSrc, TCHAR chBeg
 	bool fBracket = false;	// should this be recursive ?
 	int iBegin;
 
-	for ( int i = 0; pszResponse[i]; i++ )
+	int i;
+	for ( i = 0; pszResponse[i]; i++ )
 	{
 		TCHAR ch = pszResponse[i];
 		if ( ch == chBegin )

@@ -145,7 +145,8 @@ int ParseCmds( TCHAR * pCmdLine, int * piCmd, int iMax, const TCHAR * pSep )
 	if ( iMax > COUNTOF(ppTmp))
 		iMax = COUNTOF(ppTmp);
 	int iQty = ParseCmds( pCmdLine, ppTmp, iMax, pSep );
-	for ( int i=0; i<iQty; i++ )
+	int i;
+	for ( i=0; i<iQty; i++ )
 	{
 		piCmd[i] = Exp_GetVal(ppTmp[i]);
 	}

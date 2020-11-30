@@ -103,8 +103,8 @@ extern const OSVERSIONINFO * GRAY_GetOSInfo();
 
 // Text mashers.
 
-extern ITEMID_TYPE GetResourceItem( const TCHAR * & pRes );
-extern ITEMID_TYPE GetResourceEntry( const TCHAR * & pRes, int & iQty );
+extern ITEMID_TYPE GetResourceItem( TCHAR * & pRes );
+extern ITEMID_TYPE GetResourceEntry( TCHAR * & pRes, int & iQty );
 extern int FindID( WORD id, const WORD * pID, int iCount );
 
 extern DIR_TYPE GetDirStr( const TCHAR * pszDir );
@@ -5137,7 +5137,7 @@ private:
 		{
 			m_SkillLevelMax[i] = 1000;
 		}
-		for ( i=0; i<COUNTOF(m_StatMax); i++ )
+		for ( int i=0; i<COUNTOF(m_StatMax); i++ )
 		{
 			m_StatMax[i] = 100;
 		}

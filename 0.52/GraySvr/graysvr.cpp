@@ -347,7 +347,7 @@ DIR_TYPE GetDirStr( const TCHAR * pszDir )
 	return( DIR_QTY );
 }
 
-ITEMID_TYPE GetResourceItem( const TCHAR * & pRes )
+ITEMID_TYPE GetResourceItem( TCHAR * & pRes )
 {
 	static const WORD Resource[] = // preserve the old defs.
 	{
@@ -421,7 +421,7 @@ ITEMID_TYPE GetResourceItem( const TCHAR * & pRes )
 	return((ITEMID_TYPE) Exp_GetSingle( pRes ));
 }
 
-ITEMID_TYPE GetResourceEntry( const TCHAR * & pRes, int & iQty )
+ITEMID_TYPE GetResourceEntry( TCHAR * & pRes, int & iQty )
 {
 	if ( pRes == NULL )
 		return( ITEMID_NOTHING );

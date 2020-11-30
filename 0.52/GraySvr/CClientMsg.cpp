@@ -3095,7 +3095,8 @@ void CClient::Setup_Start( CChar * pChar ) // Send character startup stuff to pl
 		// bring to the nearest shore.
 		// drift to nearest shore ?
 		int iDist = 1;
-		for ( int i=0; i<20; i++)
+		int i;
+		for ( i=0; i<20; i++)
 		{
 			// try diagonal in all directions
 			int iDistNew = iDist + 20;

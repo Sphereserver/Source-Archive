@@ -90,7 +90,14 @@ public:
 	CVarDefArray m_VarDefs;	 // Defined variables in sorted order.
 
 	int  GetSingle( const TCHAR * & pArgs, bool fHexDef = false );
+	inline int  GetSingle(TCHAR * & pArgs, bool fHexDef = false) {
+		return GetSingle(const_cast<const TCHAR*&>(pArgs), fHexDef);
+	}
+
 	int  GetVal( const TCHAR * & pArgs, bool fHexDef = false );
+	inline int GetVal(TCHAR * & pArgs, bool fHexDef = false) {
+		return GetVal(const_cast<const TCHAR * &>(pArgs), fHexDef);
+	}
 
 	bool SetVarDef( const TCHAR * pszName, const TCHAR * pszVal );
 

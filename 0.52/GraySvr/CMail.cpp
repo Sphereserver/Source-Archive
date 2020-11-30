@@ -126,7 +126,7 @@ bool CMailSMTP::SendMail( const TCHAR * pszDstMail, const TCHAR * pszSrcMail, CG
     //S: Subject:  The Next Meeting of the Board
     //S: To: Jones@BBN-Vax.ARPA
             
-	for ( i=0; iBodyLines--; i++ )
+	for (int i=0; iBodyLines--; i++ )
 	{
 		const TCHAR * pszLine = ppszBody[i];
 		if ( pszLine[0] == '.' && 

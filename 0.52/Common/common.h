@@ -32,7 +32,6 @@
 #endif	// min
 #ifndef sign
 #define sign(n) (((n) < 0) ? -1 : (((n) > 0) ? 1 : 0))
-#define abs(n) (((n) < 0) ? (-(n)) : (n))
 #endif	// sign
 
 // Windows type standard stuff.

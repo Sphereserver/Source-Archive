@@ -3308,7 +3308,7 @@ bool CChar::Spell_CanCast( SPELL_TYPE spell, bool fTest, CObjBase * pSrc, bool f
 			{
 				if ( *pszRegs == ',' ) pszRegs ++;
 				const TCHAR * pRegPrv = pszRegs;
-				if ( pPack->ContentConsume( GetResourceItem(pszRegs), 1, fTest ))
+				if ( pPack->ContentConsume( GetResourceItem(const_cast<TCHAR * &>(pszRegs)), 1, fTest ))
 				{
 					if ( fFailMsg )
 					{
