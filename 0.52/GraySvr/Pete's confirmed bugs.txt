@@ -1,0 +1,485 @@
+when you try Provocation........if you play poorly you'll succeed !
+
+hehehe i think when you play poorly you cant do provocation :)
+
+ 
+Forge seems to act as both smith and smelting tool.
+Anvil should only let you smith ingots and Forge only smelt ore. Also, seems like animal lore is bugged since theres no delay.
+
+And Dull copper and Bronze can't be smithed, Silver seems to have dissapeared ore wise. Aside from you can smith at low levels.
+
+Oh yeah.. and Taming, Herding an a few other skills work backwards.. 
+the less you have the more successsful you are at it and the more you
+ have the harder it is. Like say i have taming at 30.0 I can tame
+  ostrich's no problem but with 70 taming i can't tame them.
+ 
+hehehe well when you are in a dungeons and a zombie attack you but he's 
+very far and you cast invisible on you....
+the zombie can attack you and you dont fight....
+So if like me im in a dungeons and i want a smoke and i put me 
+invisible i can come back and see my char dead .......
+dunno if its a bug but its what i saw
+
+
+Poly seems to be messed up.. you get 200 str as a demon instead of 400-600 and you get 189 str when you poly into a women.
+
+
+People get stuck under their houses constantly now.. 
+AR seems to have no effect anymore or did you increase monster 
+armor piercing? 
+
+And when you start a new character (Carpenter/Tinker/Lumberjack) 
+you end up with 3000 molded planes.. however you spell that.
+
+it appears that theres blocking square areas all over the map,
+ theres 1 infront of vesper bank.
+
+
+i made old sleeve ringmail and old copper legs ringmail.....
+with iron ingnots
+
+hmm, any chace of a map option to disallow recallin BUT 
+allow recalling from within the area to another part of the same area??
+
+Graymap .. toggle to put colors in AREA and ROOM designation. a different color for each.
+
+Makes them stand out better when hunting for something. and easier to spot whether it's an AREA or a ROOM.
+
+
+if you have a range of prices for an item, and you add an NPC, he'll pick a price for the item, and it will stay the same forever.  Actually, all NPCs will have the same price if you create them all during the same server session....on a restart, the prices change, but not for the vendors.
+I would like to see them change on restock for each vendor.
+
+Bug report
+I had found that when I melt some bronze ore, they became some gold coin. is it right? I think that is a bug.
+
+x Any chance that the *2.scp files can be made non-critical so that the server
+x looks for them, but if not found continues loading ..maybe just a warning that
+x they are missing.
+
+x I kind of liked the request to not report the 2007 deletions .. 
+x do you need the server to report them??
+
+x ) Harm ( players told me Mind blast too ) Doesn't unfreeze you if you are
+  paralyzed.
+I had to set Harm's damage to 1 , 'cause think......a mage paralyzes a Warrior 
+with weapon in hands , then start to cast Harm ( 6 mana ) it does something like 10 hp of damage.....The warrior is dead :)
+I wanted to make something like on Osi , dclick on a trapped chest and you are
+ no more paralyzed , but paralyze prevents to do any action hehe ,
+  maybe if you have any idea...'
+ 
+This one has been already reported , but.... :
+2 ) magery still goes up if macroed in anti-magic zones.....and if reagentlossfail=1 , you won't lose any mana or regs in those areas , but please don't just make that you lose regs and mana there , 'cause I don't like reagentlossfail , just fix the bug :)
+ 
+3 ) All Versions ||  
+I made triggers applied on plate that lower dex, but that causes problem with
+ Statcap of course , since Tus doesn't recognize it's a temporarily stat loss 
+ , and so stats keep going up , and gms on our shard have to set up stats to 
+ everyone again....guess Skil cap will have the same problem if wearing cursed
+  weapons.
+ 
+4 ) 44n-45d  ||  Summoned NPCs keep appearing again after some minute......
+now Destard on our Shard is more dungerous due to the Ev growing from nothing 
+than for the Monsters hehe.
+ 
+5 ) VER. 44n ( dunno if in 45d too) ||  Monsters will Equip EVERYTHING they got 
+in their backpack even if they have no MT_EQUIP o MT_USEHANDS  setted.
+
+================
+FIXED:
+
+X 4.	Body plate cannot be removed.  I experienced this myself the the other night.  It tells you it is to heavy.  Zaishen had the same problem. If you do /underwear it falls off your charactor.  Also we are getting pages that players that are trying to pick things up and are finding them to heavy.
+X 5.	Wall of Stone can be cast in anti-magic fields (such as players houses). This is being used to steal from other players.  Not a well known bug but not hard to figure out either.  Can you make it so you can't cast it in an anti magic field.
+X 9.	Archery Bolts!!  Please fix - they weigh a stone each and are impossible for players to carry.  This was a complain from last version. CSM and Gaelin mentioned it to me.
+
+There is still a bug when a GM goes invis in from on lower priv players.
+The GM is not truly invis til they leave the screen.
+7. Players that use a war hammer, I think that when holding the war hammer it
+is their left hand and when they take a swing at the NPC or player they are
+fighting the empty right hand hows the movement of swinging.
+
+================
+
+Hi there as per your request last night please note the following:
+1.	Black rock, Blood Rock, Rose, Rusty, Mytheril ores can not be smelted, 
+they turn into gold coins.
+2.	Bronze ingots can not be smithed.  Nothing shows up in the smithing menu window.  Although if you try smithing it enuf eventually it will show up as Iron ingots.  The amount of ingots showing (ie 30) never lowers itself.    Although each time you try to make something it does go down (just doesnt show it on the ingots you have it will remain at 30). 
+
+Copper ingots can also not be smithed.
+3.	You can not mine Silver ore.  Was this replaced by something else as per
+ Zaishens post on the BS2 bug board or was it written out of the scripts?
+6.	Gargoyles, liches and other magic casting monsters are able to cast through
+ walls. Very annoying.
+7.	Scrolls that are stacked (depending on type and amount) give you unlimited
+ usage. (hmm sounds similar to the stacked ingot thing). 
+8.	Evil NPCS have positive Karma rather then negative.  
+10.	Smithing is extremely hard.  I understand this is one of the harder
+ skills (weve talked about this before) but as my charactor Pandora I had to 
+ make over 100 items to go up  just .1.  
+Can we increase the ratio for it to rise just a bit please.
+
+================================
+
+==================================
+
+If you look at NPC 463 the occllo cashual, theyre supposed to sell
+random reagents and potions.
+
+If you add npc 463
+and then add another
+
+they do indeed sell different potions and reagents..
+
+but if you /restock or /restock all
+each vendor keeps the same stock -- i.e. a Cashual that sells a
+"random_potion"  that is an Orange Potion when you add the NPC seems to
+always sell that Orange Potion no mater how many time you restock.
+
+but if you add a NEW cashual -- /addnpc 463 again -- they will indeed
+have a different "random" potion -- which is then never randomized again
+
+PETE'S COMMENT: Confirmed...we'll have to fix it so it saves the "sell"
+def (which is a range) somehow
+======================================
+
+Ship planks do not automatically raise.
+you can move the ship whether the plank is raised or lowered.
+
+Plot maps cannot be dropped on tillerman
+
+for approximately a six square area round the ship, you can stand on the
+ship deck and place items in the water.  When you move the boat, they
+will travel on top of the water, along with the boat.
+
+A good way to test this is to place a plotted map on the tillerman then
+say back.
+
+==================================
+
+5. Monsters are not aggressive so to speak, when a player walks by a monster,
+ the monster says the “you see ????????? attacking ???????” 
+ which is fine however, the monster does not advance towards the player.
+  So if the monster does not attack with magic it pretty much just stays 
+  there and get killed by the player without ever encountering a direct 
+  combat. Also the monster if it happens to killa player and another player
+   is near by, it will take almost forever for it to then attack the other 
+   player. In fact I have seen players stand by the monster and never be 
+   attacked by it.
+Monsters AI is still wacked. They are not aggresive enough and lose interest.
+
+
+==================================
+
+Ghost IP’s and non-releasing IP’s. When a player logs on initially, 2 identical
+IP’s  show in the console as logging in. One IP usually disconnects immediately,
+the other is the one that the player logs on with. However sometimes the second
+IP stays on and then there are two IP’s showing as being logged in and one shows
+as account and other shows as NA. On the same related note, at times when a
+player leaves the shard, it changes to NA and the IP sticks around till a save
+feature is done from the Console.
+
+-- these will get fixed by the idle timeout ?
+
+==================================
+
+6. NPC’s human, (something that may be related to above) if attacked go into
+combat mode, however they never release from combat mode into peace mode. So
+like everyday someone has to go through with hog and reset the NPC attributes
+to get them out of war mode.
+
+PETE'S COMMENT: Confirmed....very annoying too
+
+==================================
+
+9. Also if a player summons a creature and then uses that summoned creature to
+attack another player. If that creature now kills the other player it does not
+add a kill count to the player that initially summoned the creature, nor does
+the player even turn gray.
+==================================
+
+11. When a player goes gray, they seem to never turn back to blue (Unconfirmed) 
+Also in the same not if you attack a player and lets say they are blue, 
+they turn blue upon initiating the attack. 
+If you back away from the attack the player stays blue even after going in and 
+out of war mode.
+
+==================================
+
+ships fall apart.
+
+------------------------------------------------------
+
+
+VERY OLD STUFF
+
+
+TEST for Posting ....
+
+Potions require both hands to be free 
+If server currently diasarms to drink, then rearms..perhaps adding a delay ???
+Can use any potion with hands full
+
+==================================
+
+The possibilty of random treasure hunting or S.O.S bottles while fishing.
+(assuming this is a long shot)  I think the server is a long way off from
+coded quests.  Good idea though.
+
+==================================
+
+Possibly implementing higher quality of player made items with Grandmaster
+skill level. Placing GM skilled player names on items. (Could this be a
+"triggered" scripted action?)  Another good idea
+
+NOTE:  Need the server to allow players to relog back in when their char is
+held in-game by clientlinger
+
+=========================
+
+Polymorph bug in .39 
+Using UO Orginal    When a player polymorphs into any creature and types /sleep
+and trys to walk they turn back into a human player.
+Using T2A     When a player polymorphs into any creature and types /sleep and
+trys to walk they turn back into the unnamed sea monster. You cannot walk
+anywhere.
+Verified, also when you wake back up in human form you keep the attributes of
+the polymorphed form until spell wears off
+==========================
+
+karma/fame bugs/features,  provoke  In a non guarded region.
+  If I provoke or use a tamed/summon animal, I do not loose karma/etc but if the
+NPC calls guards I'm criminal.  They will attack me, I autodefend, they die. No
+karma loss , no fame gained, I gain loot.
+Verified, also another guard will come along and kill that guard for killing an
+innocent
+==========================
+
+Provoking blue creatures (60 skill) causes them to attack you, (even the blue
+cats and dogs) they are unprovokable.
+after they turn grey(ie: autodefend kicks in) they are provokable.
+Verified
+========================
+
+Provocation
+  The Skill seems to be buggy at all , for that players are also able to provoce
+Monsters , and that with a very low provocation skill. So most of our players
+were able to kill the toughest beasts with provocating them and let attack them
+each other without getting involved in battle.
+  So we decided to disable the SKill via the tables.scp but that has the
+disadvantage that NPC Training does not work any more. But that is the better solution for us so far thou it is not a good solution , because training is important for the players and the GMs do not need to do this.
+  So I think provocation needs a workover , it should not be able to provocate
+monsters (I don't think they must be provocated , they are already angry) and
+it also has to be depending on the other players , perhaps something like Int
+, so if player has int 90 , it is very difficult to prococate him , and if
+there is a dumb warrior with 10 , then it shoulb be a bit easier. 
+
+=========================
+Cotton plants growth cycles seems strange.  they will grow to full cotton
+normally, but then cycle back to invis cotton sprouts.  This seems to be the
+only plant doing this.
+Verified
+=========================
+newbie item bug   A newbie item can't be sold by a vendor. They just take your
+money and won't give you the item you buy.
+Ex. buy a spellbook from a mage.
+
+Verified, spell books for sale can’t be newbiefied, will vanish.
+=========================
+**Needs rechecked for 38i
+It seems that when you kill a an NPC on a horse... the horse's name becomes
+"Ship" although it acts just like a normal horse would. It might just be a
+simple scripting bug
+**The mounted horse becoming ship is known, I presumed fixed. In any case,
+there is cleanup code in to erase them. Next server restart should get rid of
+them.
+Cannot Verify, don’t know mounted guards code.
+=========================
+if you add stuff to a locked down item, it unlocks
+I locked down demon bones, I added more demon bones, it unlocked it self
+(though I was holding a key at the time,) (good? I do like it though hehe)
+Verified
+=========================
+a newbie item stacked to a non newbie item, newbiefies the whole lot. I.E.
+newbie reagents.
+Verified
+=========================
+possible for
+1) stacked identified potions    
+ Not Stackable items
+
+2) stacked bandages (or dye bandages?)
+ Bandages should stack if you drop them into a pouch automatically.
+3) named keys?
+ Dbl click key and target same key to rename
+4) how to name boat? using key on boat/setname 
+doesn't work
+5) how to make lockable chests/traps
+
+=========================
+It seems normal players can lock and unlock their ship. But when they get off
+the ship next to say a cliff, they can't open and close the plank anymore. But
+they can still lock and unlock the ship. So basically if they get off on a
+cliffed area, they can't get back on
+Verified
+=========================
+too weak to drop stuff from your pack. Regardless of your strength, you
+should be able to move things on your body/pack
+try this:
+create a fresh character
+strength 10: the rest whatever.
+put some starting equipment.
+swordsmanship/macefighting/armslore or something .
+some weapons you can't move, I can't even remove my trousers.
+  You should also be able to sell stuff etc..irregardless of weight.
+
+Verified, but a note...not able to drop something occurs also if item has been
+damaged to point of uselessness.
+=========================
+About Poison(38i) If you use poison in food and someone eat it. Poison will
+not work.
+Verified vs 39
+=========================
+Keys going blank, When I make a key to a chest or any other container the k goes
+blank when the server saves
+Verified. Occasional bug I thought was my own operator error with linking keys.
+=========================
+Ghosts can call for the guards.
+Couldn’t Verify, needs two to test better.
+=========================
+NPC Archers...When you give a bow or crossbow to an NPC they will shoot at the
+correct rate when they are standing still. However, the moment they start
+walking towards you they start shooting at least one time for each step they
+take. This of course means that they shoot about 4 to 5 arrows/bolts per second
+while moving. The NPC also has a tendancy to charge at you in an attempt to
+engage in melee combat even if he's using a ranged weaponn.
+Verified, felt like a chicken in a shooting gallery!
+Another problem (well, not really) is that each time they shoot and miss, it
+will leave an arrow on the floor...leaving a royal mess of arrows on the ground
+after a while.
+What else is new? heh
+=========================
+ Have archery check for ammo prior to applying skill increase.
+Verified, personal opinion is leave it as is, or fix and add a training bow to
+scripts that does only 2-5 damage.  This matches how to train with bows in OSI
+currently.
+
+=========================
+
+Ver 45o Server changes:
+
+Support for client 1.26.02
+
+New skill locking is in though it is not yet functional.
+
+Resync will now reload the MAP and MAP2 script files. So changes to these can be made at run time
+
+Weight is calculated as tenths of a stone. So some items have weight that did not before.
+
+New speech files are now being distributed in the main release. 
+
+Basic town stones - currently just support membership.
+Set the OWNED flag on the stone will allow all to join the town without having to be reviewed.
+See the new entries in TUSGUMP.SCP
+Say "I resign from my town" to resign at any time.
+
+Say "I must consider my sins" to check your murder status.
+
+Items to be targeted for creation now have a picture of the item as it is placed.
+
+Sign gumps will now come up in some cases for signs (house) and tomb stones.
+
+Regions now have the name of their building "You are in Shop in Britain" with the /WHERE command
+
+scripts may now be put in a new directory. SCPFILES= in TUS.INI
+
+Max change in ploymorph effect on stats is 150
+
+Player vendor commands "DROP" "DROP ALL" and "CASH"
+
+Orges, Ettins and some others will only throw rocks if they have them in their packs.
+
+Tailoring of hides
+
+WIN32 console events are trapped and must be confirmed. ex  CTRL C or close button.
+
+New TUS.INI
+LIGHTNIGHT=base light level 0-30
+LOGMASK=log certian debug stuff to the log file.
+NPCTRAINMAX = max skill to train to ex. NPCTRAINMAX=50.0 (default)
+
+New Script commands:
+All immediate script commands are now listed by priv level in TABLE.SCP
+To make a command unavailable to a priv level simply raise it's priv level.
+By default GM's can use all commands.
+
+
+SPEAKU = speak a UTF8 encoded UNICODE string.
+
+New SERV. commands:
+ALLCLIENTS ex. SERV.ALLCLIENTS GO x // will bring all clients to this location (not a nice thing to do)
+
+New ACCOUNT commands (also recorded in TUSACCT.SCP)
+T2A
+LANG
+
+New CChar commands:
+GOTYPE x
+GONAME xx
+
+New CClient commands
+CHARLIST
+
+new /ACCOUNT commands
+/ACCOUNT UNUSED xx command
+will execute the script command on the account that has not been used in x days.
+By default it will just print a list of all accounts that fit this catagory.
+
+new CSector commands
+NIGHTTIME = is it currently night time here ?
+
+BUGS fixed:
+OBODY now replaces XBODY
+OSKIN replaces XSKIN
+Can no longer repair items worn or in other peoples packs.
+loaf%s name plural fix.
+polymorph and equip scripted item will no longer cause stat problems.
+vendors may immediatly buy after creation.
+light level transition and night time should work better.
+log files now have the correct month number.
+
+=========================
+
+Ver 45 Script Changes 
+
+Big change in the look of the MAP.SCP to support the new graymap.exe features.
+MAP2.SCP file is now usable.
+MAP.SCP no longer uses MIDI= but instead has a general TRIGPERIODIC= in TRIG.SCP
+See samples in TRIG.SCP [REGION 65003]
+added MIDILIST=x for CClients.
+
+Scripts are now UTF8 compatible. Use the SPEAKU command to allow NPC's to speak in UNICODE.
+
+GUMP.SCP is new replacing TOME.SCP and PROPS.SCP.
+All menus and gumps are now scriptable. 
+Much of the look of MENU.SCP has changed as well.
+
+Player vendors and barbers have been added to the main scripts. 0401, 0402
+
+Many new Char types have been added. Barbarians, Gnomes, Elves and many others.
+
+The loot system has been greatly improved.
+
+some creatures will carry magic items.
+
+====================================
+
+KNOWN BUGS:
+
+Still have many items in SKILL.SCP Blacksmithy that are not 
+createable because of invalid item numbers.
+
+In large houses in some cases you can fall through the floor when double clicking on things ? GM's may move the house to fix this ?
+
+
+
+
+

@@ -1,0 +1,90 @@
+// Map of regions in the world.
+
+// LOCATION -------------------------------------
+//  These are diff from start locations.
+
+[LOCATION 1]
+Name=Front of Castle Britannia
+p=1401,1625,28
+
+[LOCATION 2]
+Name=Front of Castle Blackthorne
+p=1523,1456,15
+
+[LOCATION 3]
+Name=Middle of water
+p=1480,1473,-5
+
+[LOCATION 4]
+Name=Help Desk of Hell
+p=5691,1501,0
+
+[LOCATION 5]
+Name=Great empty field
+p=5445,1153,0
+
+[LOCATION 6]
+Name=Jail 1
+p=5276,1164,0
+
+[LOCATION 7]
+Name=Jail 2
+p=5286,1164,0
+
+[LOCATION 8]
+Name=Jail 3
+p=5296,1164,0
+
+[LOCATION 9]
+Name=Jail 4
+p=5306,1164,0
+
+[LOCATION 10]
+Name=Jail 5
+p=5276,1174,0
+
+[LOCATION 11]
+Name=Jail 6
+p=5286,1174,0
+
+[LOCATION 12]
+Name=Jail 7
+p=5296,1174,0
+
+[LOCATION 13]
+Name=Jail 8
+p=5306,1174,0
+
+[LOCATION 14]
+Name=Jail 9
+p=5283,1184,0
+
+[LOCATION 15]
+Name=Jail 10
+p=5304,1184,0
+
+[LOCATION 16]
+Name=LB Main Gate
+p=1397,1626,52
+
+[LOCATION 17]
+Name=LB Throne
+p=1323,1624,55
+
+[LOCATION 18]
+Name=LB Study
+p=1333,1647,72
+
+[LOCATION 19]
+Name=BT Main Gate
+p=1524,1453,35
+
+[LOCATION 20]
+Name=BT Room
+p=1533,1415,56
+
+[LOCATION 21]
+Name=Help Room Backdoor
+p=5681,1497,0
+
+

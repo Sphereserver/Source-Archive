@@ -1,0 +1,26 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: GraySvr - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "bscmake.exe /nologo /o"Debug/GraySvr.bsc"  ".\Debug\CChar.sbr" ".\Debug\CClient.sbr" ".\Debug\CContain.sbr" ".\Debug\CItem.sbr" ".\Debug\CServer.sbr" ".\Debug\CString.sbr" ".\Debug\CWorld.sbr" ".\Debug\graysvr.sbr""
+Creating browse info file...
+BSCMAKE: warning BK4503 : minor error in .SBR file '.\Debug\CClient.sbr' ignored
+BSCMAKE: warning BK4503 : minor error in .SBR file '.\Debug\CContain.sbr' ignored
+BSCMAKE: warning BK4503 : minor error in .SBR file '.\Debug\CItem.sbr' ignored
+BSCMAKE: warning BK4503 : minor error in .SBR file '.\Debug\CServer.sbr' ignored
+BSCMAKE: warning BK4503 : minor error in .SBR file '.\Debug\CString.sbr' ignored
+BSCMAKE: warning BK4503 : minor error in .SBR file '.\Debug\CWorld.sbr' ignored
+BSCMAKE: warning BK4503 : minor error in .SBR file '.\Debug\graysvr.sbr' ignored
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+GraySvr.exe - 0 error(s), 7 warning(s)
+</pre>
+</body>
+</html>

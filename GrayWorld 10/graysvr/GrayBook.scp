@@ -1,0 +1,42 @@
+// Tips, Books and scrolls.
+
+[GUEST]
+Welcome Guest Traveller you have entered GrayWorld! A Guest account has been opened for you
+Your life in this world is transient at best. Consult with Menace for a permenant account.
+
+[NEWBIE]
+Welcome Traveller you have entered GrayWorld! Our guardian 
+watches over and protects us all. Please try to remain in the cities
+during your stay. It is dangerous in the wilds. Be carefull !
+
+[MOTD]	// normal entry
+Welcome Traveller you have re-entered GrayWorld! Please try to remain in the cities
+during your stay. It is dangerous in the wilds. Be carefull !
+
+[TIP 1]
+Did you know that GMs can use the /ALLMOVEON command to make all
+dynamic items movable for them? To turn this off again, simply use
+the /ALLMOVEOFF command.
+
+[TIP 2]
+As a GM use /SETMOVABLE 1 to make item movable by everyone or /SETMOVABLE 2
+to make it movable by no one except GMs.
+
+[TIP 3]
+War is unhealthy for children and other living things.
+
+[BOOK 1]
+PAGES=3
+TITLE=Hitchhikers Guide to GrayWorld
+AUTHOR=Menace
+
+[PAGE 1 1]
+Don't Panic
+
+[PAGE 1 2]
+See Page 1
+
+[PAGE 1 3]
+This is page 3 and the end of this book.
+
+

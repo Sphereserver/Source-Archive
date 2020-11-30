@@ -1,0 +1,54 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f16\froman\fcharset238\fprq2 Times New Roman CE;}{\f17\froman\fcharset204\fprq2 Times New Roman Cyr;}
+{\f19\froman\fcharset161\fprq2 Times New Roman Greek;}{\f20\froman\fcharset162\fprq2 Times New Roman Tur;}{\f21\froman\fcharset186\fprq2 Times New Roman Baltic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;
+\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}}{\info{\title Bugs by platine}{\author Dennis Robinson}{\operator Dennis Robinson}
+{\creatim\yr2000\mo3\dy22\hr15\min9}{\revtim\yr2000\mo3\dy22\hr15\min9}{\version2}{\edmins0}{\nofpages2}{\nofwords543}{\nofchars3098}{\*\company Andover Controls Corp.}{\nofcharsws3804}{\vern89}}\widowctrl\ftnbj\aenddoc\hyphcaps0\viewkind4\viewscale100 
+\fet0\sectd \linex0\sectdefaultcl {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}
+{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \nowidctlpar\adjustright \fs20\cgrid {\cf2\cgrid0 
+Bugs by platine.  Blue text are my notes or confirmation of a bug.  Red is for not confirmable, though they may still be a bug.  Green will be for bugs known to be fixed.
+\par 
+\par }{\cf1\cgrid0 Version is before each bug, when version known.  ?? when unknown.}{\cf2\cgrid0 
+\par 
+\par 48e Skillclass not functioning.  Added skill class 1 with limits on fencing of 15.0 and a plot for our mage class  (04).  when set
+ting a regular players skillclass to 1, it did not set his plot1 to 04.  Additionally he was able to gain beyond 15.0 fencing.  A game save or a server reboot did not seem to trigger the skillclass into effect either.  
+\par }{\cgrid0 
+\par 48e Very strange happenings in Serpent's Hold.  At coordinates 2904,3490,10 something strange happens.  If you go one step north you
+\par  move to coordinates 2904,3489,10, but if you take another step north the coordinates don't move again, you stay at 2904,3489,10. 
+\par  From that point on your coordinates are screwy until suddenly the server fixes your coordinates and you magically jump to where the
+\par  coordinates say you are. 
+\par 
+\par 48e   I have a problem my minners can smelt ore without fire or forge why is this.  }{\cf6\cgrid0 Worked correctly for me, not confirmable.}{\cgrid0 
+\par 
+\par 48e.  Buying mutiple animals from animal vendor produces no animals at all, or just one animal, but charges for all.    }{\cf2\cgrid0 Confirmed
+\par }{\cgrid0 
+\par 48e   regular Vendors not restocking when items placed in bank 1A by GM.    }{\cf2\cgrid0 Confirmed
+\par 
+\par }{\cf1\cgrid0 48e Archery: altought the skill improvment in case of no arrow carried was adjusted some times ago, now it's still possible to macro this skill
+\par  without resources waste and harmful effect because the skill impr. check is still made at the first use of this skill; it's true that the attack is
+\par  not mainteined but continous clikking on the target will result in a skill/stat improvement.    }{\cgrid0   }{\cf2\cgrid0 
+\par }{\cf1\cgrid0 
+\par 48e Hiding: it's not made the LoS check; it's now possible to letterally DISAPPEAR in front of someone (it's strange indeed to hide in front of someone in a plain grassland!    }{\cgrid0   }{\cf2\cgrid0 Confirmed
+\par 
+\par Thougths, possible LoS check should also be based on skill when it's back, so someone with 100 in hiding might just be able to hide in grasslands:)
+\par }{\cf1\cgrid0 
+\par 48e  Energy vortex's and blade spirits attack the summoner.    }{\cf2\cgrid0 Confirmed
+\par }{\cf1\cgrid0 
+\par 48e The skill Remove trap isn\'b4t working good, when a player uses this skill on trap (TYPE=25), his skill is going up, but he is not able to dissarm this trap. He can\'b4t remove this trap even when he has remove trap at 100 ( GM level ).
+\par 
+\par 48e when a player drinks some potion for example they drink Night sight potion, the potion adds the night sight, but after drinking some other potion, the efect of the first potion is canceled and only the efect of latest potion is worki
+ng. This happened with all potions. 
+\par 
+\par ?? bug where it's impossible to loose Dex when you are over the skill cap.  No matter what you set tustables to, 100str, 100int, 0 dex, use that skill, you still don't loose Dex! 
+\par 
+\par ?? random spell book crashing of client when opening book.. (if I could provide more info on this bug, I would, but my crashing is not due to the wrong item type, it's something else)    }{\cf6\cgrid0 Couldn't Confirm}{\cf1\cgrid0 
+\par 
+\par }{\cf2\cgrid0 Thoughts.  One time when defining a book i put the lines of it in the item definition instead of book.scp.  Caused client crashes also.  maybe related?
+\par 
+\par }{\cf1\cgrid0 ?? ANIMAL TAMING!!  The skill is totally hosed.. no matter what you skill is, you can still seem to fail at taming simple stuff.. and likewise, when your skill is high enough to tame said cre
+ature, you always fail taming it.. it's just screwed..   }{\cf2\cgrid0 Probably related to the brain used on certain creatures?   }{\cf6\cgrid0 Can't Confirm with out details on creatures.
+\par 
+\par }{\cf1\cgrid0 ??  Either make poison work correctly, or make the amount of time it takes to have the "poison kick in", cofigurable.   }{\cf2\cgrid0 Confrimed, takes about 2 minutes RL for posion to kick in in 48e.
+\par 
+\par 
+\par }}

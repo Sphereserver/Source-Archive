@@ -1,0 +1,282 @@
+X MENACE - how do u set to admin level ?
+Newly set admin accounts have their privs dropped back to GM after a period of time.
+Existing Admin accounts are unaffected.
+NOTE: Confirmed all 46 series, possibly before.
+==========================================================================
+X - MENACE fixed 46s
+Purple potions won't follow target, they disappear but 'hang' on your charactr (hidden, can't be seen) and explode on you .. even if you run
+NOTE: Confirmed 46r
+
+==========================================================================
+Need to check
+==========================================================================
+Accounts bug  Well, I dunno if this is known or not, but I don't remember seeing it on the board. So if it's in the FAQ or something, shoot me (but use Nerf bullets please :/)
+	I have Freeshard turned on (debatable whether this is bright or not :). Despite what I have on our web site, people just INSIST on choosing account names with spaces or punctuation in them. Now, lets say someone chooses "Melen Abatha" as an account name, and "Melen" as a player name. As long as the server stays up (resync's don't effect anything) it'll be fine. They could play for days if the server doesn't reboot for days. Now, if you shut the server down and restart it, while it's loading the world it'll complain and remove the accounts! Anyone who has used a 1 word account name (letters & numbers only) is fine. Do it with a space, you'll get nuked. This happened with all versions of 46 I've used, currently I'm using 46o.
+
+	NOTE: At certain points it has been ok to use spaces. Personally, I tell everyone NOT to use spaces and NOT to allow names when the first 5 character match a previous account. I have notated it in the past, I would have to reread the account setup info to see if I left it in. If not, I will be sure to put it back. I will make a note in my list to see about implenting a check for spaces in the name, or fix it if there and broke.
+
+==========================================================================
+X - MENACE - should be fixed in 46q
+
+Check /ANIM 99 from a player perspective, see if it hides them from all, even admin/gm
+ANIM 99 is a mounting ANIM but appears to make them invis.
+
+==========================================================================
+
+Criminals and Ghosts by GM Red Dragon 
+	Any idea if any kind of an implementation of making it so ghosts only say "OooOOoO" is ever going to be put on the server? As it stands ghosts an be understood by everyone making spirit speaking a pretty useless skill and I've tested that ghosts can do everything from open a bank to carry on conversations with vendors in town. Also is there a way to incorporate the 2 minute criminal "no-res" rule so people can't die constantly, run to the healer and back immediately? I've had a few "gifted" players who found it amusing to harass the healers in town by attacking them and then immediately being res'ed by them right after the guards killed them. I'd like a way to discourage that besides threatening the players all the time. Also even with .46o I still see that once a player has been flagged grey it still never seems to wear off. Heck my smith killed a grey dog and was flagged from that point on as a grey because of it being a couple point karma loss. I really don't want players to be flagged quite so easily making them vulnerable to attack 24/7. 
+
+==========================================================================
+
+excessive newbie start equipment, different skills
+
+==========================================================================
+
+When fighting and there are more than one enemy around, the player's target switches all by itself, even when the other NPCs aren't even on your screen. You'll be sitting there waiting to swing but the swing never comes. You have to go out of and back into war mode then reselect your target. I think when a monster decides to attack you, YOU end up targetting that monster, even though you're already fighting
+NOTE: Still needs tested.
+
+==========================================================================
+
+	Ok, here goes, I have my tus.ini setup to use both the custom scripts "tus*2.scp", and the new "speech.scp". Now the only reason I was even attempting to modify the "NPC"s was because I needed a "mayor's wife", and alot of the replys from the "standard npcs", were abit messed up, like when you say "(npc's name) sell", to one of the vendors, I was getting 2 "you don't have anything that I would be interested in" messages, and things like that. Also when I would say hello to an npc I was getting messages like, "you seem to be abit repetative", or "hello again", even though they were a fresh spawned npc. So I tried modifing the "standard npcs" and kept getting these "exception" or "gray-something" errors, with every spawn I tried to create, so I did some testings, and here's what I got.
+	I created a blank world, and used Tussvr 46m, and Hog 8m, on a celeron 300MHZ, with 128MB RAM, 3+GB HD. Well, Here's the jest of it.
+	I never used hog to edit any of the npcs, that I adjusted to test this "exception/grayworld" error bug. All I did was copy the characters that I used, a tanner(male), and a innkeeper(female), over to blank "TUSchar2.scp" and in proper numerical order. Well, all I changed on either was which "Speech" to use and spawned them one at a time. I also took one of the speech .scps "greetings", and saved it as "hello2.scp", and changed its "ON=" to "ON=*hello*", and put "hello2.scp" in the "TUSTable.scp", in the proper order. Well, it should have worked without any errors, but as soon as I saved them, and tried to spawn one of the "boom", out pops the "Exception" error. So then I removed the "hello2.scp", and only changed the "SPEECH=Tanner", for the tanner(male), to "SPEECH=shopkeep", and added "shopkeep" to the "TUStable.scp", and tried again, "boom" it happened again. So then I removed both of them from "Tustable.scp", and made sure the characters were back the way they were and tried to spawn them again which they spawned ok, then.
+	Well, I think I've localized this bug to being with the new "speech" scripts, system, even though I still think I'm going to do more testing to make sure, but I just wanted to post this message to see if anyone else has encounted this, and knew more about it, or if I was on the wrong track, etc. Also if anyone wants a copy of my log, custom npcs, and "hello2.scp", just let me know, and tonight when I get home I'll email them a copy. Well thanks for your time and patience.
+
+
+==========================================================================
+New 
+==========================================================================
+
+How to get players to climb over hills 
+There is a path near the Ophidian area in T2A from the north which joins to the desert. As gm I can climb this but as a normal player i'm stuck low and cant climb over it. The z at the bottom ranges from -2 to -5 and it is 39 at the top. Is there a setting i can change to allow normal players to climb this sort of height or some way of putting some step up tiles to help the players over. This is a great hunting spot. I'm sure someone must have a way to use it. 
+	re: get me the actual co-ords and I can investigate it to see if a change to TUSmap is in order .. I handle map revisions. However, chars are limited by the client to steping up a max of 2Z , not much we can do about that. Placing hidden/quiet teleports which raises only your z position up a step is a great fix to some unwalkable areas and doesn't show as bad to gameplay as teleporting to a new place. 
+	The co-ordinates are 5723,2672,-4   by Esadie  ID = 1028826  
+NOTE: Confirmed. GM characters (in GM mode and not) can walk this path .. players cannot.
+
+==========================================================================
+
+Cannot change a characters account name - invalid set
+NOTE: tested in 46n-o  with an admin character, trying to reset a player account
+
+==========================================================================
+
+==========================================================================
+BUGGED
+==========================================================================
+
+House Areas
+Things in a house that are too close to the wall on the E & S walls are accessible from the outside. Almost as is the walkable area is one tile off from the house frame.
+NOTE: Confirmed 45o - 46o
+ Place a chest on the floor inside along the E or S wall and you can grab them from outside.
+ Also, if you notice while INSIDE, you cannot walk next to the E & S walls, you stop one tile away. While OUTSIDE you cannot walk next to the N & W walls, you stop on tile away.
+
+==========================================================================
+
+MAP / RESS BUG:
+When MARK and RECALL are blocked, it also blocks ressurection with an anti-magic field ... tied in with the house protection?
+NOTE: Still does this in 46o
+
+==========================================================================
+
+IMPORT & EXPORT work in 46L-N
+NOTE: Cannot export characters. Import of characters works.
+
+==========================================================================
+
+Fishing pole and longsword are equipped at the same time in right hand. Not sure if this will corrupt a character or not.
+NOTE: Tested in 46m
+
+==========================================================================
+
+Guards don't kill on first hit, if you are ready, you can gate or recall to safety
+oops or feature??
+NOTE: Confirmed in 46m
+
+==========================================================================
+
+NPC Archer's
+Archer fire extremely fast. Appears to be one shot per step
+NOTE: Still does in 46L
+
+==========================================================================
+
+Player Vendors
+When you place stackable items in the vendors inventory...like 50 bottles...when a player buys any amount at all, he gets the right amount at the right cost, but all of them are emptied from the vendors inventory. Work-around:  Do not stack items on the vendor, do each one individually. It's more work, but you won't lose stock.
+
+Along same note:
+ regular vendors will not stack purchased items, even though they already exist in stock. A check of bank 1a on purchase and stacking would be nice.
+ regular vendors, if you place something in bank 1a, it won't auto-restock with other items, you have to do a manual /xRESTOCK
+
+==========================================================================
+
+Problem with flagging - players are attacking out of town and then coming back in and are still flagged to the person attacked, thus guards can be called on them. Also reports that the flag 'sticks' on so that any approach into a guarded area causes guards to come .. even days afterwards.
+NOTE: Can't reproduce locally while alone
+
+==========================================================================
+
+Meditation
+ Requires constant spam-macro’ing of the skill to show any gain in mana. If not repeatedly clicking the skill, or macro, mana gain stays constant at same speed as normal. Fast repeated use causes gain to roughly double. Tested at sill 10; 50; and 100 .. all the same.
+NOTE: confirmed in 46m
+
+==========================================================================
+
+Magery
+ raises in Anti-magic areas even if you fizzle.....so people macro magery in those areas
+NOTE: Confirmed – 45o-46m
+
+==========================================================================
+
+Fletching does not work right.
+If you fail to make arrow/bolts you lose everything rather then a set # or percentage
+NOTE: confirmed in 46m
+
+==========================================================================
+
+Apparently fishermen have no line of sight checks because they can fish through walls yet an archer can't shoot over a iron gate into a graveyard area
+NOTE: Confirmed in 46m - Tested by placing a water tile in center of a house, set circle of transparenty high, and could still fish in the water tile.
+
+==========================================================================
+
+Targeting after casting.
+If you are attacking a monster with a sword and cast a spell you lose your target. You just stand there while the monster contiues to attack. You must D-click him to re-initiate attack.
+NOTE: confirmed in 46m
+
+==========================================================================
+
+ERROR:Vendor uid=02bb9 selling unmovable item 0f8d='Spider's Silk'
+This is caused by players SELLING stuff from their packs. As the are set this way 'never movable - requires stealing'  At the sell statement, a player becomes a vendor, thus you get the vendor error. You can see this by the UID which is the player.
+NOTE: tested in 46m
+
+==========================================================================
+
+45e – 45o Triggers work only few hours after restarting server and after this time they stop working. And after new restart is it the same. 
+NOTE: My thoughts on this is a bad trigger item in the file. Some shards report this, some don’t … but those who do all have custom triggers. Some that reported this issue did track it down to a bad trigger and corrected it.
+
+MENACE - still looking for this.
+
+==========================================================================
+
+Traps (TYPE=25):
+ they work good, but problem is with their animations. When somebody walks across or push some kind of trap their animation work only once and, at the second time ( when somebody walk across...) they work, but animations don´t ). Problem is that in MORE there is for example number of one trap 111c (animation) and after walking or pushing that trap number is 111b, which isn´t animation.
+Note: the problem is not with it resetting to the base # .. in this case 111b. The problem is it never recycles back into the next ID # for the animation upon reactivation. So you only get the damage. 
+
+==========================================================================
+
+LockPicks 
+brings up target cursor and the 'you can't think of a way to use this item" when clicked on door
+
+==========================================================================
+
+Linked keys turn into blanks at worldsave (46h) by HellRazor
+ There has been a bug around for awhile with keys not retaining their links when the world saves. I did some playing around with this and the problem seems to be related to the MORE value of the door & key. There appears to be a valid range that door links must be within. If your door and key MORE values are within the range, the keys don't go blank. If they are not within the range, the key becomes a blank at world save. Placed houses are hardcoded and thus seem to always create a link within the valid range. The Link command, however, does not.
+****
+**** Linked keys turn into blanks at worldsave by Admin Kho'saf
+ The problem happens when you /link a key to a door or item that was /dupe'd. This will cause the key to blank after worldsave. It has to do with the MORE values and LINKs of the key. My advice is to always create real items especially doors, NEVER dupe doors, always causes me problems and stuff like that, especially during garbage collections.
+****
+****re: Happens with non-duped doors as well by HellRazor
+ None of my doors were duped, they were all created fresh. As near as I've been able to tell, it seems like the /MORE value of the key has to be within a certain range, and the /LINK command doesn't check for the valid range. Anything I have linked using /LINK has resulted in the key going blank at worldsave.
+ However, I found a workaround in linking from within a script. Apparently when a new key is created, its serial number is within the valid range. So by setting the MORE value of the door and the key to the key's serial number, all appears to work ok.
+NOTE: could not confirm, but still get reports of keys going blank, so included this info .. just in case.
+
+==========================================================================
+
+Report that sending a connection attempt via a spoofed IP will stall and crash the server. Related issue is: You will get a client login of fffff  which effectivlely blocks any other client from logging in.
+Multiple reports that with client 1.26.1 TUS sometime stops accepting client connection May only happen if there are many players connected, since small shards don't seem to have this problem. It requires a restart to re-allow connections. using encryption 1.25.37 does not do this.
+NOTE: Can't reproduce locally while alone   ??Is fixed in 46H-L??
+
+==========================================================================
+
+Items seem random change type, use /info command to check it out. Items will look like one thing, but /info  will be displayed as another things such as wooden box and can't remove it, much like a bogus item. But you can /set type 8 and dclick on it, it's will be eaten. NPC's also have this problem, can't remove (delete) it, Player attack it. it's status changes nothing. after I restart TUS all things and NPC's with this problem will be deleted at TUS load time. It's possible that this is related to the mysterious disappearing items ..once they 'change' they are cleaned up during garbage collection.
+NOTE: Can't reproduce locally - insufficient item count on local server.
+
+==========================================================================
+
+Account/Characters Ghosting:
+  Basically, it seems sometimes if there is net lag, a resync or death crash, the client disconnects but the server leaves the character online.  If the character is a in-game ghost, you can res them which will kick them off the system.
+NOTE: Need to know if this still occurs in 46 series.
+
+==========================================================================
+
+Hiding does not work right.
+If you are hidden when the monster comes, he will not 'see' you. But, when fighting, if you run 1 1/2 screens away and hide, a monster can still find you every time and re-initiates the attack. Probably due to tracking via fight-memory object. Add chance that hiding removes the object???
+NOTE: confirmed in 46m
+
+==========================================================================
+
+Resistance
+Magic Resistance
+appears to be imbalanced. has roughly the same effect throuout all skill levels. Tested using firefield. Had 2 points of damage done on each 'hit' while message scrolled of resisting magic.
+NOTE: confirmed in 46m 
+
+==========================================================================
+
+Forensics
+When a player calls a guard to kill an attacker ... Using forensic evaluation on the body of Attacker, the murderer name will be the name of the player who called the guards. Suggest changing it to simply say :  Killed by Guards .. or something to that effect.
+NOTE: Still does in 46M
+
+==========================================================================
+
+Cooking:
+You cannot combine flour and water to create dough
+NOTE: 46m - flour does nothing on DCLICK. Should cooking code be all scripted or set by code?
+
+==========================================================================
+
+Bless
+If Bless puts you over the cap, decay will take effect. It happens slowly, but does occur. Should this be considered fair risk?? STR appears to be the prime candidate for this. I could find no other issue with bless, even after a save or resync, the stats reset properly.
+NOTE: tested in 46m 
+
+==========================================================================
+
+Trigger code - terminating  a DORAND requires use of ENDDO .. ENDRAND does not work. IT actually halts the run of the trigger.
+
+==========================================================================
+
+Cutting Bandages. 
+set a max resource consumed on each cut ??  Seems silly to cut a bolt of cloth and get 50 bandages.
+Perhaps changing it so that scissors on a bolt of cloth gives you folded cloth ????
+
+==========================================================================
+
+--------------
+Comment/Suggestions
+--------------
+Any chance for a command to nudge an entire area?
+
+	When Monster is guard killed, there should be no corpse generated, this will avoid 'guard-killed' looting  of monsters (guard zone fringes)
+
+
+	About Monsters:
+Lets say it's dark, and you wander through the forest...suddenly you hear someone speeking in gutteral voices near you...you sneak up behind a tree and from a distance you notice that it's a band of orcs! And they are right in your path! You silently sneak by them in the dark and avoid getting deteced.
+Now, i don't mean stealth, just simply walking by them in the dark. Give all monsters a "sphere of detection" so if it's dark it's little likely they will attack you when you walk by them almost a whole screen away. 
+It would be different if you RAN of course *smiles* In light, this sphere of detection of SoD for short *grin* would be much larger. THat is...unless it was monsters who see better in the dark than in daylight....*shivers*
+
+	It would be nice if the character file was separate from the world file. Reason being is that occasionally it becomes necessary to do a world wipe, and basically clean up the server. This becomes frustrating for the players as any world wiping usually means they loose their characters.   If these files were separate this would not be a problem
+
+	Trigger functionality is somewhat limited.. While I agree that triggers are very useful, there are certain functions that simply could not be obtained by using them.  Perhaps you could add a few new things such as scripts that continually run in the background, scripts that can contain loops and arrays. Scripts that would pause and wait for a target would be especially helpful, too. Finishing up that ONTRIGGER=HEAR would be nice, since we've all been waiting for it since version .39...
+
+	Is it possible that in the next release, an ONTRIGGER=SKILL would be added? And maybe an ONTRIGGER=CAST? These would be very useful. Perhaps new properties called LASTSKILL and LASTSPELL could be added to the Character type object so that we, as the scripters, can stop a player from casting a spell before it is cast? An ONTRIGGER=3DTARGET would be interesting, too.  The ACTARG1 and ACTARG2 client properties that the game obviously uses internally, but we never get a chance to use would be helpful in this situation. 
+
+	create a ‘Region spawn’ area rect in the map script editor and then create spawns in that rect and have the creatures wander freely without leaving that rect area. Ability to go beyond the border if in war-mode4. Spell mana cost - I'd like to be able to change some of the mana cost of some spells on our server to make them incredibly hard to cast without a high enough intelligence. Ie, make gate almost twice as hard, etc.
+
+	Shard Gate .. Some GMs thought it would be cool to be able to have some kind of gate between shards (I would think the player's data would have to be sent between shards?) >>> There’s an ongoing debate about intershard gates…. IT’S an evolving concept…you probably won’t see something for a while though. NOTE: DreamGate code started, not effective yet. 
+
+	Item difficulty
+Base skill gain per attempt on difficulty setting of an object? Currently seems to raise based only on resources consumed 
+
+	Spellcasting order of priority:
+Choose spell
+Animation and runes overhead
+Target cursor
+The runes disappear.
+
+	About Death
+[scriptable/optional]Make it so that players who die can only get resurrected where their corpse lie. Also some way of transporting a body from one location to another? The body would weigh very much so that a player who wanted to bring his friend's body to a healer would have to choose between his belongings and his friend, or if in a battle, whether to leave his friends body to the mercy of the monsters or stay and fight and bring it back.
+
+	Horse Thieveing:
+Make it possible to "steal" a horse with stealing skill. Upon doing so, the horsethief would be FRIENDED to the horse (not put as new owner) and could thus ride it or command it....since the thief is only friended to the horse there's also a chance that the original horse owner can find his old horse and retrieve it. 
+
+	Making Glass(and Clay?)
+This is a new raw material as a source for a new product line for glass objects. It also provides miners with a new product line of trade.Miners dig sand, smelt on forge, produce "glass ingots". Those ingots can then be used in the production of glass objects, beakers, pitchers, alchemy bottles, flasks, etc.
+
+

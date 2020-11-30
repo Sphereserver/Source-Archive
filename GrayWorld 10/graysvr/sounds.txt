@@ -1,0 +1,602 @@
+# http://alluvian.simplenet.com/projects/sounds.zip
+# This file is as of yet, incomplete.
+# The sounds are numbered, both in hexadecimal format,
+# As well as Decimal (I do not think any other format
+# Will be needed anytime soon) The descriptions are
+# The best ones I have done at the time, once I have
+# Finished adding all the sounds, I will go back through
+# Them again, and improve or change them :p
+# Feel free to remove this commentary to make the file
+# Easier to search through
+#
+  Hex     Decimal     Description
+------- ----------- ---------------
+00 00   0           Multiple birds chirping
+00 01   1           Multiple birds chirping, slightly longer
+00 02   2           Multiple birds chirping, one slightly dominant
+00 03   3           Birds/Owls at night
+00 04   4           Crickets/Birds at night, wind sounds
+00 05   5           Loud crickets, some birds in background
+00 06   6           Muted selection of birds/crickets/owls at night with wind
+00 07   7           Bird mating call (warble)
+00 08   8           Loud owl/crickets at night
+00 09   9           Loud crickets, owl mating call at night
+00 0A   10          Very loud crickets, muted background hum (water?)
+00 0B   11          Crickets with background sound of running water (river)
+00 0C   12          General frog noises, one bird in background
+00 0D   13          Slightly longer frog noises, another bird in background
+00 0E   14          Loud crickets, mating chirps
+00 0F   15          Subdued crickets
+00 10   16          Fast-moving water, river possibly over rocks
+00 11   17          Fast-moving stream, shallow
+00 12   18          A boat, or something being dragged or wading through deep water
+00 13   19          A boat moving through water, sails/rigging creaking in the wind
+00 14   20          Wind on a high mountain peak/cliff or in the desert at night
+00 15   21          Strong wind (long) prelude to a storm
+00 16   22          Strong wind, sounds of light rain, or blizzard
+00 17   23          Frog or Cricket chirping 4 times
+00 18   24          Single bird 'singing' a few short notes
+00 19   25          Bird call at night (cut off at end, possibly meant to loop)
+00 1A   26          Solitary bird call (could be used for fleeing bird)
+00 1B   27          Two single bird chirps (high-pich)
+00 1C   28          One bird chattering at another
+00 1D   29          Single two-note bird chirp
+00 1E   30          Two mid-range bird cries
+00 1F   31          Cry of a solitary bird (seeking others, or warning something off)
+00 20   32          Bubbling water (natural spring, or something similar)
+00 21   33          Bubbiling mud, lava, or thick stew
+00 22   34          Single large drop of water, into water
+00 23   35          Water dripping onto stone
+00 24   36          Two drips o water into something (alchemy sound perhaps, or wet cave)
+00 25   37          Sound of someone pouring (bucket?) of water, into some other container of water
+00 26   38          Large amount (semi-loud) sound of water being dumped into water
+00 27   39          Rock (or some small object) being tossed into water (or fishing sound of failure?)
+00 28   40          Thunder (deep bass notes, trailes off)
+00 29   41          Longer peal of thunder, trails off
+00 2A   42          Clang of metal pot (or metal hammer)
+00 2B   43          Forge being stoked (bellows) or fire being snuffed out
+00 2C   44          Wooden door closing (behind you as you walk through)
+00 2D   45          Wooden door opening (infront of you, to walk through)
+00 2E   46          Metal door closing with a click
+00 2F   47          Metal door opening
+00 30   48          Slurping sounds (stew or something thick)
+00 31   49          Something thick being drunk, sigh of relief
+00 32   50          Several small coins (or dice) hitting a table or stone floor
+00 33   51          Coins being dropped into chest (echoing)
+00 34   52          Single coing hitting (table?) spinning, falling over
+00 35   53          Smaler coin hitting (table?) spinning, falling over
+00 36   54          Several coins being dropped/poured onto (table?)
+00 37   55          More coins being dropped onto table
+00 38   56          Single drum playing, basic pattern
+00 39   57          Single drum playing, pattern, could be a signal
+00 3A   58          Someone/something taking a bite out of something crisp (like an apple)
+00 3B   59          Someone/something taking two bites out of something, and chewing on it
+00 3C   60          Someone (a pig?) biting down and swallowing something crisp
+00 3D   61          Single horn playing, simple pattern
+00 3E   62          Glass breaking, or set of keys being dropped
+00 3F   63          Several coins or keys being dropped
+00 40   64          Ceramic plate being broken
+00 41   65          Plate or glass being broken
+00 42   66          Hammer pounding wooden surface, or something being dropped (heavy) onto a table
+00 43   67          Harp playing, simple tune
+00 44   68          Someone failing to play a harp well
+00 45   69          Harp playing, same simple tune, higher pitched
+00 46   70          Someone failing to play a harp, higher pitched
+00 47   71          Wooden barrel having it's lid opened/closed
+00 48   72          Canvas/leather bag/pouch being opened
+00 49   73          Something like a nail(?) being pounded in (carpentry?)
+00 4A   74          Wood being joined together, or key being used in lock
+00 4B   75          Carpentry (board being placed somewhere, and nailed)
+00 4C   76          Harp playing, simple tune
+00 4D   77          Harp playing, very poorly (failure)
+00 4E   78          Container filling with water
+00 4F   79          Animal(?) chewing on plants
+00 50   80          Loud sound of something being swallowed
+00 51   81          System sound, cannot place item there
+00 52   82          Tamborine, played well
+00 53   83          Tabmorine, played poorly (failed)
+00 54   84          Fire (wall of fire set off?)
+00 55   85          Close book (spellbook)
+00 56   86          Sharpen sword/kinfe, possibly draw sword from hard scabbard
+00 57   87          Place object in backpack (default)
+00 58   88          Close backpack/inventory
+00 59   89          Close book/spellbook
+00 5A   90          Bear or other large animal growling
+00 5B   91          Fire hissing after being doused, or snake sounds
+00 5C   92          Large animal growl, used in combat?
+00 5D   93          Monster (dragon? ogre?) growling
+00 5E   94          Monster growling (summoned monster arrive sounds?)
+00 5F   95          Animal (gorilla?) growling
+00 60   96          Large cat growl
+00 61   97          Large cat growl (or a monster)
+00 62   98          Animal growl (large cat or similar creature)
+00 63   99          Animal growl(s) two sounds mixed
+00 64   100         Cow moo
+00 65   101         Cow moo (end cut off)
+00 66   102         Semi-generic animal growl
+00 67   103         Angry cow moo
+00 68   104         Injured cow (cow death?)
+00 69   105         Cat meow
+00 6A   106         Cat meow (slightly longer)
+00 6B   107         Cat screech (combat/injury)
+00 6C   108         Cat screach (attack?)
+00 6D   109         Cat 'growl'
+00 6E   110         Generic chicken sound
+00 6F   111         Chicken clucking (bad rooster calling?)
+00 70   112         Short chicken calls
+00 71   113         Chicken (scream?)
+00 72   114         Chicken (injured)
+00 73   115         Large cat growl
+00 74   116         Large cat growl (shorter)
+00 75   117         Large cat growl/hiss (combat?)
+00 76   118         Large cat injured/upset
+00 77   119         Large cat (combat sound)
+00 78   120         Cow mooing
+00 79   121         Cow mooding (deeper)
+00 7A   122         Cow mooing (injured/fleeing)
+00 7B   123         Cow injured
+00 7C   124         Cow death
+00 7D   125         Bird cry
+00 7E   126         Hawk call
+00 7F   127         Bird call (injured)
+00 80   128         Generic bird call
+00 81   129         Bird death cry?
+00 82   130         Deer (injured/combat)
+00 83   131         Stag (injured/combat)
+00 84   132         Stag death cry
+00 85   133         Dog bark (wag tail)
+00 86   134         Dog barks twice
+00 87   135         Dog growls (attacking)
+00 88   135         Dog whines (injured)
+00 89   137         Dog whines (injured)
+00 8A   138         Dolphin (standard)
+00 8B   139         Dolphin chattering
+00 8C   140         Dolphin injured/attacking
+00 8D   141         Doplhin injured
+00 8E   142         Dolphin injured (death cry?)
+00 8F   143         Eagle cry (generic)
+00 90   144         Eagle cry
+00 91   145         Eagle attacking (injured?)
+00 92   146         Eagle injured or screaming
+00 93   147         Eagle death cry
+00 94   148         Bird chirp (generic)
+00 95   149         Bird chirp, alarmed
+00 96   150         Bird chirp (attacking?)
+00 97   151         Bird chirp, injured
+00 98   152         Bird chirp, death cry
+00 99   153         Sheep (generic)
+00 9A   154         Sheep injured
+00 9B   155         Sheep sound (generic)
+00 9C   156         Sheep injured/attacking
+00 9D   157         Sheep death cry
+00 9E   158         Gorilla (generic)
+00 9F   159         Gorilla grunting
+00 A0   160         Gorilla growling
+00 A1   161         Gorilla injured
+00 A2   162         Gorilla death cry
+00 A3   163         Grizzly (generic)
+00 A4   164         Grizzly grunting
+00 A5   165         Grizzly attacking
+00 A6   166         Grizzly injured
+00 A7   167         Grizzly death cry
+00 A8   168         Horse (generic)
+00 A9   169         Horse (generic) + snort
+00 AA   170         Horse attacking
+00 AB   171         Horse injured
+00 AC   172         Horse death cry
+00 AD   173         Bird (generic)
+00 AE   174         Bird chirping
+00 AF   175         Bird attacking
+00 B0   176         Bird injured
+00 B1   177         Bird death cry
+00 B2   178         Polar bear (generic)
+00 B3   179         Polar bear attacking
+00 B4   180         Polar bear injured
+00 B5   181         Polar bear injured
+00 B6   182         Polar bear death cry
+00 B7   183         Donkey/Llama generic
+00 B8   184         Donkey/Llama attack
+00 B9   185         Donkey/Llama inured/death
+00 BA   186         Walrus growl
+00 BB   187         Walrus growls
+00 BC   188         Walrus attacking
+00 BD   189         Walrus injured
+00 BE   190         Walrus death cry
+00 BF   191         Parrot 'Hello'
+00 C0   192         Parrot caw
+00 C1   193         Parrot attacking
+00 C2   194         Parrot injured
+00 C3   195         Parrot death cry
+00 C4   196         Pig (generic)
+00 C5   197         Pig grunting
+00 C6   198         Pig attacking
+00 C7   199         Pig injured
+00 C8   200         Pig death cry
+00 C9   201         Small pig generic
+00 CA   202         Small pig whining
+00 CB   203         Small pig attacking/injured
+00 CC   204         Bird call
+00 CD   205         Giant rat generic
+00 CE   206         Giant rat attacking
+00 CF   207         Giant rat injured
+00 D0   208         Giant rat death cry
+00 D1   209         Duck/Goose
+00 D2   210         Bird in swamp
+00 D3   211         Shrill bird cry
+00 D4   212         Bird cry
+00 D5   213         Bird injured
+00 D6   214         Lamb (generic)
+00 D7   215         Lamb baaing
+00 D8   216         Lamb attacking/injured
+00 D9   217         Lamb injured
+00 DA   218         Lamb death cry
+00 DB   219         Sea serpent (generic)
+00 DC   220         Sea serpent hissing
+00 DD   221         Sea serpent attacking
+00 DE   222         Sea serpent injured
+00 DF   223         Sea serpent death cry?
+00 E0   224         Walrus generic
+00 E1   225         Walrus growl/attack
+00 E2   226         Walrus growl
+00 E3   227         Walrus injury
+00 E4   228         Walrus death cry
+00 E5   229         Wolf growl
+00 E6   230         Wolf howl
+00 E7   231         Wolf attack
+00 E8   232         Wolf injured
+00 E9   233         Wolf death cry
+00 EA   234         Wooden door open
+00 EB   235         Wooden door close
+00 EC   236         Metal door open
+00 ED   237         Large metal door open/gate open
+00 EE   238         Door slamming shut (large metal?)
+00 EF   239         Door creaking shut
+00 F0   240         Door creaking open
+00 F1   241         Door closing with echo
+00 F2   242         Door closing with echo
+00 F3   243         Metal door opening/closing with echo
+00 F4   244         Monster (demon?) deep growl/attack
+00 F5   245         Monster (demon/lich?) growl/injury
+00 F6   246         Errie sound (echoing, magical?)
+00 F7   247         Errie sound (musical notes)
+00 F8   248         Errie sound (fading in/out)
+00 F9   249         Errie sound (graveyard/undead)
+00 FA   250         Single deep note, echoing (suspenseful)
+00 FB   251         Errie sound (undead/ghost)
+00 FC   252         Errie sound (spellcasting)
+00 FD   253         Errie sound (spell effect)
+00 FE   254         Errie sound (piercing/fading notes)
+00 FF   255         Errie sound (deep humming/magical effect)
+01 00   256         Errie sound (suspensful/dangerous place)
+01 01   257         Errie sound (thunder parody with gong)
+01 02   258         Errie sound (entrance music to something?)
+01 03   259         Errie sound (spellcasting/ghost)
+01 04   260         Errie sound (dungeon)
+01 05   261         Errie sound (dungeon, longer)
+01 06   262         Errie sound (dungeon, long, fading)
+01 07   263         Air elemental (generic)
+01 08   264         Air elemental
+01 09   265         Air elemental attacking
+01 0A   266         Air elemental injured
+01 0B   267         Air elemental destroyed
+01 0C   268         Earth elemental (generic)
+01 0D   269         Earth elemental growl
+01 0E   270         Earth elemental attack
+01 0F   271         Earth elemental injured
+01 10   272         Earth elemental destroyed
+01 11   273         Fire elemental (generic)
+01 12   274         Fire elemental moaning
+01 13   275         Fire elemental attacking
+01 14   276         Fire elemental injured
+01 15   277         Fire elemental destroyed
+01 16   278         Water elemental (generic)
+01 17   279         Water elemental bubbling
+01 18   280         Water elemental attacking
+01 19   281         Water elemental injured
+01 1A   282         Water elemental destroyed
+01 1B   283         Explosion (cannon fire?)
+01 1C   284         Explosion (distant)
+01 1D   285         Explosion (nearby)
+01 1E   286         Explosion (gunshot)
+01 1F   287         Drum (deep)
+01 20   288         Drum (deep)
+01 21   289         Footstep (wooden floor)
+01 22   290         Footstep (wooden floor)
+01 23   291         Footstep (stone/dirt)
+01 24   292         Footstep (stone/dirt)
+01 25   293         Footstep (water/swap)
+01 26   294         Footstep (water/swamp)
+01 27   295         Footstep (cobblestone/tile)
+01 28   296         Footstep (cobblestone/tile)
+01 29   297         Footstep (grass)
+01 2A   298         Footstep (grass)
+01 2B   299         Footstep (plain dirt)
+01 2C   300         Footstep (plain dirt)
+01 2D   301         Footstep (thick underbrush)
+01 2E   302         Footstep (thick underbrush)
+01 2F   303         Footstep (wooden or stone floor)
+01 30   304         Footstep (wooden or stone floor)
+01 31   305         Footstep (puddle/water)
+01 32   306         Footstep (puddle/water)
+01 33   307         Footstep (swamp)
+01 34   308         Footstep (swamp)
+01 35   309         Punching sound (hit)
+01 36   310         Punching sound (practice dummy)
+01 37   311         Punching sound (hit)
+01 38   312         Punching sound (practice dummy)
+01 39   313         Punching sound (practice dummy)
+01 3A   314         Punching sound (miss)
+01 3B   315         Punching sound (hit)
+01 3C   316         Punching sound (miss/hit)
+01 3D   317         Punching sound (hit)
+01 3E   318         Punching sound (practice dummy)
+01 3F   319         Punching sound (practice dummy)
+01 40   320         Punching sound (metallic)
+01 41   321         Punching sound (hit)
+01 42   322         Hammering sound (wood?)
+01 43   323         Metallic echo (missed punch?)
+01 44   324         Wooden item dropped (heavy)
+01 45   325         Punching sound (hit)
+01 46   326         Metallic echo (lighter, missed punch?)
+01 47   327         Punching sound (hit)
+01 48   328         Punching sound (practice dummy)
+01 49   329         Metallic echo (faint, missed punch?)
+01 4A   330         Punching sound (hit)
+01 4B   331         Human injured (female)
+01 4C   332         Human injured (female)
+01 4D   333         Human injured (female)
+01 4E   334         Human injured (seriously? female)
+01 4F   335         Human injured (female)
+01 50   336         Human death cry (female)
+01 51   337         Human death cry (female)
+01 52   338         Bird/Insect death cry
+01 53   339         Human injured (male/female)
+01 54   340         Human injured (male)
+01 55   341         Human injured (male)
+01 56   342         Human injured (male)
+01 57   343         Human injured (serious, male)
+01 58   344         Human injured (male)
+01 59   345         Human injured (male)
+01 5A   346         Human death cry (male)
+01 5B   347         Human death cry (male)
+01 5C   348         Human death cry (male)
+01 5D   349         Human death cry (male)
+01 5E   350         Fire (fireball?)
+01 5F   351         Fire (flamewall?)
+01 60   352         Fire (flamewall? shorter)
+01 61   353         Giant Spider (?)
+01 62   354         Ginat Spider (?)
+01 63   355         Giant Spider attacking
+01 64   356         Giant Spider injured
+01 65   357         Giant Spider death cry (?)
+01 66   358         Dragon
+01 67   359         Dragon Grunting
+01 68   360         Dragon attacking
+01 69   361         Dragon injured
+01 6A   362         Dragon death cry
+01 6B   363         Dragon
+01 6C   364         Dragon angry
+01 6D   365         Dragon injured
+01 6E   366         Dragon seriously injured
+01 6F   367         Dragon death cry
+01 70   368         Troll/Ogre (muttering)
+01 71   369         Troll/Ogre (grunting)
+01 72   370         Troll/Ogre (injured/attacking)
+01 73   371         Troll/Ogre (seriously injured)
+01 74   372         Monster spellcasting (speach)
+01 75   373         Monster spellcasting (chanting)
+01 76   374         Orc (speach)
+01 77   375         Orc (whining/grunting)
+01 78   376         Orc (injured/attacking)
+01 79   377         Spectre
+01 7A   378         Spectre (general noise)
+01 7B   379         Spectre (attack)
+01 7C   380         Spectre (injured)
+01 7D   381         Spectre death cry
+01 7E   382         Wolf howl (brief)
+01 7F   383         Jungle (creepy nighttime sounds)
+01 80   384         Bird cries (at night)
+01 81   385         Monster howling in the distance, at night
+01 82   386         Multiple background sounds, at night
+01 83   387         Frogs croaking at night
+01 84   388         Crickets/frogs at night
+01 85   389         Snake hissing at night
+01 86   390         Splash at night (background noises)
+01 87   391         Monster moving through trees at night
+01 88   392         Squeaking sound & monster growls at night
+01 89   393         Mouse (generic)
+01 8A   394         Mouse (squeek)
+01 8B   395         Mouse (attacking/injured)
+01 8C   396         Mouse death cry (background monster sounds)
+01 8D   397         General swamp/jungle sounds
+01 8E   398         General swamp/jungle sounds
+01 8F   399         General swamp/jungle sounds
+01 90   400         Something moving through swamp/jungle
+01 91   401         Creature hissing in jungle/swamp
+01 92   402         Bird cawing in jungle/swamp
+01 93   403         Bird/Cat in swamp/jungle
+01 94   404         Hawk (generic)
+01 95   405         Hawk
+01 96   406         Hawk (attacking/injured)
+01 97   407         Pig (generic)
+01 98   408         Pig
+01 99   409         Pig (injured/attacking)
+01 9A   410         Pig (injured)
+01 9B   411         Pig death cry
+01 9C   412         Evil(?) laughter (monster/mage?)
+01 9D   413         Spellcasting (chanting, evil sounding)
+01 9E   414         Monster (slime?) gurgle/grunt
+01 9F   415         Sound of suprise (monster)
+01 A0   416         Spellcasting/chanting (monster)
+01 A1   417         Spellcasting (monster)
+01 A2   418         Spell effects (monster, instable, failure?)
+01 A3   419         Scream/gasp of suprise (monster)
+01 A4   420         Gasp of pain (monster)
+01 A5   421         Muttering (monster)
+01 A6   422         Giant Rat (generic)
+01 A7   423         Giant Rat (being hit?)
+01 A8   424         Giant Rat (attacking)
+01 A9   425         Giant Rat (injured)
+01 AA   426         Giant Rat death cry
+01 AB   427         Ettin (generic)
+01 AC   428         Ettin (muttering)
+01 AD   429         Ettin (attacking)
+01 AE   430         Ettin (injured)
+01 AF   431         Ettin death cry
+01 B0   432         Orc (generic)
+01 B1   433         Orc (grunting)
+01 B2   434         Orc (injured/attacking)
+01 B3   435         Orc (injured)
+01 B4   436         Orc death cry
+01 B5   437         Rat man (generic)
+01 B6   438         Rat man (squeaking)
+01 B7   439         Rat man (attacking)
+01 B8   440         Rat man (injured)
+01 B9   441         Rat man death cry
+01 BA   442         Giant snake (generic)
+01 BB   443         Giant snake (hiss/rattle)
+01 BC   444         Giant snake (attacking)
+01 BD   445         Giant snake (injured)
+01 BE   446         Giant snake death cry
+01 BF   447         Sea serpent (generic)
+01 C0   448         Sea serpent (howling/attacking)
+01 C1   449         Sea serpent (howling/injured)
+01 C2   450         Sea serpent death cry
+01 C3   451         Skeleton (generic)
+01 C4   452         Skeleton (creaking)
+01 C5   453         Skeleton (attacking)
+01 C6   454         Skeleton (injured)
+01 C7   455         Skeleton destryoed
+01 C8   456         Slime (generic)
+01 C9   457         Slime (oosing)
+01 CA   458         Slime (attacking)
+01 CB   459         Slime (injured)
+01 CC   460         Slime death cry
+01 CD   461         Headless (generic)
+01 CE   462         Headless (moaning)
+01 CF   463         Headless (attacking)
+01 D0   464         Headless (injured)
+01 D1   465         headless death cry
+01 D2   466         Wisp (generic)
+01 D3   467         Wisp (errie)
+01 D4   468         Wisp (attacking)
+01 D5   469         Wisp (injured)
+01 D6   470         Wisp destroyed
+01 D7   471         Zombie (generic)
+01 D8   472         Zombie (moaning)
+01 D9   473         Zombie (attacking)
+01 DA   474         Zombie (injured)
+01 DB   475         Zombie destroyed
+01 DC   476         Lightning Field
+01 DD   477         Fire Field
+01 DE   478         Poison field
+01 DF   479         Teleport (trigger) sound
+01 E0   480         Spellcasting (failure?)
+01 E1   481         Spellcasting (drawing mana?)
+01 E2   482         Spell effect (detection)
+01 E3   483         Spell effect (wearing off/affection)
+01 E4   484         Teleport (appear sound)
+01 E5   485         Spell effect (spell cast)
+01 E6   486         Spell effect (something? summoned/created)
+01 E7   487         Spell effect (heal/resurrect?)
+01 E8   488         Spell effect (errie/gothic)
+01 E9   489         Spell effect (errie/gothic)
+01 EA   490         Spell effect (echoing)
+01 EB   491         Spell effect (summon/raise dead?)
+01 EC   492         Spell effect (circle 1 or two spell?)
+01 ED   493         Spell effect (failure?)
+01 EE   494         Spell effect (teleport?)
+01 EF   495         Spell effect/trap
+01 F0   496         Spell effect/trap
+01 F1   497         Spell effect (hollow sounding)
+01 F2   498         Spell effect (holy/angelic)
+01 F3   499         Spell effect (magic w/ fire field?)
+01 F4   500         Spell effect (unlock?)
+01 F5   501         Spell effect (transfer something?)
+01 F6   502         Spell effect (necromancy?)
+01 F7   503         Spell effect (nature magic?)
+01 F8   504         Magical (wisp/undead detected?)
+01 F9   505         Magical (see above, longer)
+01 FA   506         Magical (failure?)
+01 FB   507         Magical (can't target?)
+01 FC   508         Magical (item created?)
+01 FD   509         Magical (wispy/long)
+01 FE   510         Teleport (again)
+01 FF   511         Unlock w/ Gold & coin sounds
+02 00   512         Thrown (weapon) with magical background
+02 01   513         Single deep note (echoing) with magical effect
+02 02   514         Spell effect (holy/angelic)
+02 03   515         Spell/magic effect (generic)
+02 04   516         Spell/magic effect (wearing off/disipating)
+02 05   517         Magical effect (errie)
+02 06   518         Thunder
+02 07   519         Thunder (deeper)
+02 08   520         Fireball (quick)
+02 09   521         Spell effect (echoing)
+02 0A   522         Spell effect (splashing)
+02 0B   523         Piano roll
+02 0C   524         Errie echo
+02 0D   525         Muted explosion
+02 0E   526         Muted echoing vanishing sound
+02 0F   527         Magical (increasing echoing notes)
+02 10   528         Spell effect (affection cast?)
+02 11   529         Spell effect (lighting field worn off?)
+02 12   530         Magical (semi-random noise)
+02 13   531         Magical (magical trap?)
+02 14   532         Magical (powering up/summoning)
+02 15   533         Magical/Special (event?)
+02 16   534         Errie Sound (echoing)
+02 17   535         Errie Sound (fading in/out echoing)
+02 18   536         Corpser (generic)
+02 19   537         Corpser (shrieking)
+02 1A   538         Corpser (attacking)
+02 1B   539         Corpser (injured)
+02 1C   540         Corpser (death cry)
+02 1D   541         Thunder/Earthquake
+02 1E   542         Thunder/Earthquake
+02 1F   543         Thunder/Earthquake
+02 20   544         Thunder/Earthquake
+02 21   545         Thunder/Earthquake
+02 22   546         Thunder/Earthquake 
+02 23   547         Arrow/Bolt leaving bow/crossbow?
+02 24   548         Arrow/Bolt hitting (practice target)
+02 25   549         Torch/Brazier/Campfire being lit
+02 26   550         Torch/Brazier/Campfire failed being lit/going out
+02 27   551         Blazing hot (noisy) fire
+02 28   552         Sound of a fireball wizzing by
+02 29   553         Sound of something (fireball?) hitting target
+02 2A   554         Sound of something (fireball?) hitting target
+02 2B   555         Metal pot/door being used
+02 2C   556         Chest/Door opening w/ echoes
+02 2D   557         Earthquake in town/on ship
+02 2E   558         Earthquake in town/on ship (shorter)
+02 2F   559         Hissing sound
+02 30   560         Hissing sound (louder/longer)
+02 31   561         Hissing sound (shorter/fading)
+02 32   562         Weapon swinging & missing
+02 33   563         Weapon swinging & missing
+02 34   564         Crossbow firing
+02 35   565         Forging sound (hitting anvil w/sparks)
+02 36   566         Forging sound (hitting anvil)
+02 37   567         Forging sound (failure?)
+02 38   568         Weapon swinging & missing
+02 39   569         Weapon swinging & missing
+02 3A   570         Weapon swinging & missing
+02 3B   571         Forging sound (hitting metal)
+02 3C   572         Forging sound (hitting metal w/echo)
+02 3D   573         Carpentry (hammering/sawing)
+02 3E   574         Filling something with water
+02 3F   575         Dropping something (small) in water (fishing?)
+02 40   576         Filling something with water
+02 41   577         Skeleton (or something) breaking apart?
+02 42   578         Writing on paper/in book
+02 43   579         Errie sound (?)
+02 44   580         Errie sound (harps)
+02 45   581         Errie sound (danger?)
+02 46   582         Demon or Guardian laughing
+02 47   583         Writing on paper?
+02 48   584         Cutting something (cloth?)
+02 49   585         Working with wood/papaer?
+02 4A   586         Incanting (spellcasting)
+02 4B   587         Horse footsteps?
+02 4C   588         Horse footsteps?

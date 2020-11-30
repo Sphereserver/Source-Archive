@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Run Time Files">
+      <UniqueIdentifier>{97128179-c418-46ee-ad71-0f50143c92dd}</UniqueIdentifier>
+      <Extensions>scp,ini</Extensions>
+    </Filter>
+    <Filter Include="Web Pages">
+      <UniqueIdentifier>{c13625fb-7f39-48ca-9738-9830a104aa4e}</UniqueIdentifier>
+      <Extensions>htm</Extensions>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{1d01ccbe-a0b9-4ba4-9f60-5f782db3843e}</UniqueIdentifier>
+      <Extensions>cpp,c,h,rc</Extensions>
+    </Filter>
+    <Filter Include="Data Files">
+      <UniqueIdentifier>{9e981c61-f745-4d4b-b678-cac8e6348b0e}</UniqueIdentifier>
+      <Extensions>scp</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CChar.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CClient.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CContain.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CItem.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CServer.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CString.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorld.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="graysvr.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="graycom.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="graysvr.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="graysvr.rc">
+      <Filter>Sources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="game2.log">
+      <Filter>Data Files</Filter>
+    </Text>
+    <Text Include="items.txt">
+      <Filter>Data Files</Filter>
+    </Text>
+    <Text Include="sounds.txt">
+      <Filter>Data Files</Filter>
+    </Text>
+    <Text Include="terrain.txt">
+      <Filter>Data Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Gray.ini">
+      <Filter>Run Time Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GrayAcct.scp">
+      <Filter>Run Time Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GrayBook.scp">
+      <Filter>Run Time Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GrayChar.scp">
+      <Filter>Run Time Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GrayItem.scp">
+      <Filter>Run Time Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="graymap.scp">
+      <Filter>Run Time Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GrayMenu.scp">
+      <Filter>Run Time Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="grayname.scp">
+      <Filter>Run Time Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="grayspee.scp">
+      <Filter>Run Time Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GrayWorld.scp">
+      <Filter>Run Time Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="login.cfg">
+      <Filter>Run Time Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\public_html\gray\dev.htm">
+      <Filter>Web Pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\public_html\gray\ideas.htm">
+      <Filter>Web Pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\public_html\gray\index.html">
+      <Filter>Web Pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\public_html\gray\readme.htm">
+      <Filter>Web Pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Protocol.doc">
+      <Filter>Data Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

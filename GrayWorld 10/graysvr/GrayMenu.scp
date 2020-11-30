@@ -1,0 +1,1896 @@
+// All menus in the game. 
+// GM, Items, locations and Gumps
+
+// GMMENU -------------------------------------
+
+[GMMENU 1] // GMMENU 1 is executed whenever someone presses the "Page GM" button
+GrayWorld Main Support Menu
+PAGE A GM: Sends a notice to the server administrators, if they are online. They can help you with almost all your in-game problems.
+GMMENU 3
+WEB MENU: Provides a list of links to various websites.
+GMMENU 2
+INFO: Shows the version of GrayWorld this server is running.
+VERSION
+SERVER STATUS: Shows some status information about this server.
+INFORMATION
+GO TO THE HELP ROOM: This will teleport you to the Help Desk of Hell.
+GMMENU 4
+
+[GMMENU 2]
+Web Menu
+GrayWorld HOMEPAGE: Redirects you to the official GrayWorld homepage. 
+WEBLINK http://www.menasoft.com
+UO HOMEPAGE: The Ultima Online homepage. Go here if you need help on using the client program.
+WEBLINK http://www.owo.com
+MAIL MENACE: Send mail to Menace, the creator of GrayWorld. Bug reports, Suggestions, Marriage Proposals etc.
+WEBLINK mailto:menace@unforgettable.com
+
+[GMMENU 3]
+GM Page Menu
+STUCK: Use this option if you cant move and need GM assistance.
+GMPAGE Stuck
+ITEM PROBLEM: Use this if you have run into a problem with a specific item.
+GMPAGE Item Problem
+BUG: Use this if you have found a bug that you would like to report to the GMs.
+GMPAGE Bug Report
+INFO: Use this if you need helping information about some part of the game.
+GMPAGE Information
+OTHER: Use this for anything not listed above.
+GMPAGE Other
+
+[GMMENU 4]
+Are you sure you want to be teleported to the Help Desk of Hell? You will be stuck there until a GM teleports you back to the world.
+YES, down we go!
+GOPLACE 4
+NO, I rather stay here.
+SYSMESSAGE Help request aborted.
+
+// ITEMMENU -------------------------------------
+// menus of menus.
+
+// ITEMMENU 0 is executed when the /add command is used by non-GMs
+[ITEMMENU 0]
+Player Item Menu
+1EFD Clothes and Dyes
+ITEMMENU 78
+0E75 Containers
+ITEMMENU 51
+
+
+// ITEMMENU 1 is executed when /add is called without parameters
+[ITEMMENU 1]
+GM Master Item Menu
+2106 NPCs
+ITEMMENU 47
+204F Special GM Items
+ITEMMENU 2
+0E75 Equipment
+ITEMMENU 49
+203C Hairs/Beards
+ITEMMENU 48
+0FEA Decoration/Furniture
+ITEMMENU 7
+
+
+[ITEMMENU 49]
+Equipment
+1EFD Clothes and Dyes
+ITEMMENU 78
+0E75 Containers
+ITEMMENU 51
+100F Keys
+ITEMMENU 52
+099E Foodstuff
+ITEMMENU 85
+4000 Quest Items
+ITEMMENU 6
+0F7D Reagents
+ITEMMENU 76
+1BC3 Shields
+ITEMMENU 5
+1416 Armor
+ITEMMENU 8
+143E Weapons
+ITEMMENU 17
+0dfc Tools
+ITEMMENU 50
+
+
+[ITEMMENU 7]
+Decoration/Furniture
+06A5 Doors
+ITEMMENU 90
+049B Floor Tiles
+ITEMMENU 27
+0AA9 Rugs
+ITEMMENU 38
+0459 Benches
+ITEMMENU 54
+0B32 Chairs
+ITEMMENU 62
+129F Statues
+ITEMMENU 74
+1E60 Trophies
+ITEMMENU 88
+0B1D Light Sources
+ITEMMENU 89
+0002 Other Decoration
+ITEMMENU 26
+
+
+[ITEMMENU 26]
+Other Decoration
+0B11 Display Case Bottom
+ITEMMENU 86
+0B18 Display Case Top
+ITEMMENU 87
+181D Alchemical Symbols
+ITEMMENU 75
+0002 Ankh Left
+ADDITEM 2
+0003 Ankh Right
+ADDITEM 3
+1D97 Blood Ankh Left
+ADDITEM 1D97
+1D98 Blood Ankh Right
+ADDITEM 1D98
+0B26 Lit Candelabrum
+ADDITEM B26
+
+
+[ITEMMENU 78]
+Clothes & Footwear
+170B Boots
+ITEMMENU 79
+1713 Hats
+ITEMMENU 80
+1515 Shirts & Robes
+ITEMMENU 81
+152E Pants
+ITEMMENU 82
+153B Misc.
+ITEMMENU 83
+1547 Masks
+ITEMMENU 84
+
+
+[ITEMMENU 62]
+Chairs
+0B32 Throne
+ITEMMENU 63
+0B2E Wooden Chair
+ITEMMENU 64
+0B4E Chair 1
+ITEMMENU 65
+0B52 Chair 2
+ITEMMENU 66
+0B56 Chair 3
+ITEMMENU 67
+0B5A Chair 4
+ITEMMENU 68
+1218 Stone Throne
+ITEMMENU 73
+
+
+[ITEMMENU 55]
+Other wooden benches
+0B67 Wooden Bench 1
+ITEMMENU 56
+0B60 Wooden Bench 2
+ITEMMENU 57
+0B64 Wooden Bench 3
+ITEMMENU 58
+0B6A Wooden Bench 4
+ITEMMENU 59
+0B92 Wooden Bench 5
+ITEMMENU 61
+
+
+[ITEMMENU 17]
+Weapons
+13BA Swords
+ITEMMENU 23
+0F47 Axes
+ITEMMENU 18
+0EC4 Knives & Daggers
+ITEMMENU 19
+0F5C Maces & Hammers
+ITEMMENU 20
+0E87 Spears and Forks
+ITEMMENU 24
+13B2 Bows
+ITEMMENU 25
+143E Pole Arms
+ITEMMENU 21
+0E8A Staves
+ITEMMENU 22
+
+
+[ITEMMENU 8]
+Armor
+1416 Plate Mail
+ITEMMENU 9
+144F Bone Mail
+ITEMMENU 10
+13C4 Chain Mail
+ITEMMENU 11
+13ED Ring Mail
+ITEMMENU 12
+13E2 Studded Leather Armor
+ITEMMENU 13
+13D3 Leather Armor
+ITEMMENU 14
+140C Miscellaneous Helms
+ITEMMENU 15
+1C00 Female Armor
+ITEMMENU 16
+
+
+[ITEMMENU 38]
+Rugs
+0AA9 Red Rug
+ITEMMENU 39
+0AB3 Greenish Rug
+ITEMMENU 40
+0ABD Fancy Blue Rug
+ITEMMENU 41
+0AC6 Fancy Red Rug
+ITEMMENU 42
+0AD1 Fancy Blue/Gold Rug
+ITEMMENU 43
+0ADA Fancy Gold Rug
+ITEMMENU 44
+0AEB Fancy Pink Rug
+ITEMMENU 45
+0AEC Fancy Pink/Blue Rug
+ITEMMENU 46
+
+
+[ITEMMENU 27]
+Floor Tiles
+049B Marble
+ITEMMENU 28
+049D Sandstone Pavers
+ITEMMENU 29
+04A1 Wooden Planks
+ITEMMENU 30
+04A5 Wooden Boards
+ITEMMENU 31
+04E2 Bricks
+ITEMMENU 32
+04FC Cobblestones & Flagstones
+ITEMMENU 33
+04C5 Wooden Logs
+ITEMMENU 34
+0519 Stone Pavers
+ITEMMENU 35
+04EA Blue & Red Tiles
+ITEMMENU 36
+0525 Sandstone Floor
+ITEMMENU 37
+
+
+// ITEMMENU -------------------------------------
+// menus of items
+
+[ITEMMENU 50]
+Tools
+14EB Map
+ADDITEM 14EB
+0FF0 Book
+ADDITEM 0FF0
+0FA9 Dyes
+ADDITEM FA9
+0FAB Dye Vat
+ADDITEM FAB
+0dfc Scissors
+ADDITEM DFC
+EFA Spellbook
+ADDITEM EFA
+1F14 Rune
+ADDITEM 1F14
+0E81 Shepherd's Crook
+ADDITEM 0E81
+0e85 Pick Axe
+ADDITEM 0e85
+f39 Shovel
+ADDITEM 0f39
+0e87 Pitchfork
+ADDITEM 0e87
+1ebc Tinkers Tools
+ADDITEM 1ebc
+0e9b Mortar
+ADDITEM 0e9b
+13E4 Smithy Hammer
+ADDITEM 13E4
+f9d Sewing Kit
+ADDITEM f9d
+e34 Blank Scroll
+ADDITEM e34
+
+
+[ITEMMENU 90]
+Doors
+06AD Wooden 1
+ADDITEM 06AD
+06BD Wooden 2
+ADDITEM 06BD
+06DD Wooden 3
+ADDITEM 06DD
+06ED Wooden 4
+ADDITEM 06ED
+0841 Wooden Gate 1
+ADDITEM 0841
+086E Wooden Gate 2
+ADDITEM 086E
+069D Rattan
+ADDITEM 069D
+067D Metal
+ADDITEM 067D
+06CD Metal Large
+ADDITEM 06CD
+068D Barred Metal 1
+ADDITEM 068D
+1FF5 Barred Metal 2
+ADDITEM 1FF5
+0854 Iron Gate
+ADDITEM 0854
+033C Secret Wood 1
+ADDITEM 033C
+034C Secret Wood 2
+ADDITEM 034C
+00F0 Secret Stone 1
+ADDITEM 00F0
+031C Secret Stone 2
+ADDITEM 031C
+032C Secret Stone 3
+ADDITEM 032C
+035C Secret Stone 4
+ADDITEM 035C
+
+
+[ITEMMENU 2]
+Special GM Items
+204F GM Robe (undyed)
+ADDITEM 204F
+2042 Lord British Armor
+ADDITEM 2042
+2043 Blackthorne Robe
+ADDITEM 2043
+204E Death Shroud
+ADDITEM 204E
+0EEF Pile of Gold
+ADDITEM EEF
+
+
+[ITEMMENU 5]
+Shields
+1B72 Bronze Shield
+ADDITEM 1B72
+1B73 Buckler
+ADDITEM 1B73
+1B74 Kite Shield
+ADDITEM 1B74
+1B76 Heater
+ADDITEM 1B76
+1B78 Spiked Shield
+ADDITEM 1B78
+1B7A Wooden Shield
+ADDITEM 1B7A
+1B7B Metal Shield
+ADDITEM 1B7B
+1BC3 Chaos Shield
+ADDITEM 1BC3
+1BC4 Order Shield
+ADDITEM 1BC4
+
+
+[ITEMMENU 89]
+Light Sources
+0B1A Candle
+ADDITEM B1A
+0B1D Candelabra
+ADDITEM B1D
+0B26 Tall Candelabra
+ADDITEM B26
+0E31 Brazier
+ADDITEM E31
+
+
+[ITEMMENU 74]
+Statues
+12A1 Statue 1 Left
+ADDITEM 12A1
+129F Statue 1 Center
+ADDITEM 129F
+12A0 Statue 1 Right
+ADDITEM 12A0
+12A4 Statue 2 Left
+ADDITEM 12A4
+12A2 Statue 2 Center
+ADDITEM 12A2
+12A3 Statue 2 Right
+ADDITEM 12A3
+12D7 Statue 3 Left
+ADDITEM 12D7
+12D5 Statue 3 Center
+ADDITEM 12D5
+12D6 Statue 3 Right
+ADDITEM 12D6
+12A3 Unfinished Statue
+ADDITEM 12A3
+1224 Statue
+ADDITEM 1224
+1225 Statue
+ADDITEM 1225
+1226 Statue
+ADDITEM 1226
+1227 Statue
+ADDITEM 1227
+1228 Statue
+ADDITEM 1228
+
+
+[ITEMMENU 86]
+Display Case Bottom
+0B0F Center
+ADDITEM B0F
+0B17 North
+ADDITEM B17
+0B13 Northeast
+ADDITEM B13
+0B14 East
+ADDITEM B14
+0B11 Southeast
+ADDITEM B11
+0B15 South
+ADDITEM B15
+0B12 Southwest
+ADDITEM B12
+0B16 West
+ADDITEM B16
+0B10 Northwest
+ADDITEM B10
+
+
+[ITEMMENU 87]
+Display Case Top
+0AA2 North
+ADDITEM AA2
+0AA4 Northeast
+ADDITEM AA4
+0A9F East
+ADDITEM A9F
+0B18 Southeast
+ADDITEM B18
+0AA0 South
+ADDITEM AA0
+0AA5 Southwest
+ADDITEM AA5
+0AA1 West
+ADDITEM AA1
+0AA3 Northwest
+ADDITEM AA3
+
+
+[ITEMMENU 88]
+Trophies
+1E60 Trophy
+ADDITEM 1E60
+1E61 Trophy
+ADDITEM 1E61
+1E62 Trophy
+ADDITEM 1E62
+1E63 Trophy
+ADDITEM 1E63
+1E64 Trophy
+ADDITEM 1E64
+1E65 Trophy
+ADDITEM 1E65
+1E66 Trophy
+ADDITEM 1E66
+1E67 Trophy
+ADDITEM 1E67
+1E68 Trophy
+ADDITEM 1E68
+1E69 Trophy
+ADDITEM 1E69
+1E6A Trophy
+ADDITEM 1E6A
+1E6B Trophy
+ADDITEM 1E6B
+1E6C Trophy
+ADDITEM 1E6C
+1E6D Trophy
+ADDITEM 1E6D
+
+
+[ITEMMENU 75]
+Alchemical Symbols
+181D Alchemical Symbol
+ADDITEM 181D
+181E Alchemical Symbol
+ADDITEM 181E
+181F Alchemical Symbol
+ADDITEM 181F
+1820 Alchemical Symbol
+ADDITEM 1820
+1821 Alchemical Symbol
+ADDITEM 1821
+1822 Alchemical Symbol
+ADDITEM 1822
+1823 Alchemical Symbol
+ADDITEM 1823
+1824 Alchemical Symbol
+ADDITEM 1824
+1825 Alchemical Symbol
+ADDITEM 1825
+1826 Alchemical Symbol
+ADDITEM 1826
+1827 Alchemical Symbol
+ADDITEM 1827
+1828 Alchemical Symbol
+ADDITEM 1828
+
+
+[ITEMMENU 28]
+Marble
+0491 Marble
+ADDITEM 0491
+0492 Marble
+ADDITEM 0492
+0493 Marble
+ADDITEM 0493
+0494 Marble
+ADDITEM 0494
+0495 Marble
+ADDITEM 0495
+0496 Marble
+ADDITEM 0496
+0497 Marble
+ADDITEM 0497
+0498 Marble
+ADDITEM 0498
+0499 Marble
+ADDITEM 0499
+049A Marble
+ADDITEM 049A
+049B Marble
+ADDITEM 049B
+049C Marble
+ADDITEM 049C
+050D Marble
+ADDITEM 050D
+050E Marble
+ADDITEM 050E
+050F Marble
+ADDITEM 050F
+0510 Marble
+ADDITEM 0510
+0511 Marble
+ADDITEM 0511
+0512 Marble
+ADDITEM 0512
+0513 Marble
+ADDITEM 0513
+0514 Marble
+ADDITEM 0514
+
+
+[ITEMMENU 29]
+Sandstone Pavers
+049D Sandstone Pavers
+ADDITEM 049D
+049E Sandstone Pavers
+ADDITEM 049E
+049F Sandstone Pavers
+ADDITEM 049F
+04A0 Sandstone Pavers
+ADDITEM 04A0
+
+[ITEMMENU 30]
+Wooden Planks
+04A1 Wooden Planks
+ADDITEM 04A1
+04A2 Wooden Planks
+ADDITEM 04A2
+04A3 Wooden Planks
+ADDITEM 04A3
+04A4 Wooden Planks
+ADDITEM 04A4
+
+
+[ITEMMENU 31]
+Wooden Boards
+04A5 Wooden Boards
+ADDITEM 04A5
+04A6 Wooden Boards
+ADDITEM 04A6
+04A7 Wooden Boards
+ADDITEM 04A7
+04A8 Wooden Boards
+ADDITEM 04A8
+04A9 Wooden Boards
+ADDITEM 04A9
+04AA Wooden Boards
+ADDITEM 04AA
+04AB Wooden Boards
+ADDITEM 04AB
+04AC Wooden Boards
+ADDITEM 04AC
+04AD Wooden Boards
+ADDITEM 04AD
+04AE Wooden Boards
+ADDITEM 04AE
+04AF Wooden Boards
+ADDITEM 04AF
+04B0 Wooden Boards
+ADDITEM 04B0
+04B1 Wooden Boards
+ADDITEM 04B1
+04B2 Wooden Boards
+ADDITEM 04B2
+04B3 Wooden Boards
+ADDITEM 04B3
+04B4 Wooden Boards
+ADDITEM 04B4
+04B5 Wooden Boards
+ADDITEM 04B5
+04B6 Wooden Boards
+ADDITEM 04B6
+04B7 Wooden Boards
+ADDITEM 04B7
+04B8 Wooden Boards
+ADDITEM 04B8
+04B9 Wooden Boards
+ADDITEM 04B9
+04BA Wooden Boards
+ADDITEM 04BA
+04BB Wooden Boards
+ADDITEM 04BB
+04BC Wooden Boards
+ADDITEM 04BC
+04BD Wooden Boards
+ADDITEM 04BD
+04BE Wooden Boards
+ADDITEM 04BE
+04BF Wooden Boards
+ADDITEM 04BF
+04C0 Wooden Boards
+ADDITEM 04C0
+
+
+[ITEMMENU 32]
+Bricks
+04E2 Bricks
+ADDITEM 04E2
+04E3 Bricks
+ADDITEM 04E3
+04E4 Bricks
+ADDITEM 04E4
+04E5 Bricks
+ADDITEM 04E5
+04E6 Bricks
+ADDITEM 04E6
+04E7 Bricks
+ADDITEM 04E7
+04E8 Bricks
+ADDITEM 04E8
+04E9 Bricks
+ADDITEM 04E9
+
+
+[ITEMMENU 33]
+Cobble & Flagstones
+04FC Flagstones
+ADDITEM 04FC
+04FD Flagstones
+ADDITEM 04FD
+04FE Flagstones
+ADDITEM 04FE
+04FF Flagstones
+ADDITEM 04FF
+0515 Cobblestones
+ADDITEM 0515
+0516 Cobblestones
+ADDITEM 0516
+0517 Cobblestones
+ADDITEM 0517
+0518 Cobblestones
+ADDITEM 0518
+
+
+[ITEMMENU 34]
+Wooden Logs
+04C1 Wooden Logs
+ADDITEM 04C1
+04C2 Wooden Logs
+ADDITEM 04C2
+04C3 Wooden Logs
+ADDITEM 04C3
+04C4 Wooden Logs
+ADDITEM 04C4
+04C5 Wooden Logs
+ADDITEM 04C5
+0504 Wooden Logs
+ADDITEM 0504
+0505 Wooden Logs
+ADDITEM 0505
+0506 Wooden Logs
+ADDITEM 0506
+0507 Wooden Logs
+ADDITEM 0507
+0508 Wooden Logs
+ADDITEM 0508
+0509 Wooden Logs
+ADDITEM 0509
+050A Wooden Logs
+ADDITEM 050A
+050B Wooden Logs
+ADDITEM 050B
+050C Wooden Logs
+ADDITEM 050C
+
+
+[ITEMMENU 35]
+Stone Pavers
+0519 Stone Pavers
+ADDITEM 0519
+051A Stone Pavers
+ADDITEM 051A
+051B Stone Pavers
+ADDITEM 051B
+051C Stone Pavers
+ADDITEM 051C
+051D Stone Pavers
+ADDITEM 051D
+051E Stone Pavers
+ADDITEM 051E
+051F Stone Pavers
+ADDITEM 051F
+0520 Stone Pavers
+ADDITEM 0520
+
+
+[ITEMMENU 36]
+Red & Blue Tiles
+04EA Blue Tile
+ADDITEM 04EA
+04EB Blue Tile
+ADDITEM 04EB
+04EC Blue Tile
+ADDITEM 04EC
+04ED Blue Tile
+ADDITEM 04ED
+04EE Blue Tile
+ADDITEM 04EE
+04EF Blue Tile
+ADDITEM 04EF
+04F0 Blue Tile
+ADDITEM 04F0
+04F1 Blue Tile
+ADDITEM 04F1
+04F2 Blue Tile
+ADDITEM 04F2
+04F3 Blue Tile
+ADDITEM 04F3
+04F4 Red Tile
+ADDITEM 04F4
+04F5 Red Tile
+ADDITEM 04F5
+04F6 Red Tile
+ADDITEM 04F6
+04F7 Red Tile
+ADDITEM 04F7
+04F8 Red Tile
+ADDITEM 04F8
+04F9 Red Tile
+ADDITEM 04F9
+04FA Red Tile
+ADDITEM 04FA
+04FB Red Tile
+ADDITEM 04FB
+
+[ITEMMENU 37]
+Sandstone Floors
+0525 Sandstone Floor
+ADDITEM 0525
+0526 Sandstone Floor
+ADDITEM 0526
+0527 Sandstone Floor
+ADDITEM 0527
+0528 Sandstone Floor
+ADDITEM 0528
+0529 Sandstone Floor
+ADDITEM 0529
+052A Sandstone Floor
+ADDITEM 052A
+052B Sandstone Floor
+ADDITEM 052B
+052C Sandstone Floor
+ADDITEM 052C
+052F Sandstone Floor
+ADDITEM 052F
+0530 Sandstone Floor
+ADDITEM 0530
+0531 Sandstone Floor
+ADDITEM 0531
+0532 Sandstone Floor
+ADDITEM 0532
+0533 Sandstone Floor
+ADDITEM 0533
+0534 Sandstone Floor
+ADDITEM 0534
+
+
+[ITEMMENU 39]
+Red Rug
+0AA9 Red Rug
+ADDITEM 0AA9
+0AAA Red Rug
+ADDITEM 0AAA
+0AAB Red Rug
+ADDITEM 0AAB
+0AAC Red Rug
+ADDITEM 0AAC
+0AAD Red Rug
+ADDITEM 0AAD
+0AAE Red Rug
+ADDITEM 0AAE
+0AAF Red Rug
+ADDITEM 0AAF
+0AB0 Red Rug
+ADDITEM 0AB0
+0AB1 Red Rug
+ADDITEM 0AB1
+0AB2 Red Rug
+ADDITEM 0AB2
+
+[ITEMMENU 40]
+Greenish Rug
+0AB3 Greenish Rug
+ADDITEM 0AB3
+0AB4 Greenish Rug
+ADDITEM 0AB4
+0AB5 Greenish Rug
+ADDITEM 0AB5
+0AB6 Greenish Rug
+ADDITEM 0AB6
+0AB7 Greenish Rug
+ADDITEM 0AB7
+0AB8 Greenish Rug
+ADDITEM 0AB8
+0AB9 Greenish Rug
+ADDITEM 0AB9
+0ABA Greenish Rug
+ADDITEM 0ABA
+0ABB Greenish Rug
+ADDITEM 0ABB
+0ABC Greenish Rug
+ADDITEM 0ABC
+
+
+[ITEMMENU 41]
+Fancy Blue Rug
+0ABD Fancy Blue Rug
+ADDITEM 0ABD
+0ABE Fancy Blue Rug
+ADDITEM 0ABE
+0ABF Fancy Blue Rug
+ADDITEM 0ABF
+0AC0 Fancy Blue Rug
+ADDITEM 0AC0
+0AC1 Fancy Blue Rug
+ADDITEM 0AC1
+0AC2 Fancy Blue Rug
+ADDITEM 0AC2
+0AC3 Fancy Blue Rug
+ADDITEM 0AC3
+0AC4 Fancy Blue Rug
+ADDITEM 0AC4
+0AC5 Fancy Blue Rug
+ADDITEM 0AC5
+
+
+[ITEMMENU 42]
+Fancy Red Rug
+0AC6 Fancy Red Rug
+ADDITEM 0AC6
+0AC7 Fancy Red Rug
+ADDITEM 0AC7
+0AC8 Fancy Red Rug
+ADDITEM 0AC8
+0AC9 Fancy Red Rug
+ADDITEM 0AC9
+0ACA Fancy Red Rug
+ADDITEM 0ACA
+0ACB Fancy Red Rug
+ADDITEM 0ACB
+0ACC Fancy Red Rug
+ADDITEM 0ACC
+0ACD Fancy Red Rug
+ADDITEM 0ACD
+0ACE Fancy Red Rug
+ADDITEM 0ACE
+0ACF Fancy Red Rug
+ADDITEM 0ACF
+0AD0 Fancy Red Rug
+ADDITEM 0AD0
+
+
+[ITEMMENU 43]
+Fancy Blue/Gold Rug
+0AD1 Fancy Blue/Gold Rug
+ADDITEM 0AD1
+0AD2 Fancy Blue/Gold Rug
+ADDITEM 0AD2
+0AD3 Fancy Blue/Gold Rug
+ADDITEM 0AD3
+0AD4 Fancy Blue/Gold Rug
+ADDITEM 0AD4
+0AD5 Fancy Blue/Gold Rug
+ADDITEM 0AD5
+0AD6 Fancy Blue/Gold Rug
+ADDITEM 0AD6
+0AD7 Fancy Blue/Gold Rug
+ADDITEM 0AD7
+0AD8 Fancy Blue/Gold Rug
+ADDITEM 0AD8
+0AD9 Fancy Blue/Gold Rug
+ADDITEM 0AD9
+
+
+[ITEMMENU 44]
+Fancy Golden Rug
+0ADA Fancy Golden Rug
+ADDITEM 0ADA
+0ADB Fancy Golden Rug
+ADDITEM 0ADB
+0ADC Fancy Golden Rug
+ADDITEM 0ADC
+0ADD Fancy Golden Rug
+ADDITEM 0ADD
+0ADE Fancy Golden Rug
+ADDITEM 0ADE
+0ADF Fancy Golden Rug
+ADDITEM 0ADF
+0AE0 Fancy Golden Rug
+ADDITEM 0AE0
+0AE1 Fancy Golden Rug
+ADDITEM 0AE1
+0AE2 Fancy Golden Rug
+ADDITEM 0AE2
+
+
+[ITEMMENU 45]
+Fancy Pink Rug
+0AE3 Fancy Pink Rug
+ADDITEM 0AE3
+0AE4 Fancy Pink Rug
+ADDITEM 0AE4
+0AE5 Fancy Pink Rug
+ADDITEM 0AE5
+0AE6 Fancy Pink Rug
+ADDITEM 0AE6
+0AE7 Fancy Pink Rug
+ADDITEM 0AE7
+0AE8 Fancy Pink Rug
+ADDITEM 0AE8
+0AE9 Fancy Pink Rug
+ADDITEM 0AE9
+0AEA Fancy Pink Rug
+ADDITEM 0AEA
+0AEB Fancy Pink Rug
+ADDITEM 0AEB
+
+[ITEMMENU 46]
+Fancy Pink & Blue Rug
+0AEC Fancy Pink & Blue Rug
+ADDITEM 0AEC
+0AED Fancy Pink & Blue Rug
+ADDITEM 0AED
+0AEE Fancy Pink & Blue Rug
+ADDITEM 0AEE
+0AEF Fancy Pink & Blue Rug
+ADDITEM 0AEF
+0AF0 Fancy Pink & Blue Rug
+ADDITEM 0AF0
+0AF1 Fancy Pink & Blue Rug
+ADDITEM 0AF1
+0AF2 Fancy Pink & Blue Rug
+ADDITEM 0AF2
+0AF3 Fancy Pink & Blue Rug
+ADDITEM 0AF3
+0AF4 Fancy Pink & Blue Rug
+ADDITEM 0AF4
+0AF5 Fancy Pink & Blue Rug
+ADDITEM 0AF5
+0AFA Fancy Pink & Blue Rug
+ADDITEM 0AFA
+
+
+[ITEMMENU 9]
+Plate Mail
+1416 Breastplate
+ADDITEM 1416
+1413 Plate Neckpiece
+ADDITEM 1413
+1414 Plate Gloves
+ADDITEM 1414
+1412 Plate Helm
+ADDITEM 1412
+141A Plate Legs
+ADDITEM 141A
+1410 Plate Sleeves
+ADDITEM 1410
+
+[ITEMMENU 10]
+Bone Armor
+144F Bone Chestplate
+ADDITEM 144F
+144E Bone Sleeves
+ADDITEM 144E
+1450 Bone Gloves
+ADDITEM 1450
+1451 Bone Helmet
+ADDITEM 1451
+1452 Bone Legs
+ADDITEM 1452
+
+
+[ITEMMENU 11]
+Chain Mail
+13C4 Chain Tunic
+ADDITEM 13C4
+13C3 Chain Legs
+ADDITEM 13C3
+13BB Chain Coif
+ADDITEM 13BB
+
+[ITEMMENU 12]
+Ring Mail
+13ED Ring Chest
+ADDITEM 13ED
+13EF Ring Arms
+ADDITEM 13EF
+13F1 Ring Legs
+ADDITEM 13F1
+13F2 Ring Gloves
+ADDITEM 13F2
+
+
+[ITEMMENU 13]
+Studded Leather Armor
+13D6 Studded Leather Gorget
+ADDITEM 13D6
+13DD Studded Leather Gloves
+ADDITEM 13DD
+13D4 Studded Leather Arms
+ADDITEM 13D4
+13E1 Studded Leather Legs
+ADDITEM 13E1
+13E2 Studded Leather Chest
+ADDITEM 13E2
+
+
+[ITEMMENU 14]
+Leather Armor
+13CD Leather Arms
+ADDITEM 13CD
+13D2 Leather Legs
+ADDITEM 13D2
+13D3 Leather Chest
+ADDITEM 13D3
+1DBA Leather Cap
+ADDITEM 1DBA
+
+
+[ITEMMENU 15]
+Miscellaneous Helms
+1408 Closed Helmet
+ADDITEM 1408
+140A Metal Skullcap
+ADDITEM 140A
+140C Bascinet
+ADDITEM 140C
+140E Bucket Helm
+ADDITEM 140E
+141C Orc Helm
+ADDITEM 141C
+
+
+[ITEMMENU 16]
+Female Armor
+1C00 Spiked Underwear
+ADDITEM 1C00
+1C02 Female Plate
+ADDITEM 1C02
+1C04 Female Plate 2
+ADDITEM 1C04
+1C06 Female Plate 3
+ADDITEM 1C06
+1C08 Leather Skirt
+ADDITEM 1C08
+1C0A Female Plate Top
+ADDITEM 1C0A
+1C0C Female Plate Top 2
+ADDITEM 1C0C
+
+
+[ITEMMENU 18]
+Axes
+0F47 Hatchet
+ADDITEM 0F47
+0F45 Executioner's Axe
+ADDITEM 0F45
+0F49 Axe
+ADDITEM 0F49
+0F4B Double Axe
+ADDITEM 0F4B
+13FB Large Battle Axe
+ADDITEM 13FB
+0E85 Pick Axe
+ADDITEM 0E85
+13B0 War Axe
+ADDITEM 13B0
+
+
+[ITEMMENU 19]
+Knives and Daggers
+13F7 Butcher's Knife
+ADDITEM 13F7
+0EC4 Skinning Knife
+ADDITEM 0EC4
+0EC2 Cleaver
+ADDITEM 0EC2
+0F51 Dagger
+ADDITEM 0F51
+1400 Kryss
+ADDITEM 1400
+
+
+[ITEMMENU 20]
+Maces & Hammers
+13B4 Club
+ADDITEM 13B4
+143C Hammer Pick
+ADDITEM 143C
+0F5C Mace
+ADDITEM 0F5C
+143A Maul
+ADDITEM 143A
+13E4 Smithy Hammer
+ADDITEM 13E4
+1438 War Hammer
+ADDITEM 1438
+1406 War Mace
+ADDITEM 1406
+
+[ITEMMENU 21]
+Pole Arms
+0F4D Bardiche
+ADDITEM 0F4D
+143E Halberd
+ADDITEM 143E
+
+[ITEMMENU 22]
+Staffs
+0DF0 Black Staff
+ADDITEM 0DF0
+13F9 Gnarled Staff
+ADDITEM 13F9
+0E8A Quarterstaff
+ADDITEM 0E8A
+0E81 Shepherd's Crook
+ADDITEM 0E81
+0DF2 Sceptre
+ADDITEM 0DF2
+
+
+[ITEMMENU 23]
+Swords
+13B6 Scimitar
+ADDITEM 13B6
+13B8 Long Sword
+ADDITEM 13B8
+13BA Viking Sword
+ADDITEM 13BA
+0F5E Longsword #2
+ADDITEM 0F5E
+1440 Scimitar #2
+ADDITEM 1440
+13FF Katana
+ADDITEM 13FF
+
+
+[ITEMMENU 24]
+Spears & Forks
+0E87 Pitchfork
+ADDITEM 0E87
+0F62 Spear
+ADDITEM 0F62
+
+
+[ITEMMENU 25]
+Bows
+13B2 Bow
+ADDITEM 13B2
+0F4F Crossbow
+ADDITEM 0F4F
+13FD Heavy Crossbow
+ADDITEM 13FD
+
+
+[ITEMMENU 51]
+Containers
+0E75 Backpack
+ADDITEM 0E75
+0E76 Leather Bag
+ADDITEM 0E76
+0E77 Barrel
+ADDITEM 0E77
+0E78 Round Basket
+ADDITEM 0E78
+0E79 Pouch
+ADDITEM 0E79
+0E7A Square Basket
+ADDITEM 0E7A
+0E7C Silver Chest
+ADDITEM 0E7C
+0E7D Wooden Box
+ADDITEM 0E7D
+0E7E Wooden Crate
+ADDITEM 0E7E
+0E7F Wooden Keg
+ADDITEM 0E7F
+0E80 Brass Box
+ADDITEM 0E80
+
+
+[ITEMMENU 52]
+Keys
+100F Gold Key
+ADDITEM 100F
+1010 Iron Key
+ADDITEM 1010
+1012 Magic Key
+ADDITEM 1012
+1013 Bronze Key
+ADDITEM 1013
+
+
+[ITEMMENU 54]
+Benches
+0459 Marble Bench
+ADDITEM 0459
+045A Marble Bench 2
+ADDITEM 045A
+045B Stone Bench
+ADDITEM 045B
+045C Stone Bench 2
+ADDITEM 045C
+0B2C Wooden Bench
+ADDITEM 0B2C
+0B2D Wooden Bench 2
+ADDITEM 0B2D
+1DCF Marble Bench 3
+ITEMMENU 69
+1DC9 Sandstone Bench
+ITEMMENU 70
+0B67 Other Wooden Benches
+ITEMMENU 55
+
+
+[ITEMMENU 56]
+Wooden Bench 1
+0B66 Wooden Bench
+ADDITEM 0B66
+0B68 Wooden Bench
+ADDITEM 0B68
+0B67 Wooden Bench
+ADDITEM 0B67
+
+[ITEMMENU 57]
+Wooden Bench 2
+0B5F Wooden Bench 2
+ADDITEM 0B5F
+0B61 Wooden Bench Mid 2
+ADDITEM 0B61
+0B60 Wooden Bench 2
+ADDITEM 0B60
+
+
+[ITEMMENU 58]
+Wooden Bench 3
+0B62 Wooden Bench 3
+ADDITEM 0B62
+0B64 Wooden Bench Mid 3
+ADDITEM 0B64
+0B63 Wooden Bench 3
+ADDITEM 0B63
+
+
+[ITEMMENU 59]
+Wooden Bench 4
+0B69 Wooden Bench 4
+ADDITEM 0B69
+0B68 Wooden Bench 4
+ADDITEM 0B68
+0B6A Wooden Bench 4
+ADDITEM 0B6A
+
+[ITEMMENU 61]
+Wooden Bench 5
+0B92 Wooden Bench
+ADDITEM 0B92
+0B91 Wooden Bench
+ADDITEM 0B91
+0B93 Wooden Bench
+ADDITEM 0B93
+0B94 Wooden Bench
+ADDITEM 0B94
+
+
+[ITEMMENU 69]
+Marble Bench 3
+1DCD Marble Bench
+ADDITEM 1DCD
+1DCF Marble Bench
+ADDITEM 1DCF
+1DCE Marble Bench
+ADDITEM 1DCE
+
+[ITEMMENU 70]
+Sandstone Bench
+1DC7 Sandstone Bench
+ADDITEM 1DC7
+1DC9 Sandstone Bench
+ADDITEM 1DC9
+1DC8 Sandstone Bench
+ADDITEM 1DC8
+
+
+[ITEMMENU 63]
+Throne
+0B32 Throne
+ADDITEM 0B32
+0B33 Throne
+ADDITEM 0B33
+
+
+[ITEMMENU 64]
+Wooden Chair
+0B2E Wooden Chair
+ADDITEM 0B2E
+0B2F Wooden Chair
+ADDITEM 0B2F
+0B30 Wooden Chair
+ADDITEM 0B30
+0B31 Wooden Chair
+ADDITEM 0B31
+
+
+[ITEMMENU 65]
+Chair 1
+0B4E Chair 1
+ADDITEM 0B4E
+0B4F Chair 1
+ADDITEM 0B4F
+0B50 Chair 1
+ADDITEM 0B50
+0B51 Chair 1
+ADDITEM 0B51
+
+
+[ITEMMENU 66]
+Chair 2
+0B52 Chair 2
+ADDITEM B52
+0B53 Chair 2
+ADDITEM B53
+0B54 Chair 2
+ADDITEM B54
+0B55 Chair 2
+ADDITEM B55
+
+
+[ITEMMENU 67]
+Chair 3
+0B56 Chair 3
+ADDITEM B56
+0B57 Chair 3
+ADDITEM B57
+0B58 Chair 3
+ADDITEM B58
+0B59 Chair 3
+ADDITEM B59
+
+
+[ITEMMENU 68]
+Chair 4
+0B5A Chair 4
+ADDITEM B5A
+0B5B Chair 4
+ADDITEM B5B
+0B5C Chair 4
+ADDITEM B5C
+0B5D Chair 4
+ADDITEM B5D
+
+
+[ITEMMENU 73]
+Stone Throne
+1218 Stone Throne
+ADDITEM 1218
+1219 Stone Throne
+ADDITEM 1219
+121A Stone Throne
+ADDITEM 121A
+121B Stone Throne
+ADDITEM 121B
+
+
+[ITEMMENU 76]
+Reagents
+0F78 Bat Wing
+ADDITEM F78
+0F79 Blackmoor
+ADDITEM F79
+0F7A Black Pearl
+ADDITEM F7A
+0F7B Blood Moss
+ADDITEM F7B
+0F7C Bloodspawn
+ADDITEM F7C
+0F7D Vial of Blood
+ADDITEM F7D
+0F7E Bone
+ADDITEM F7E
+0F7F Brimstone
+ADDITEM F7F
+0F80 Daemon Bone
+ADDITEM F80
+0F81 Fertile Dirt
+ADDITEM F81
+0F82 Dragon Blood
+ADDITEM F82
+0F83 Executioners Cap
+ADDITEM F83
+0F84 Garlic
+ADDITEM F84
+0F85 Ginseng
+ADDITEM F85
+0F86 Mandrake Root
+ADDITEM F86
+0F87 Eye of Newt
+ADDITEM F87
+0F88 Nightshade
+ADDITEM F88
+0F89 Obsidian
+ADDITEM F89
+0F8A Pig Iron
+ADDITEM F8A
+0F8B Pumice
+ADDITEM F8B
+0F8C Sulfurous Ash
+ADDITEM F8C
+0F8D Spiders Silk
+ADDITEM F8D
+0F8E Serpent Scales
+ADDITEM F8E
+0F8F Volcanic Ash
+ADDITEM F8F
+0F90 Dead Wood
+ADDITEM F90
+0F91 Worms Heart
+ADDITEM F91
+
+
+[ITEMMENU 85]
+Foodstuff
+099F Ale
+ADDITEM 99F
+09C7 Wine
+ADDITEM 9C7
+099B Liquor
+ADDITEM 99B
+09C9 Ham
+ADDITEM 9C9
+09B7 Cooked Bird
+ADDITEM 9B7
+09BB Roast Pig
+ADDITEM 9BB
+09E9 Cake
+ADDITEM 9E9
+1040 Pizza
+ADDITEM 1040
+103C Bread
+ADDITEM 103C
+1044 Spam
+ADDITEM 1044
+1AD3 Donuts
+ADDITEM 1AD3
+
+
+[ITEMMENU 84]
+Masks
+1547 Deer mask
+ADDITEM 1547
+1545 Bear mask
+ADDITEM 1545
+1F0B Orc helm
+ADDITEM 1F0B
+141C Orc mask
+ADDITEM 141C
+1549 Tribal mask
+ADDITEM 1549
+154B Voodoo mask
+ADDITEM 154B
+
+
+[ITEMMENU 83]
+Misc.
+153B Half apron
+ADDITEM 153B
+153D Full apron
+ADDITEM 153D
+1540 Bandana
+ADDITEM 1540
+1541 Body sash
+ADDITEM 1541
+1544 Skullcap
+ADDITEM 1544
+
+
+[ITEMMENU 82]
+Pants
+1516 Skirt
+ADDITEM 1516
+152E Short pants
+ADDITEM 152E
+1537 Kilt
+ADDITEM 1537
+1539 Long pants
+ADDITEM 1539
+
+
+[ITEMMENU 81]
+Shirts & Robes
+1515 Cape
+ADDITEM 1515
+1EFD Fancy shirt
+ADDITEM 1EFD
+1517 Plain shirt
+ADDITEM 1517
+1FFD Surcoat
+ADDITEM 1FFD
+1FA1 Tunic
+ADDITEM 1FA1
+1F03 Robe
+ADDITEM 1F03
+1F9F Jester's suit
+ADDITEM 1F9F
+1F7B Doublet
+ADDITEM 1F7B
+1EFF Fancy Dress
+ADDITEM 1EFF
+1F01 Plain Dress
+ADDITEM 1F01
+
+
+[ITEMMENU 79]
+Boots
+170B Boots
+ADDITEM 170B
+170D Sandals
+ADDITEM 170D
+170F Shoes
+ADDITEM 170F
+1711 Thigh boots
+ADDITEM 1711
+
+
+[ITEMMENU 80]
+Hats
+1713 Floppy hat
+ADDITEM 1713
+1714 Wide-brim hat
+ADDITEM 1714
+1715 Cap
+ADDITEM 1715
+1716 Tall straw hat
+ADDITEM 1716
+1717 Straw hat
+ADDITEM 1717
+1718 Wizard's hat
+ADDITEM 1718
+1719 Bonnet
+ADDITEM 1719
+171A Feathered hat
+ADDITEM 171A
+171B Tricorne hat
+ADDITEM 171B
+171C Jester hat
+ADDITEM 171C
+
+
+// ITEMMENU -------------------------------------
+// menus of other stuff
+
+[ITEMMENU 47]
+NPCs
+2120 Animals
+ITEMMENU 77
+20D3 Monsters
+ITEMMENU 99
+2042 GM
+NPC 3DB
+20CD Basic Male
+NPC 190
+20CE Basic Female
+NPC 191
+2106 Male Guard
+NPC 401
+2107 Female Guard
+NPC 402
+
+[ITEMMENU 99]
+Monsters
+20E0 Orc
+NPC 7
+20D3 Daemon
+NPC A
+
+
+[ITEMMENU 77]
+Animals
+20CF Brown Bear
+NPC D3
+20D0 Large Rat
+NPC D7
+20D1 Chicken
+NPC D0
+20D4 Large Deer
+NPC EA
+20D4 Deer
+NPC ED
+20D5 Dog
+NPC D9
+20DA Alligator
+NPC CA
+20DB Grizzly Bear
+NPC D4
+2120 Horse (White)
+NPC C8
+211F Horse 
+NPC E2
+2124 Horse 
+NPC E4
+2121 Horse (Brown)
+NPC CC
+20E1 Polar Bear
+NPC D5
+20E2 Rabbit
+NPC CD
+20E5 Serpent
+NPC 34
+20E6 Sheep
+NPC CF
+
+
+[ITEMMENU 60]
+Polymorph Menu
+20CD Male
+POLY 0190
+20CE Female
+POLY 0191
+20CF Animals
+ITEMMENU 71
+20D3 Monsters
+ITEMMENU 72
+
+
+[ITEMMENU 71]
+Animals
+20CF Brown Bear
+POLY D3
+20D0 Large Rat
+POLY D7
+20D1 Chicken
+POLY D0
+20D4 Large Deer
+POLY EA
+20D4 Deer
+POLY ED
+20D5 Dog
+POLY D9
+20DA Alligator
+POLY CA
+20DB Grizzly Bear
+POLY D4
+2120 Horse (White)
+POLY C8
+211F Horse 
+POLY E2
+2124 Horse 
+POLY E4
+2121 Horse (Brown)
+POLY CC
+20E1 Polar Bear
+POLY D5
+20E2 Rabbit
+POLY CD
+20E5 Serpent
+POLY 34
+20E6 Sheep
+POLY CF
+
+
+[ITEMMENU 72]
+Monsters
+20D3 Daemon
+POLY A
+20E0 Orc
+POLY 7
+
+
+[ITEMMENU 48]
+Hairs/Beards
+203B Short Hair
+ADDITEM 203B
+203C Long Hair
+ADDITEM 203C
+203D Pony Tail
+ADDITEM 203D
+2044 Mohawk
+ADDITEM 2044
+2045 Pageboy
+ADDITEM 2045
+2046 Curly
+ADDITEM 2046
+2048 Receding
+ADDITEM 2048
+2049 2 Tails
+ADDITEM 2049
+204A Topknot
+ADDITEM 204A
+203E Long Beard
+ADDITEM 203E
+203F Short Beard
+ADDITEM 203F
+2040 Goatee
+ADDITEM 2040
+2041 Moustache
+ADDITEM 2041
+204B Short/Moustache
+ADDITEM 204B
+204C Long/Moustace
+ADDITEM 204C
+204D Goatee/Moustace
+ADDITEM 204D
+
+
+[ITEMMENU 6]
+Quest Items
+1869 Humility
+ADDITEM 5030
+186A Honesty
+ADDITEM 5031
+186B Justice
+ADDITEM 5032
+186C Sacrifice
+ADDITEM 5033
+186D Honor
+ADDITEM 5034
+186E Valor
+ADDITEM 5035
+186F Spirituality
+ADDITEM 5036
+1870 Compassion
+ADDITEM 5037
+1C12 Courage
+ADDITEM 5038
+1C13 Truth
+ADDITEM 5039
+1C14 Love
+ADDITEM 5040
+
+// GUMPMENU -------------------------------------
+//  
+
+[GUMPMENU 1]
+nomove
+noclose
+page 0
+resizepic 0 0 5100 400 350
+text 15 10 32 0
+button 13 290 5050 5051 1 0 1
+text 45 292 77 3
+tilepic 20 200 5453
+page 1
+button 366 320 5224 5224 0 2
+text 288 317 77 1
+text 55 32 0 4
+radio 20 35 5002 5003 0 0
+text 55 57 0 5
+radio 20 60 5002 5003 1 1
+text 55 82 0 6
+radio 20 85 5002 5003 0 2
+page 2
+button 20 320 5223 5223 0 1
+text 45 317 77 2
+text 55 32 0 7
+radio 20 35 5002 5003 0 3
+text 55 57 0 8
+radio 20 60 5002 5003 0 4
+text 55 82 0 9
+radio 20 85 5002 5003 0 5
+
+
+[GUMPTEXT 1]
+First Gump Menu
+Next page
+Previous page
+Done
+One
+Two (Default)
+Three
+Four
+Five
+Six
+
+
+[GUMPMENU 2]
+page 0
+gumppic 0 0 100
+text 20 20 0 0
+text 20 35 0 1
+text 20 50 0 2
+
+
+[GUMPTEXT 2]
+You can do
+nice stuff
+with this...
+
+
+[GUMPMENU 3]
+noclose
+page 0
+resizepic 0 0 2520 400 350
+text 40 10 32 0
+button 35 280 2130 2129 1 0 1
+tilepic 50 200 5453
+page 1
+button 366 320 2224 2224 0 2
+text 288 317 77 1
+text 80 70 0 4
+radio 45 67 2151 2153 0 0
+text 80 100 0 5
+radio 45 97 2151 2153 1 1
+text 80 130 0 6
+radio 45 127 2151 2153 0 2
+page 2
+button 40 320 2223 2223 0 1
+text 65 317 77 2
+text 80 70 0 7
+radio 45 67 2151 2153 0 3
+text 80 100 0 8
+radio 45 97 2151 2153 0 4
+text 80 130 0 9
+radio 45 127 2151 2153 0 5
+
+
+[GUMPTEXT 3]
+Third Gump Menu
+Next page
+Previous page
+UNUSED
+One
+Two (Default)
+Three
+Four
+Five
+Six
+
+

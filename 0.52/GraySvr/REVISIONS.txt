@@ -1,0 +1,166 @@
+
+----
+
+4/29/2000 - Sphere .52
+
+Vendor gold restock problems fixed. Restock time is now COLOR, in seconds
+Allow multiple servers to register on the same ip address.
+fix TARGET problems. TARGET is now the verb of the item being targetted (not SRC.TARGET)
+
+?TEST stupid { -100 -200 } range problem. KARAM=-100 -200 is not working.
+----
+4/28/2000 - Sphere 51b
+LIGHTDAY to SPHERE.INI
+Underground flag for regions should turn off weather. Still is a new client bug with waether in dungeons though.
+?TEST - Vendors release too fast, even if paid way ahead
+FIX - not criminal to heal yourself if you are evil.
+
+use ARMOR instead of DEF for SChar armor base.
+Get rid of MANA= and HITS= from CHAR.SCP. no need to set these.
+HIREDAYWAGE= must come after NPC=
+
+
+
+----
+September 3, 1999 Revision Notes:
+As of this release all default vendors have been tested and none are selling unpriced or inappropriate items like rocks.  We are still getting reports of rocks in loot and have narrowed the problem down to magical random items. We're going to be changing how magical items are generated, so look for more notes later.  Please report any bugs at www.menasoft.com/tus
+
+
+*ITEMS:
+Growing Reagents, Contributed by Aphrodite! Thanks!
+Added Growing Reagents to the items file (they're triggers, but see the items file.) You can grow and harvest these reagents -- and they may be used as reagents.  These properties were added to the default "growing" items themselves so if you have other triggers or purposes for these items, make sure that you're only making your changes to the tusitems2.scp file or your original work may not function properly.
+
+[18dd]
+[18de]
+[18e3]
+[18e4]
+[18e7]
+[18e8]
+[18eb]
+[18ec]
+
+*Superior, Exceptional Weapons by Admin Stranger(platine) from TFL! Thanks!
+
+[7200] Superior Bow
+[7201] Superior Crossbow
+[7202] Superior Heavy Crossbow
+[7203] Exceptional Bow
+[7204] Exceptional Crossbow
+[7205] Exceptional Heavy Crossbow
+[7206] Elven Bow, Has Equip Trigger
+
+
+*Item/House deeds contributed by Kain!  Thanks!  (KAIN is now officially helping with scripts - thanks, and welcome aboard, Kain!)
+
+[7409] Deed to a Spinning Wheel
+[7410] Deed to a Training Dummy (West)
+[7411] Deed to a Training Dummy (North)
+[7423] Deed to a Archery Butte (West)
+[7424] Deed to a Archery Butte (North)
+[7553] Deed to a Pickpocket Den (North)
+[7554] Deed to a Pickpocket Den (West)
+
+*Item Trigger contribution: Grave Digging - contributed by Kain!  Thanks!  
+
+[7668] grave for grave digging.
+[7669] average Grave Digging Random Monster Spawn
+
+*Item Trigger contribution Race Gates - contributed by Kain!  Thanks!  
+
+[7050] War-Mage Gate
+[7051] Warrior Gate
+[7052] Rogue Gate
+[7053] Mage Gate
+[7054] Cleric Gate
+[7055] Craftsman Gate
+[7056] Necromancer Gate
+[7057] Ranger Gate
+
+
+Fixed ship deeds to reflect all ship types: small ship, small dragon ship, medium ship, medium dragon ship, long ship, long dragon ship
+
+CHAR FILE
+
+*Various Loot change suggestions by Kain!  Thanks!  (KAIN is now officially helping with scripts - thanks, and welcome aboard, Kain!)
+
+TRIGGERS (in the triggers file)
+
+*Expanded Plot Item Settings by Kain!  Thanks!  
+
+
+*Guild Member Door Trigger from Admin Stranger (platine) from TFL!  Thanks!
+
+[TRIG 3000]  Guild Members Only Door.  
+See notes in file - this is experimental only and may not work reliably due to a code issue. We're fixing this.
+
+*Race Triggers by Kain!  Thanks!  (KAIN is now officially helping with scripts - thanks, and welcome aboard, Kain!)
+//Race Triggers. Assign these to Alchemy Symbols or Moongates(depends on preference). 
+//settype ##### = (Trigger Number[1200 for example would be for the human]) Suggestions for 
+//using these are to close off a room of some sort and add this "SRC.P=5564 1344 0" type of 
+//statement after "SRC.FIX" so they will be teleported elsewhere and in turn forces them to 
+//choose a Race.
+
+[TRIG 1200] Human
+[TRIG 1201] Elf
+[TRIG 1202] Dark-Elf
+[TRIG 1203] Wood-Elf
+[TRIG 1204] Barbarian
+[TRIG 1205] Dwarf
+
+SKILLS
+
+*Major skill additions in carpentry, tinkering contributed by Kain! Thanks!
+
+
+NOTE: More fixes forthcoming.  Please post bugs.  Note that MANY defs have been removed in this version and may cause your own scripting to go whacky.  Here's what's changed (thanks to Allorian and Maxus for bug list):
+
+Some have been fixed in the default scripts, some may still contain errors.  
+
+4c4783:WARNING: can't find definition for 'VENDOR_S_BLACKSMITH'!
+4c4783:WARNING: can't find definition for 'VENDOR_B_BLACKSMITH'!
+
+4c474d:WARNING: can't find definition for 'CUTLASS_2'!
+4c4752:WARNING: can't find definition for 'copper_ingot_2'!
+4c4752:WARNING: can't find definition for 'gold_ingot_2'!
+4c4752:WARNING: can't find definition for 'iron_ingot_2'!
+4c4752:WARNING: can't find definition for 'silver_ingot_2'!
+4c4755:WARNING: can't find definition for 'clock_2'!
+4c4755:WARNING: can't find definition for 'clock_parts_2'!
+4c4755:WARNING: can't find definition for 'axel_and_gears_2'!
+4c4755:WARNING: can't find definition for 'gears_2'!
+4c4755:WARNING: can't find definition for 'hinge_2'!
+4c4755:WARNING: can't find definition for 'sextant_2'!
+4c4755:WARNING: can't find definition for 'sextant_parts_2'!
+4c4755:WARNING: can't find definition for 'lockpick_2'!
+4c4755:WARNING: can't find definition for 'lockpicks_2'!
+4c4755:WARNING: can't find definition for 'tinker_kit_1'!
+4c4755:WARNING: can't find definition for 'tinker_kit_2'!
+4c4755:WARNING: can't find definition for 'tinker_kit_3'!
+4c4755:WARNING: can't find definition for 'tinker_kit_4'!
+4c4755:WARNING: can't find definition for 'butcher_knife_2'!
+4c4755:WARNING: can't find definition for 'tongs_2'!
+4c4755:WARNING: can't find definition for 'saw_2'!
+4c4755:WARNING: can't find definition for 'smith_hammer_2'!
+4c4755:WARNING: can't find definition for 'sledge_hammer_2'!
+4c4755:WARNING: can't find definition for 'shovel_2'!
+4c4755:WARNING: can't find definition for 'pickaxe_2'!
+4c4755:WARNING: can't find definition for 'vendor_deed_template'!
+4c4755:WARNING: can't find definition for 'vendor_deed_template'!
+4c4755:WARNING: can't find definition for 'backgammon_2'!
+4c4755:WARNING: can't find definition for 'poor_shirt_2'!
+4c4755:WARNING: can't find definition for 'fancy_shirt_2'!
+4c4755:WARNING: can't find definition for 'jester_suit_2'!
+4c4755:WARNING: can't find definition for 'tunic_2'!
+4c4755:WARNING: can't find definition for 'retted_flax2'!
+4c4755:WARNING: can't find definition for 'gourd'!
+4c4763:WARNING: can't find definition for 'sash_1'!
+4c4763:WARNING: can't find definition for 'heater_shield_1'!
+4c4783:WARNING: can't find definition for 'dagger'!
+4c4783:WARNING: can't find definition for 'club_2'!
+4c4783:WARNING: can't find definition for 'mace_2'!
+4c4783:WARNING: can't find definition for 'maul_2'!
+4c4783:WARNING: can't find definition for 'bowl_lettuce'!
+
+NOTE: Random Magic weapon/etc. is commented out of some loot ranges for testing purposes.  We're trying to track down the rest of the rocks. 
+
+

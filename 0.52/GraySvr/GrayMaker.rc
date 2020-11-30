@@ -1,0 +1,858 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""GrayMaker.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "GrayMaker.ico"
+IDR_MULTYPE             ICON    DISCARDABLE     "GrayMakerDoc.ico"
+IDM_DATA_VERDATA        ICON    DISCARDABLE     "iVerData.ico"
+IDM_DATA_ANIM           ICON    DISCARDABLE     "iAnim.ico"
+IDM_DATA_TEXTURE        ICON    DISCARDABLE     "iTexture.ico"
+IDM_DATA_TERRAIN        ICON    DISCARDABLE     "iTexture.ico"
+IDM_DATA_ITEM           ICON    DISCARDABLE     "iItem.ico"
+IDM_DATA_SOUND          ICON    DISCARDABLE     "iSound.ico"
+IDM_DATA_LIGHT          ICON    DISCARDABLE     "iLight.ico"
+IDM_DATA_GUMP           ICON    DISCARDABLE     "iGump.ico"
+IDM_DATA_SKILL          ICON    DISCARDABLE     "iSkill.ico"
+IDM_DATA_MULTI          ICON    DISCARDABLE     "iMulti.ico"
+IDM_DATA_HUE            ICON    DISCARDABLE     "iHue.ico"
+IDM_DATA_FONT           ICON    DISCARDABLE     "iFont.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About GrayMaker...",         ID_APP_ABOUT
+    END
+END
+
+IDR_MULTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save Fast",                   IDM_FILE_SAVE_FAST
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Open Base Muls...",           IDM_FILE_OPEN_MULS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "Delete\tDel",                 IDM_EDIT_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Properties\tAlt+Enter",       IDM_EDIT_PROPS
+    END
+    POPUP "&Data"
+    BEGIN
+        MENUITEM "VerData",                     IDM_DATA_VERDATA
+        MENUITEM "Skills",                      IDM_DATA_SKILL
+        MENUITEM "Items",                       IDM_DATA_ITEM
+        MENUITEM "Textures",                    IDM_DATA_TEXTURE
+        MENUITEM "Terrains",                    IDM_DATA_TERRAIN
+        MENUITEM "Multis",                      IDM_DATA_MULTI
+        MENUITEM "Animations",                  IDM_DATA_ANIM
+        MENUITEM "Sounds",                      IDM_DATA_SOUND
+        MENUITEM "Lights",                      IDM_DATA_LIGHT
+        MENUITEM "Gumps",                       IDM_DATA_GUMP
+        MENUITEM "Hues",                        IDM_DATA_HUE
+        MENUITEM "Fonts",                       IDM_DATA_FONT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "Mul Files",                   IDM_VIEW_MUL
+        MENUITEM "VerData",                     IDM_VIEW_VERDATA
+        MENUITEM "Changes",                     IDM_VIEW_CHANGES
+        MENUITEM SEPARATOR
+        MENUITEM "Unused Slots",                IDM_VIEW_UNUSED
+        MENUITEM SEPARATOR
+        MENUITEM "Text List",                   IDM_VIEW_TEXTLIST
+        MENUITEM "Thumb Nail",                  IDM_VIEW_THUMBNAIL
+    END
+    POPUP "Tools"
+    BEGIN
+        MENUITEM "Merge VerData...",            IDM_TOOLS_MRG_VERDATA
+        MENUITEM "Write Radar Colors",          IDM_TOOLS_SYNCRADARCOL
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About GrayMaker...",         ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About GrayMaker"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "GrayMaker Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2000",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_PROP_ITEM_TILEDATA DIALOG DISCARDABLE  0, 0, 234, 255
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "TileData"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Name",IDC_TDATA_NUMBER,7,11,35,8
+    LTEXT           "a",IDC_TDATA_AN,53,11,21,8
+    EDITTEXT        IDC_TDATA_NAME,83,8,75,14,ES_AUTOHSCROLL
+    CONTROL         "0=FLOOR",IDC_TDATA_F0,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,29,90,10
+    CONTROL         "1=EQUIP",IDC_TDATA_F1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,40,90,10
+    CONTROL         "2=NONBLOCKING",IDC_TDATA_F2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,51,90,10
+    CONTROL         "3=LIQUID",IDC_TDATA_F3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,62,90,10
+    CONTROL         "4=WALL",IDC_TDATA_F4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,73,90,10
+    CONTROL         "5=DAMAGE",IDC_TDATA_F5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,84,90,10
+    CONTROL         "6=BLOCK",IDC_TDATA_F6,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,95,90,10
+    CONTROL         "7=WATER",IDC_TDATA_F7,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,106,90,10
+    CONTROL         "8=UNUSED",IDC_TDATA_F8,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,117,90,10
+    CONTROL         "9=PLATFORM",IDC_TDATA_F9,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,128,90,10
+    CONTROL         "A=CLIMBABLE",IDC_TDATA_F10,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,139,90,10
+    CONTROL         "B=STACKABLE",IDC_TDATA_F11,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,150,90,10
+    CONTROL         "C=WINDOW",IDC_TDATA_F12,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,161,90,10
+    CONTROL         "D=WALL2",IDC_TDATA_F13,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,172,90,10
+    CONTROL         "E=A",IDC_TDATA_F14,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,183,90,10
+    CONTROL         "F=AN",IDC_TDATA_F15,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,193,90,10
+    CONTROL         "10=DESCRIPTION",IDC_TDATA_F16,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,29,90,10
+    CONTROL         "11=TRANSPARENT",IDC_TDATA_F17,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,40,90,10
+    CONTROL         "12=CLOTH",IDC_TDATA_F18,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,51,90,10
+    CONTROL         "13=UNUSED",IDC_TDATA_F19,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,62,90,10
+    CONTROL         "14=MAP",IDC_TDATA_F20,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,73,90,10
+    CONTROL         "15=CONTAINER",IDC_TDATA_F21,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,84,90,10
+    CONTROL         "16=EQUIP2",IDC_TDATA_F22,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,95,90,10
+    CONTROL         "17=LIGHT",IDC_TDATA_F23,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,106,90,10
+    CONTROL         "18=ANIM",IDC_TDATA_F24,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,117,90,10
+    CONTROL         "19=UNK1",IDC_TDATA_F25,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,128,90,10
+    CONTROL         "1A=UNK2",IDC_TDATA_F26,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,139,90,10
+    CONTROL         "1B=BODYITEM",IDC_TDATA_F27,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,150,90,10
+    CONTROL         "1C=ROOF",IDC_TDATA_F28,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,161,90,10
+    CONTROL         "1D=DOOR",IDC_TDATA_F29,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,172,90,10
+    CONTROL         "1E=STAIRS",IDC_TDATA_F30,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,183,90,10
+    CONTROL         "1F=WALKABLE",IDC_TDATA_F31,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,193,90,10
+    LTEXT           "Weight",IDC_STATIC,7,212,37,8
+    LTEXT           "Layer",IDC_STATIC,7,224,37,8
+    LTEXT           "Height",IDC_STATIC,7,236,37,8
+    LTEXT           "Val6",IDC_STATIC,110,212,37,8
+    LTEXT           "Anim",IDC_STATIC,110,224,37,8
+    LTEXT           "Val14",IDC_STATIC,110,236,37,8
+    EDITTEXT        IDC_EDIT1,49,210,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,49,222,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,49,234,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,152,210,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,152,222,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,152,234,54,12,ES_AUTOHSCROLL
+    SCROLLBAR       IDC_TDATA_SCROLLBAR,217,27,10,174,SBS_VERT
+END
+
+IDD_PROP_ITEM_DRAW DIALOG DISCARDABLE  0, 0, 186, 146
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Image"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_PROP_VERDATA DIALOG DISCARDABLE  0, 0, 186, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "VerData"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "File Size",IDC_STATIC,7,58,42,8
+    LTEXT           "Type",IDC_STATIC,7,7,42,8
+    LTEXT           "Index",IDC_STATIC,7,24,42,8
+    LTEXT           "Static",IDC_VERDATA_FSIZE,52,58,73,8
+    LTEXT           "File Position",IDC_STATIC,7,41,42,8
+    LTEXT           "Static",IDC_VERDATA_FPOS,52,41,73,8
+    LTEXT           "More1",IDC_STATIC,7,75,42,8
+    EDITTEXT        IDC_VERDATA_BLOCK,52,21,52,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_VERDATA_TYPE,52,5,127,221,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_VERDATA_MORE1,52,72,51,14,ES_AUTOHSCROLL
+    LTEXT           "More2",IDC_STATIC,7,92,39,8
+    EDITTEXT        IDC_VERDATA_MORE2,52,89,51,14,ES_AUTOHSCROLL
+    LTEXT           "Static",IDC_VERDATA_BLOCK_MAX,107,24,72,8
+END
+
+IDD_PROP_MULTI_COMPO DIALOG DISCARDABLE  0, 0, 186, 190
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Components"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,7,7,172,176,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PROP_SOUND_BASE DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sound"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Sound Name",IDC_STATIC,17,21,45,8
+    EDITTEXT        IDC_EDIT1,73,18,106,14,ES_AUTOHSCROLL
+END
+
+IDD_PROP_SKILL DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Skill"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Skill Name",IDC_STATIC,7,7,51,8
+    CONTROL         "Skill Has Button",IDC_SKILL_BUTTON,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,40,112,10
+    EDITTEXT        IDC_SKILL_NAME,7,20,135,14,ES_AUTOHSCROLL
+END
+
+IDD_PROP_MULTI_DRAW DIALOG DISCARDABLE  0, 0, 224, 204
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Image"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_PROP_TEXTURE_DRAW DIALOG DISCARDABLE  0, 0, 186, 108
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Texture"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_PROP_ITEM_SCRIPT DIALOG DISCARDABLE  0, 0, 216, 189
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Script"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,7,7,195,175,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PROP_MULTI_SCRIPT DIALOG DISCARDABLE  0, 0, 243, 194
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Script"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,7,7,229,175,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PROP_SKILL_SCRIPT DIALOG DISCARDABLE  0, 0, 186, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Script"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,7,7,172,115,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PROP_LIGHT_DRAW DIALOG DISCARDABLE  0, 0, 267, 242
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Image"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_PROP_GUMP_DRAW DIALOG DISCARDABLE  0, 0, 269, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Image"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_PROP_ANIM_DRAW DIALOG DISCARDABLE  0, 0, 248, 201
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Image"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_PROP_TERRAIN_DRAW DIALOG DISCARDABLE  0, 0, 194, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Image"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_PROP_HUE DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Hue"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_PROP_FONT DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Font"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_PROP_TILEDATA DIALOG DISCARDABLE  0, 0, 186, 167
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tile Data"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "This is a bizarre method of packing 32 tiles or terrain descriptors into a single block.",
+                    IDC_STATIC,13,23,132,29
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "GrayMaker MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "GrayMaker\0"
+            VALUE "LegalCopyright", "Copyright (C) 2000\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "GrayMaker.EXE\0"
+            VALUE "ProductName", "GrayMaker Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_PROP_ITEM_TILEDATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 248
+    END
+
+    IDD_PROP_ITEM_DRAW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_PROP_VERDATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_PROP_MULTI_COMPO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_PROP_SOUND_BASE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_PROP_SKILL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_PROP_MULTI_DRAW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 197
+    END
+
+    IDD_PROP_TEXTURE_DRAW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_PROP_ITEM_SCRIPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_PROP_MULTI_SCRIPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_PROP_SKILL_SCRIPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_PROP_LIGHT_DRAW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 235
+    END
+
+    IDD_PROP_GUMP_DRAW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_PROP_ANIM_DRAW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_PROP_TERRAIN_DRAW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_PROP_HUE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_PROP_FONT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_PROP_TILEDATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BTN_PIN_DOWN        BITMAP  DISCARDABLE     "PUSHPIND.bmp"
+IDB_BTN_HELP            BITMAP  DISCARDABLE     "BtnHelp.bmp"
+IDB_BTN_PIN_UP          BITMAP  DISCARDABLE     "PUSHPINU.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Gray Maker"
+    IDR_MULTYPE             "\nmul\nmul\nmul Files (*.mul)\n.mul\nGrayMaker.Document\nmul Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "GrayMaker"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new verdata.mul file\nNew"
+    ID_FILE_OPEN            "Open an existing verdata.mul file\nOpen"
+    ID_FILE_CLOSE           "Close the active verdata.mul file\nClose"
+    ID_FILE_SAVE            "Save the active verdata\nSave"
+    ID_FILE_SAVE_AS         "Save the active verdata to a new directory\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_VIEW_UNUSED         "View the data entries the are not unsed"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_DATA_VERDATA        "VerData"
+    IDM_DATA_ANIM           "Animations"
+    IDM_DATA_TEXTURE        "Textures"
+    IDM_DATA_TERRAIN        "Terrains"
+    IDM_DATA_ITEM           "Items"
+    IDM_DATA_SOUND          "Sounds"
+    IDM_DATA_LIGHT          "Lights"
+    IDM_DATA_GUMP           "Gumps"
+    IDM_DATA_SKILL          "Skills"
+    IDM_DATA_MULTI          "Multis"
+    IDM_DATA_HUE            "Hues"
+    IDM_DATA_FONT           "Fonts"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "GrayMaker.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
