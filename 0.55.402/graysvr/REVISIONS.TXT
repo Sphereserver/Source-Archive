@@ -1,0 +1,77 @@
+-------- SphereServer 55R4.0.1 -----------------------------------------
+
+30-05-2004, Kell
+- Little fixes to allow compile under Linux (use strcmpi() for caseless string
+  comparison, and add casts to (LPCTSTR) on CGStrings).
+- Changed version number. I suggest using R4.x.y where xx is increased when
+  something major is done and yy is for little changes. Set to R4.0.1.
+  (ps: some people never quite understood what RC* means. After the 20th it
+   stops being a release candidate, it's more like a candidate to a release
+   candidate. So after the "powers that be" have adopted and turned that
+   numbering scheme into a mockery, I suggest we change to something less
+   confusing.
+
+31-05-2004, Furio
+- Added FORCONT loop, format is FORCONT uid_of_container max_sub_containers. It will loop on every item
+  present in the container. If max_sub_containers is not present it will search in all subcontainers. If 
+  max_sub_containers = 0 - it will search only in this container. (Thx to Balkon for the base code for
+  container loops)
+
+07-06-2004, Furio
+- Made a blank REVISIONS.TXT because it was getting pretty big.
+- Added XOR (^) operator to expressions.
+
+12-06-2004, Furio
+- Added two new INI value USECRYPT and USENOCRYPT. The first if 0 don't allow at encrypted client to login
+  otherwise allow them to log (default is 1). The second if 0 don't allow at unencrypted client to login otherwise
+  if 1 -> allow and suppose that the clientversion is >= 2.0.0
+  if 2 -> allow and suppose that the clientversion is >= x.x.x
+  if 3 -> allow and suppose that the clientversion is >= 3.0.0
+  (to use unencrypted client > 4.0.0c you need to enable the Ef_Aos thing)
+- Added the most requested security-by-obscurity feature DISGUISEVERSION in sphere.ini. If set change the version
+  outputted to clients, ircserver, webserver, listserver, telnetserver to its value otherwise the default build 
+  value is used. (Mind that the version in savefile and in console startup is the default build version)
+- Fixed (i hope) bug with Mozilla/Firefox browser with the status page
+- Fixed a buffer overrun bug that could be exploited to crash or run arbitrary code, in the log system.
+
+20-06-2004, kuch
+- Added ClearTags function (removes all the tags from the char/item/account); Revital did most of the work, but I get the credit.
+
+28-06-2004, Furio
+- Fixed multiple gump exploits. In order to do this now memory 08000 is used as internal memory (is called MEMORY_GUMPRECORD).
+- Fixed and refined things for disguise version feature.
+
+02-07-04, kuch
+- Added MODMAXWEIGHT: allows you to increase/decrease max carrying capacity of a char
+- Added MODAR: allows you to increase/decrease the overall AR of a char
+  NOTE: there are no oStat equivalents (ie oModAr or oModMaxWeight) for the above
+- Also added the following to avoid possible confusion:
+  * MAXWEIGHT - same as WEIGHTMAX
+  * AR - same as AC
+  * MODAC - same as MODAR
+  * MODWEIGHTMAX - same as MODMAXWEIGHT
+  
+03-07-04, kuch
+- Added 135 more strings (mostly from skills) to sphere_msg.scp
+- Added new .ini option: WOOLGROWTHTIME: how long in minutes it takes for wool on sheared sheep to regrow.
+- Added new .ini option: SKILLPRACTICEMAX: how high can you train a skill on dummy/archery_target.
+
+04-07-04, kuch
+- Added 93 more strings: NPC speech and skill msgs; there are now 329 string messages in sphere_msgs.scp.
+- Added TAGCOUNT function (works on regions/items/chars/accounts) - returns the number of tags on that obj
+- Fixed CLEARTAGS (now also works on regions)
+
+06-07-04, kuch
+- Furio pointed out few problems with MODAR and MODMAXWEIGHT: all relevant functions are not working till I fix them
+- Fixed some weird bug in jobmage.scp and jobnoble.scp 
+- Added a lot more strings to sphere_msgs.scp; If you find any bugs with them, kuchervano@hotmail.com me immediately!
+
+07-07-04, Furio
+- Fixed DISTANCEWHISPER not working correctly.
+
+07-07-04, kuch
+- Added DEFFOOD value to sphere_defs.scp - this is a template of items you want to get by casting the create food spell
+  Yes it does not give you a great deal of control over what you get (ie skillbased for example), but its better than nothing
+  
+09-07-04, Furio
+- Fixed bug with ^ operator.

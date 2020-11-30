@@ -1,0 +1,17 @@
+11/9/05 Start working on 4.0.2a
+11/9/05 Fixed: #vendordupe (teot)
+11/9/05 Added: Client switchs into war mode on attack
+11/9/05 Added: Setting "LASTCONNECTDATE" on account creation (needed by UNUSED)
+11/9/05 Added: "talkmode whisper" hearable for PRIV_HEARALL
+11/9/05 Fixed: [Linux] prevent freezes (nonblocking sockets)
+11/9/05 Removed: .dbg (null-pointer)
+11/9/05 Changed: Version to 4.0.2.a
+11/9/05 Added: Telnet support like in 4.0.3+ (resync fixed)
+11/9/05 Added: .privshow shows real plevel now (Dev, Admin, ...)
+11/9/05 Fixed: Error with "remove 1"
+11/9/05 Fixed: Disappearing pets (thx to Furio)
+11/9/05 Fixed: Party System (thx to Varan)
+11/10/05 Fixed: .xstr 0 killed Sphere
+11/10/05 Fixed: .move without parameters killed sphere
+11/14/05 Fixed: .move n didn't work anymore
+11/14/05 Fixed: target on static t_crops

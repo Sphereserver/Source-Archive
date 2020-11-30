@@ -1,0 +1,67 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: graysvr - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\CONFIG~1\Temp\RSP1EF.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/graysvr.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\source\graysvr\graysvr.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\CONFIG~1\Temp\RSP1EF.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\CONFIG~1\Temp\RSP1F0.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/graysvr.pdb" /debug /machine:I386 /out:"Debug/graysvr.exe" /pdbtype:sept 
+.\Debug\graysvr.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\CONFIG~1\Temp\RSP1F0.tmp"
+<h3>Output Window</h3>
+Compiling...
+graysvr.cpp
+c:\source\common\common.h(201) : error C2664: 'wvsprintfA' : cannot convert parameter 1 from 'char' to 'char *'
+        Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+c:\source\common\common.h(203) : error C2664: 'lstrcpyA' : cannot convert parameter 1 from 'char' to 'char *'
+        Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+c:\source\common\common.h(204) : error C2664: 'EventStr' : cannot convert parameter 2 from 'char' to 'const char *'
+        Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+c:\source\common\carray.h(236) : error C2544: expected ')' for operator '()'
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(236) : error C2144: syntax error : missing ';' before type 'int'
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(236) : error C2059: syntax error : ')'
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(236) : error C2143: syntax error : missing ';' before 'const'
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(237) : error C2059: syntax error : '{'
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(237) : error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(245) : error C2544: expected ')' for operator '()'
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(245) : error C2144: syntax error : missing ';' before type 'int'
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(245) : error C2040: '()' : ' &' differs in levels of indirection from ''
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(245) : error C2059: syntax error : ')'
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(246) : error C2086: 'nIndex' : redefinition
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(247) : error C2059: syntax error : 'return'
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(247) : error C2238: unexpected token(s) preceding ';'
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(249) : error C2143: syntax error : missing ';' before 'const'
+        c:\source\common\carray.h(285) : see reference to class template instantiation 'CGTypedArray<TYPE,ARG_TYPE>' being compiled
+c:\source\common\carray.h(549) : fatal error C1070: mismatched #if/#endif pair in file 'c:\source\common\carray.h'
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+graysvr.exe - 18 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Testing|Win32">
+      <Configuration>Testing</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>"$/GraySvr", FCAAAAAA</SccProjectName>
+    <SccLocalPath>d:\menace\graysvr</SccLocalPath>
+    <ProjectGuid>{A2050521-7B89-4537-9CB4-6D5BF788DE43}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Testing|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Testing|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Testing|Win32'">
+    <OutDir>.\Testing\</OutDir>
+    <IntDir>.\Testing\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level2</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;GRAY_SVR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\GraySvr.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <CallingConvention>FastCall</CallingConvention>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Release\GraySvr.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\GraySvr.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>Release/sphereSvr.exe</OutputFile>
+      <AdditionalDependencies>wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Version>0.10</Version>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Testing|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level2</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;GRAY_SVR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Testing\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Testing\GraySvr.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Testing\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Testing\</ProgramDataBaseFileName>
+      <CallingConvention>FastCall</CallingConvention>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Testing\GraySvr.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Testing\GraySvr.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>Release/sphereSvr.exe</OutputFile>
+      <AdditionalDependencies>wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Version>0.10</Version>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level2</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;GRAY_SVR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\GraySvr.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <CallingConvention>StdCall</CallingConvention>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Debug\GraySvr.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\GraySvr.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>Debug/sphereSvr.exe</OutputFile>
+      <AdditionalDependencies>wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Version>0.12</Version>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\calc.cpp" />
+    <ClCompile Include="..\common\carray.cpp" />
+    <ClCompile Include="..\common\cassoc.cpp" />
+    <ClCompile Include="..\common\catom.cpp" />
+    <ClCompile Include="..\common\ccrypt.cpp" />
+    <ClCompile Include="..\common\ccrypt2.cpp" />
+    <ClCompile Include="..\common\ccryptbase.cpp" />
+    <ClCompile Include="..\common\ccryptnew.cpp" />
+    <ClCompile Include="..\common\cexpression.cpp" />
+    <ClCompile Include="..\common\cfile.cpp" />
+    <ClCompile Include="..\common\cfilelist.cpp" />
+    <ClCompile Include="..\common\cGrayData.cpp" />
+    <ClCompile Include="..\common\cgrayinst.cpp" />
+    <ClCompile Include="..\common\cGrayMap.cpp" />
+    <ClCompile Include="..\common\CMD5.cpp" />
+    <ClCompile Include="..\common\cQueue.cpp" />
+    <ClCompile Include="..\common\crect.cpp" />
+    <ClCompile Include="..\common\cregion.cpp" />
+    <ClCompile Include="..\common\cresourcebase.cpp" />
+    <ClCompile Include="..\common\cscript.cpp" />
+    <ClCompile Include="..\common\CScriptObj.cpp" />
+    <ClCompile Include="..\common\cSectorTemplate.cpp" />
+    <ClCompile Include="..\common\CSocket.cpp" />
+    <ClCompile Include="..\common\cstring.cpp" />
+    <ClCompile Include="..\common\cstring2.cpp" />
+    <ClCompile Include="..\common\cthread.cpp" />
+    <ClCompile Include="..\common\CTime.cpp" />
+    <ClCompile Include="..\common\cwindow.cpp" />
+    <ClCompile Include="..\common\graycom.cpp" />
+    <ClCompile Include="CAccount.cpp" />
+    <ClCompile Include="CBackTask.cpp" />
+    <ClCompile Include="CBase.cpp" />
+    <ClCompile Include="CChar.cpp" />
+    <ClCompile Include="CCharact.cpp" />
+    <ClCompile Include="CCharBase.cpp" />
+    <ClCompile Include="CCharFight.cpp" />
+    <ClCompile Include="CCharNPC.cpp" />
+    <ClCompile Include="CCharNPCAct.cpp" />
+    <ClCompile Include="CCharNPCFood.cpp" />
+    <ClCompile Include="CCharNPCPet.cpp" />
+    <ClCompile Include="CCharNPCStatus.cpp" />
+    <ClCompile Include="CCharSkill.cpp" />
+    <ClCompile Include="CCharSpell.cpp" />
+    <ClCompile Include="CCharStatus.cpp" />
+    <ClCompile Include="CCharUse.cpp" />
+    <ClCompile Include="CChat.cpp" />
+    <ClCompile Include="CClient.cpp" />
+    <ClCompile Include="CClientDialog.cpp" />
+    <ClCompile Include="CClientEvent.cpp" />
+    <ClCompile Include="CClientGMPage.cpp" />
+    <ClCompile Include="CClientLog.cpp" />
+    <ClCompile Include="CClientMsg.cpp" />
+    <ClCompile Include="CClientTarg.cpp" />
+    <ClCompile Include="CClientUse.cpp" />
+    <ClCompile Include="CContain.cpp" />
+    <ClCompile Include="CGMPage.cpp" />
+    <ClCompile Include="CIRCServer.cpp" />
+    <ClCompile Include="CItem.cpp" />
+    <ClCompile Include="CItemBase.cpp" />
+    <ClCompile Include="CItemMulti.cpp" />
+    <ClCompile Include="CItemSp.cpp" />
+    <ClCompile Include="CItemStone.cpp" />
+    <ClCompile Include="CItemVend.cpp" />
+    <ClCompile Include="CLog.cpp" />
+    <ClCompile Include="CMail.cpp" />
+    <ClCompile Include="CObjBase.cpp" />
+    <ClCompile Include="CPathFinder.cpp" />
+    <ClCompile Include="CProfileData.cpp" />
+    <ClCompile Include="CQuest.cpp" />
+    <ClCompile Include="CResource.cpp" />
+    <ClCompile Include="CResourceCalc.cpp" />
+    <ClCompile Include="CResourceDef.cpp" />
+    <ClCompile Include="CResourceTest.cpp" />
+    <ClCompile Include="CSector.cpp" />
+    <ClCompile Include="CServer.cpp" />
+    <ClCompile Include="CServRef.cpp" />
+    <ClCompile Include="CServResource.cpp" />
+    <ClCompile Include="CWebPage.cpp" />
+    <ClCompile Include="CWorld.cpp" />
+    <ClCompile Include="CWorldImport.cpp" />
+    <ClCompile Include="CWorldMap.cpp" />
+    <ClCompile Include="graysvr.cpp" />
+    <ClCompile Include="ntservice.cpp" />
+    <ClCompile Include="ntwindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GraySvr.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\carray.h" />
+    <ClInclude Include="..\common\cassoc.h" />
+    <ClInclude Include="..\common\CAtom.h" />
+    <ClInclude Include="..\common\ccrypt.h" />
+    <ClInclude Include="..\common\cexpression.h" />
+    <ClInclude Include="..\common\cfile.h" />
+    <ClInclude Include="..\common\cfilelist.h" />
+    <ClInclude Include="..\common\cgrayinst.h" />
+    <ClInclude Include="..\common\cGrayMap.h" />
+    <ClInclude Include="..\common\cmemblock.h" />
+    <ClInclude Include="..\common\common.h" />
+    <ClInclude Include="..\common\CQueue.h" />
+    <ClInclude Include="..\common\crect.h" />
+    <ClInclude Include="..\common\cregion.h" />
+    <ClInclude Include="..\common\cresourcebase.h" />
+    <ClInclude Include="..\common\cscript.h" />
+    <ClInclude Include="..\common\cscriptobj.h" />
+    <ClInclude Include="..\common\cSectorTemplate.h" />
+    <ClInclude Include="..\common\csocket.h" />
+    <ClInclude Include="..\common\cstring.h" />
+    <ClInclude Include="..\common\cthread.h" />
+    <ClInclude Include="..\common\ctime.h" />
+    <ClInclude Include="..\common\graybase.h" />
+    <ClInclude Include="..\common\graycom.h" />
+    <ClInclude Include="..\common\graymul.h" />
+    <ClInclude Include="..\common\grayproto.h" />
+    <ClInclude Include="..\common\grayver.h" />
+    <ClInclude Include="CAccount.h" />
+    <ClInclude Include="CBase.h" />
+    <ClInclude Include="CClient.h" />
+    <ClInclude Include="CIRCServer.h" />
+    <ClInclude Include="CObjBase.h" />
+    <ClInclude Include="CResource.h" />
+    <ClInclude Include="CServRef.h" />
+    <ClInclude Include="CWorld.h" />
+    <ClInclude Include="graysvr.h" />
+    <ClInclude Include="ntservice.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\public_html\gray\dev.htm" />
+    <CustomBuild Include="..\public_html\gray\ideas.htm" />
+    <CustomBuild Include="..\public_html\gray\index.html" />
+    <CustomBuild Include="..\public_html\gray\readme.htm" />
+    <CustomBuild Include="..\scripts\bs3\bs2_crier.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs2_items.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs2_map.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs2_santa.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs2_stuff.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs3_borgvendors.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs3_classitems.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs3_drowvendors.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs3_dwarfvendors.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs3_elfvendors.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs3_gargoyle_town.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs3_halforcvendors.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs3_helpgump.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs3_ogre_town.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs3_ore_elem.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs3_patron.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs3_racemenu.scp" />
+    <CustomBuild Include="..\scripts\bs3\bs3_troll_town.scp" />
+    <CustomBuild Include="..\scripts\bs3\sphereclass.scp" />
+    <CustomBuild Include="..\scripts\bs3\SphereRace.scp" />
+    <CustomBuild Include="..\scripts\SPHEREBook.scp" />
+    <CustomBuild Include="..\scripts\spherechar.scp" />
+    <CustomBuild Include="..\scripts\spherechar_anim.scp" />
+    <CustomBuild Include="..\scripts\spherechar_evil.scp" />
+    <CustomBuild Include="..\scripts\spherechar_human.scp" />
+    <CustomBuild Include="..\scripts\spherechar_misc.scp" />
+    <CustomBuild Include="..\scripts\SPHEREDefs.scp" />
+    <CustomBuild Include="..\scripts\spheredialog.scp" />
+    <CustomBuild Include="..\scripts\sphereevents.scp" />
+    <CustomBuild Include="..\scripts\SPHEREhelp.scp" />
+    <CustomBuild Include="..\scripts\sphereirc.scp" />
+    <CustomBuild Include="..\scripts\sphereitem2.scp" />
+    <CustomBuild Include="..\scripts\sphereitemb1.scp" />
+    <CustomBuild Include="..\scripts\sphereitemb2.scp" />
+    <CustomBuild Include="..\scripts\sphereitemb3.scp" />
+    <CustomBuild Include="..\scripts\sphereitemb4.scp" />
+    <CustomBuild Include="..\scripts\sphereitemb5.scp" />
+    <CustomBuild Include="..\scripts\sphereitemb6.scp" />
+    <CustomBuild Include="..\scripts\sphereitemb7.scp" />
+    <CustomBuild Include="..\scripts\SphereItemX.scp" />
+    <CustomBuild Include="..\scripts\sphereitem_colorarm.scp" />
+    <CustomBuild Include="..\scripts\sphereitem_deed.scp" />
+    <CustomBuild Include="..\scripts\sphereitem_magicarm.scp" />
+    <CustomBuild Include="..\scripts\sphereitem_magicweap.scp" />
+    <CustomBuild Include="..\scripts\sphereitem_magic_leather.scp" />
+    <CustomBuild Include="..\scripts\sphereitem_maps.scp" />
+    <CustomBuild Include="..\scripts\sphereitem_misc.scp" />
+    <CustomBuild Include="..\scripts\sphereitem_multis.scp" />
+    <CustomBuild Include="..\scripts\sphereitem_ore.scp" />
+    <CustomBuild Include="..\scripts\sphereitem_potions.scp" />
+    <CustomBuild Include="..\scripts\sphereitem_treas.scp" />
+    <CustomBuild Include="..\scripts\sphereitem_wands.scp" />
+    <CustomBuild Include="..\scripts\sphereitem_x.scp" />
+    <CustomBuild Include="..\scripts\SPHEREmap.scp" />
+    <CustomBuild Include="..\scripts\SPHEREMenu.scp" />
+    <CustomBuild Include="..\scripts\SPHEREname.scp" />
+    <CustomBuild Include="..\scripts\SPHEREnewb.scp" />
+    <CustomBuild Include="..\scripts\sphereregion.scp" />
+    <CustomBuild Include="..\scripts\SphereResources.scp" />
+    <CustomBuild Include="..\scripts\sphereskill.scp" />
+    <CustomBuild Include="..\scripts\spherespeech.scp" />
+    <CustomBuild Include="..\scripts\SPHERETables.scp" />
+    <CustomBuild Include="..\scripts\spheretable_x.scp" />
+    <CustomBuild Include="..\scripts\SPHEREtemplate.scp" />
+    <CustomBuild Include="..\scripts\spheretemp_loot.scp" />
+    <CustomBuild Include="..\scripts\spheretemp_vend.scp" />
+    <CustomBuild Include="..\scripts\SPHEREtrig.scp" />
+    <CustomBuild Include="..\scripts\sphereweb.scp" />
+    <CustomBuild Include="..\scripts\test\blacksmith_menu.scp" />
+    <CustomBuild Include="..\scripts\test\classmenus.scp" />
+    <CustomBuild Include="..\scripts\test\clericbook.scp" />
+    <CustomBuild Include="..\scripts\test\custom_vendor.scp" />
+    <CustomBuild Include="..\scripts\test\helpgump2.scp" />
+    <CustomBuild Include="..\scripts\test\helpgump3.scp" />
+    <CustomBuild Include="..\scripts\test\housegump.scp" />
+    <CustomBuild Include="..\scripts\test\housegump2.scp" />
+    <CustomBuild Include="..\scripts\test\housegump3.scp" />
+    <CustomBuild Include="..\scripts\test\necrobook.scp" />
+    <CustomBuild Include="..\scripts\test\RewardSystem.scp" />
+    <CustomBuild Include="..\scripts\test\runebook.scp" />
+    <CustomBuild Include="..\scripts\test\runebook2.scp" />
+    <CustomBuild Include="..\scripts\test\spherechar3.scp" />
+    <CustomBuild Include="..\scripts\test\spheretest.scp" />
+    <CustomBuild Include="..\scripts\test\Tinkering_menu.scp" />
+    <CustomBuild Include="..\scripts\test\traveler.scp" />
+    <CustomBuild Include="sphere.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="bugs.txt" />
+    <Text Include="docs\items.txt" />
+    <Text Include="docs\npcs.txt" />
+    <Text Include="docs\sounds.txt" />
+    <Text Include="docs\terrain.txt" />
+    <Text Include="docs\UoLog.txt" />
+    <Text Include="newfeatures.txt" />
+    <Text Include="REVISIONS.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="spheresvr.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

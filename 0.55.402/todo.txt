@@ -1,0 +1,11 @@
+- Add @PartyJoin, @PartyLeave and @PartyInvite.
+- Add SERV.MAPTILE(x, y).
+  ( k: there is already SERV.MAP(x,y) ? )
+- Add LIGHT to control light independantly for characters.
+(Radiant: done 12-04-2004, might need to be changed to use local light packet instead)
+
+newequip (creates a new item, equips it), newloot (creates a new item or loot template, sticks it on a corpse
+ in @death events), 
+and equipprops (example equipprops 10.0 magery, 10 dex - would give 10.0 magery and 10 dex on equip,
+ remove it on unequip, placed in @Create on an item)
+( k: doable by adding a simple resourcegroup field to items/itemdefs )

@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: grayworld - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\CONFIG~1\Temp\RSPB4.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/grayworld.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\source\graysvr.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\CONFIG~1\Temp\RSPB4.tmp" 
+<h3>Output Window</h3>
+Compiling...
+graysvr.cpp
+c:\source\graysvr.h(13) : fatal error C1189: #error :  GRAY_SVR must be -defined on compiler command line for common code to work!
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+graysvr.obj - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
