@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GraySvr", "GraySvr\GraySvr.vcxproj", "{9F35F446-79BA-4CAD-9E78-674D4E3552E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F35F446-79BA-4CAD-9E78-674D4E3552E3}.Debug|x86.ActiveCfg = Debug|Win32
+		{9F35F446-79BA-4CAD-9E78-674D4E3552E3}.Debug|x86.Build.0 = Debug|Win32
+		{9F35F446-79BA-4CAD-9E78-674D4E3552E3}.Release|x86.ActiveCfg = Release|Win32
+		{9F35F446-79BA-4CAD-9E78-674D4E3552E3}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {181BD1FB-F5B7-4355-A03B-EAE690599182}
+	EndGlobalSection
+EndGlobal
