@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{e0d1d01f-c9a4-49bf-b9d9-08b67ada8de2}</UniqueIdentifier>
+      <Extensions>scp,ini</Extensions>
+    </Filter>
+    <Filter Include="Web Pages">
+      <UniqueIdentifier>{a7006460-f92a-4f80-bd87-d070b488f12e}</UniqueIdentifier>
+      <Extensions>htm</Extensions>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{811c7ee0-1b37-4acd-b372-c622d760e23a}</UniqueIdentifier>
+      <Extensions>cpp,c,h,rc</Extensions>
+    </Filter>
+    <Filter Include="Data Files">
+      <UniqueIdentifier>{c2b235a8-38f6-4363-9141-6178f8d32af5}</UniqueIdentifier>
+      <Extensions>scp</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{ff413d53-3c74-4703-b83a-01812b1f036a}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{3a900684-db13-45be-9f9c-f6d8fc6f503c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts bs3">
+      <UniqueIdentifier>{a4acd55e-8804-4948-a6fd-12730a4e00c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts Test">
+      <UniqueIdentifier>{55a12e48-2aca-470e-beb5-5bcf38943186}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts Speech">
+      <UniqueIdentifier>{48c80384-12d1-4b6c-974f-1afcae2709df}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CAccount.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CBackTask.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="cbase.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CChar.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ccharact.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CCharBase.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CCharFight.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CCharNPC.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CCharNPCAct.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CCharNPCFood.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CCharNPCPet.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CCharNPCStatus.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ccharskill.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ccharspell.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CCharStatus.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ccharuse.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CChat.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CClient.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="cclientevent.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CClientGMPage.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CClientLog.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CClientMsg.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="cclienttarg.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="cclientuse.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CContain.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="cgmpage.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CIRCServer.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CItem.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CItemBase.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="citemmulti.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CItemSp.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CItemStone.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CItemVend.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CLog.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CMail.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjBase.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CPathFinder.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="cprofiledata.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="cquest.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CResource.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CResourceCalc.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CResourceDef.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CResourceTest.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="csector.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CServer.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CServRef.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CWebPage.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorld.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="cworldimport.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="cworldmap.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="graysvr.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ntservice.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ntwindow.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\calc.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\carray.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cassoc.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\catom.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\ccrypt.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\ccrypt2.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\ccryptbase.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\ccryptnew.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cexpression.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cfile.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cfilelist.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cGrayData.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cgrayinst.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cGrayMap.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cQueue.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\crect.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cregion.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cresourcebase.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cscript.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\CScriptObj.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cSectorTemplate.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cstring.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cstring2.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cthread.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\CTime.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cwindow.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\graycom.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="graysvr.rc">
+      <Filter>Sources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="docs\items.txt">
+      <Filter>Data Files</Filter>
+    </Text>
+    <Text Include="docs\npcs.txt">
+      <Filter>Data Files</Filter>
+    </Text>
+    <Text Include="docs\sounds.txt">
+      <Filter>Data Files</Filter>
+    </Text>
+    <Text Include="docs\terrain.txt">
+      <Filter>Data Files</Filter>
+    </Text>
+    <Text Include="docs\UoLog.txt">
+      <Filter>Data Files</Filter>
+    </Text>
+    <Text Include="bugs.txt" />
+    <Text Include="newfeatures.txt" />
+    <Text Include="REVISIONS.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="caccount.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cclient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CIRCServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cobjbase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cresource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CServRef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorld.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graysvr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\carray.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cassoc.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\CAtom.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\ccrypt.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cexpression.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cfile.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cfilelist.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cgrayinst.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cGrayMap.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cmemblock.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\CQueue.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\crect.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cregion.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cresourcebase.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cscript.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cscriptobj.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cSectorTemplate.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\csocket.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cstring.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cthread.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\ctime.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\graybase.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\graycom.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\graymul.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\grayproto.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="ntservice.h">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="GraySvr.ico" />
+    <Image Include="spheresvr.ico" />
+    <Image Include="TUSSvr.ico" />
+    <Image Include="TusSvr2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="sphere.ini">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\SPHEREBook.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\spherechar.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\spherechar_anim.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\spherechar_evil.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\spherechar_human.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\spherechar_misc.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\SPHEREDefs.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\spheredialog.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereevents.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\SPHEREhelp.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereirc.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem2.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem_colorarm.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem_deed.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem_magic_leather.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem_magicarm.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem_magicweap.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem_maps.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem_misc.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem_multis.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem_ore.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem_potions.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem_treas.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem_wands.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitem_x.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitemb1.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitemb2.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitemb3.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitemb4.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitemb5.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitemb6.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereitemb7.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\SphereItemX.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\SPHEREmap.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\SPHEREMenu.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\SPHEREname.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\SPHEREnewb.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereregion.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\SphereResources.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereskill.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\spherespeech.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\spheretable_x.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\SPHERETables.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\spheretemp_loot.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\spheretemp_vend.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\SPHEREtemplate.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\SPHEREtrig.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\sphereweb.scp">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\public_html\gray\dev.htm">
+      <Filter>Web Pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\public_html\gray\ideas.htm">
+      <Filter>Web Pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\public_html\gray\index.html">
+      <Filter>Web Pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\public_html\gray\readme.htm">
+      <Filter>Web Pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs2_crier.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs2_items.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs2_map.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs2_santa.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs2_stuff.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs3_borgvendors.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs3_classitems.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs3_drowvendors.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs3_dwarfvendors.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs3_elfvendors.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs3_gargoyle_town.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs3_halforcvendors.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs3_helpgump.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs3_ogre_town.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs3_ore_elem.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs3_patron.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs3_racemenu.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\bs3_troll_town.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\sphereclass.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\bs3\SphereRace.scp">
+      <Filter>Scripts bs3</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\blacksmith_menu.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\classmenus.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\clericbook.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\custom_vendor.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\helpgump2.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\helpgump3.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\housegump.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\housegump2.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\housegump3.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\necrobook.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\RewardSystem.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\runebook.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\runebook2.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\spherechar3.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\spheretest.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\Tinkering_menu.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\scripts\test\traveler.scp">
+      <Filter>Scripts Test</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

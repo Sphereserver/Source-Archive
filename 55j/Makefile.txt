@@ -1,0 +1,101 @@
+# Generic, all-purpose Makefile for egcs/gcc 2.8.x
+
+# *** User servicable parts
+
+OPT =
+# OPT = -O
+# OPT = -O3 -fstrength-reduce -fschedule-insns2
+
+WARN = -Wall -W
+
+EXE := gray
+
+
+# *** User servicable parts end here
+
+
+CC = g++
+
+# Spammy
+#SCOTT=-Weffc++
+
+NORTTI = -fno-rtti
+NOEX = -fno-exceptions
+
+# Debugging?
+DEBUG = -g
+
+# Profiling?
+#PROF = -pg
+
+# Use a pipe rather than temp files
+PIPE = -pipe
+
+
+# Source files
+SRC := $(wildcard *.cpp)
+
+# Exe file
+# INCLUDE = -Ih -I/usr/ea/h
+
+#LIBS += -lc_p
+#LIBS += -lefence
+
+# Common flags (used both for compile and link)
+SPECIAL = $(NORTTI) $(NOEX)
+O_FLAGS = $(PIPE) $(PROF) $(STATIC) $(SPECIAL)
+
+# static
+#STATIC = -static
+
+# Flags used under compiling
+C_FLAGS = $(WARN) $(DEBUG) $(OPT) $(INCLUDE)
+
+# Object files
+OBJ_DIR = o
+OBJ := $(patsubst %.cpp,$(OBJ_DIR)/%.o,$(SRC))
+
+# Include files
+INCL := $(wildcard h/*.h)
+
+.PHONY: all clean tidy ftp checkin diff distrib install
+
+all: $(EXE)
+
+clean:	tidy 
+	rm -f $(OBJ) $(EXE)
+	$(MAKE)
+
+.depend:
+	gcc -MM $(INCLUDE) $(SRC) > .depend
+	perl -pi -e 's/([^.]+)\.o/o\/\1.o/g' .depend
+
+tidy:
+	rm -f *~ *orig *bak *rej
+
+tags:	$(SRC) $(INCL)
+	ctags $(SRC) $(INCL)
+
+# Link with gcc to avoid the c++ libs to be linked
+$(EXE): $(OBJ)
+	gcc $(O_FLAGS) $(L_FLAGS) -o $(EXE) $(OBJ) $(LIBS)
+
+h/version.h: VERSION
+	echo "#define VERSION `head -1 VERSION`" > h/version.h
+	echo "#define COMPILED_BY \"$(COMPILED_BY)\"" >> h/version.h
+
+$(OBJ_DIR)/%.o: %.cpp
+	$(CC) -c $(O_FLAGS) $(C_FLAGS) $< -o $@
+
+# These files are under RCS control
+RCS= $(SRC) $(INCL) README Changes Makefile TODO
+
+checkin:
+	-ci -mlazy -l $(RCS)
+
+diff:
+	rcsdiff -u -p $(RCS) > diff.new
+
+include .depend
+	
+	
