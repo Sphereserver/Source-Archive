@@ -1,0 +1,418 @@
+--------------------------------------------------
+Feature Requests:
+
+--------------------------------------------------
+High Priority:
+
+save respawning creatures to another file ? to edit quicker in SphereMap and Plotline editor.
+
+
+--------------------------------------------------
+Undecided Priority:
+
+books with pages using auto line measuring 
+
+the ability to spawn or create items based on plevel. Maybe if we could set a tag on each item and NPCs,
+ a spawn or create level, then somehow link that to the plevels.  
+ I would be more than happy to start doing all the items, and spawns.  
+ And then admins could set their shard specific create and spawn levels when they set up their shard.
+
+Justice System
+
+bounty system - place bounty on the head of u're killer ?
+
+begging = grovel at monsters feet -> stop fighting you.
+
+staff accounts in a sep save file ?
+
+only admins should be able to adjust player stats?
+
+Can't prevent someone from entering a region using the EVENTS return 1
+
+Multi with a single TYPE= function?
+
+.GHOST to leave your body behind.
+
+Connect to Gamespy or Heat.net network ?
+
+Fix low aggressive creature ? headless ?
+
+all npc humans should want lights
+
+Auto install of the NTSERVICE if not installed ?
+
+baseworlds.com - link to sphere. look for errors ?
+sphere list: real age and accounts ? 
+
+check for items that have RESOURCES but also have a VALUE= override ?
+
+Ferry for Skara Brae
+NPC Thieves
+Create "spk_client" and "spk_pet" and "spk_hireling" auto speech blocks.
+	all global speech commands scripted. "home home home"
+
+string functions
+exp and log functions.
+
+BUG - .SERV.AREA.a_world.SECTORS.SEASON x
+
+Auto detect if character name needs to be sent as unicode ?
+
+gm pages list for console ?
+
+mail bag dropping ?
+
+replace some statics with dynamics on the fly , book case, bed, spin wheel, !
+
+
+chars should have a GUID for global id's
+
+more1h, more1l
+
+- [ECONOMY] section for both regions and global.
+armor metal content effects magery.
+
+regional speech blocks. a region can have commands like a ship.
+	Town speech - all npc's in town get this speech/event blocks
+
+.page d/q/etc..?
+Well maybe a .page t/tell command that would tell the paging player a message in the format of (yellow)
+(teller's name) tells you:  message here.
+
+incognito it removes the comma from your name?  a permanent flag that could remove the comma?  
+
+nt ON=@Resurrection in the next versions? further, the event @spelleffect works only, if i'm targeted by a player, doesn't work on casting npc's
+
+House Decay
+Guildstone Decay (we have nearly 200 guilds.. argh)
+Character Decay - characters are removed after x days not being used
+Chest / Box Max items - only x items can be put in a box/chest
+
+Dream gates import/export to other listed server.
+
+"withdraw 1000" from the bank as a speech command. better text parsing for scripts.
+
+CAN I DO THIS ? configure output ports to use ?
+ 
+MAXHOUSESPERACCOUNT=x is what people want ? or MAXHOUSESPERPLAYER=x
+
+single first name and family last name ? multiple players declared in a family ?
+
+web page displaying char with all items.
+t_booze should just be a spell/potion type !
+EXPLEVEL = experience level. 0=Young, 1=Normal, 2=Veteran
+? UNICODE text to the terminal ?
+
+proxy to walk to new server ?
+Ingame UO Chat-> Make it possible for Admins to OP ppl via default or make them perm Chanops..
+DNS settings for Win2k ?
+debug tracking objects to track chars and items in the world.
+
+Some people are far better at making things than others. We are going to try to come up with a grading system. So people who have better scrript contributions are more readily appearant. Scripts that are contributred that just don't work can be fixed or at least identifed as such.
+ 
+OSTR
+ODEX
+OINT
+MAXMANA
+MAXSTAM
+MAXHITS
+ 
+[NameColoring]
+  Murderer        38
+  Criminal        905
+  Attackable      905
+  Innocent        90
+  GuildAlly       68
+  GuildEnemy      44
+
+CriminalFlagInterval=120
+AggressorFlagTimeout=120
+
+unconsciousness.
+bar fights. as long as it's only wrestling. no crime.
+
+magic trap = rune mine ?
+name gates (where do they go?)
+.PAGE verb ? for tracking priv levels ?
+
+restrict list of items u can spawn/create for priv levels ?
+Get GM/seer a set amount of $ to spend creating stuff ?
+Only allow GM/Admin to tweak MORE values. (depends on TYPE?)
+Visual sphere COM interface.
+purple potion - can't get rid of it if canceled
+- summon scroll options depends on magery skill not on scroll skill ?
+- taming a creature should put karma same as owner ?
+weather sounds in cave ?
+Party system. update my status to other members all the time. Can't harm those in your party with area spells ? share exp with party members.
+Wrestling stun and disarm
+Hard hit = thrown back ?
+A* pathfinding. much better path finding algorithm
+Max hitpooints determines how hard to repair. can we make armor take less damage from battle ?
+vampires/undead - harmed by holy water.
+?Too much booze = perma stat loss. (can't reproduce this)
+better region manager - all regions shold be searched in BSP tree. new format = DEFNAME type.
+layers for editing SphereMap application. show multiple maps but just edit one.
+TEST should be generic for SKILLMENU
+VERIFY()? or DEBUG_ASSERT ?
+don't grind reagents all at once ?
+cfg set the crypt codes.
+
+weather lightning on metal armor.
+can't cast with metal armor ?
+fire elems heal in fire
+profile script usage ? list quest titles and achievements.
+@EnvironChange should only be sent when region changes. not sector ?
+
+Unconcious state - people can carry your body. Death at -10 damage. carry your corpse as well.
+Res with corpse = little stat loss. res without is LARGE stat/skill loss.
+permadeath after n deaths - INI switch. quests for more lives.
+
+- itemid = what items and skills to use to make this ?
+- list all the craftable items not in skill menus ?
+- hook up house gumps
+- Bandages work like regen rate. not apply then insta heal ! bandages fall offf on the ground if you combat or run. or healed to high rate. s_regen
+- NPC's should ignore you if you make no sense or are too far away etc.., not talking to them ?
+
+regions should reload as a resource ?
+
+Magic lock.unlock on doors and containers
+Chameleon Skin potion
+Monster form potion
+damage bonus for eval int or anatomy?
+guild guilt by association ? one member of guild attacks u , u have rights to attach any member for a time.
+lock picks dont work?
+
+auto detect utf8 in scripts and use correct SPEAK, SAY etc, auto detect to unicode.
+fizzle spells when running.
+
+TRUE:  players can use bandages and wands while in hiding mode
+
+Give all monsters a "sphere of detection" so if it's dark it's little likely they will attack you when you walk by them almost a 
+ whole screen away. It would be different if you RAN of course *smiles* In light, this sphere of 
+ detection of SoD for short *grin* would be much larger. THat is...unless it was monsters who see 
+ better in the dark than in daylight....*shivers*
+
+scripts that can contain loops and arrays. Scripts that would pause and wait for a target would be 
+especially helpful, too. 
+
+create a ‘Region spawn’ area rect in the map script editor and then create spawns in that rect and have the creatures wander freely without leaving that rect area. Ability to go beyond the border if in war-mode4. Spell mana cost - I'd like to be able to change some of the mana cost of some spells on our server to make them incredibly hard to cast without a high enough intelligence. Ie, make gate almost twice as hard, etc.
+
+Shard Gate .. Some GMs thought it would be cool to be able to have some kind of gate between shards (I would think the player's data would have to be sent between shards?) >>> There’s an ongoing debate about intershard gates…. IT’S an evolving concept…you probably won’t see something for a while though. NOTE: DreamGate code started, not effective yet. 
+
+Newbie books that represent new skills. - skill book system ?
+
+	Horse Thieveing:
+Make it possible to "steal" a horse with stealing skill. Upon doing so, the horsethief would be FRIENDED to the horse (not put as new owner) and could thus ride it or command it....since the thief is only friended to the horse there's also a chance that the original horse owner can find his old horse and retrieve it. 
+
+False Criminal: criminal flag lasting longer than 3 minutes. only to those that where personally offended.
+
+12) people are hijacking NPC's with their spells gate travel, I believe that you need to put a block in
+ for NPC's traveling through gates unless they are ridden or tamed... OSI had this same problem... 
+ I am finding players with their own town and village with bankers, mages and so forth....
+
+ low int walks into gates. unless following.
+  
+14) interupption for skill use.. for example,
+ if you are healing someone and someone attacks you, the healing should be interuppted...
+Also like if you are casting a summon deamon or even a heal, and someone hits you with a sword 
+or casts a spell on you, that should interrupt the spell, and you should have to start all 
+over again with the casting.
+  
+15) If anyone casts a Blade Spirit, Deamon or EV in town, they should be flagged 
+a criminal immediately... Then if the BS, EV or Deamon attacks and kills another player,
+ then they should get the murder count.
+
+11. TRUE-(?client bug?)  although I have over 70,000 gold when buying from a vendor it tells me in only have 5,000 
+
+7. there is still a text limit when crafting items - depending on how long the item name is ur name gets cut off (for example - platemail helm crafted by Ser)
+ItemID will tell you who crafted gm item.
+
+Sending a message to the console to be recorded in the logs, yet not shown to the player. 
+IE, "time:ScriptNotice:Character 'Bob' has begun a quest"
+
+Server run time corruption checking. If const stuff is changed (data, code) the server will notify/exit.
+
+Visual debugger. break at script/line# (Support Microsoft® Windows® Active Script Interfaces)
+	(http://msdn.microsoft.com/scripting/debugger/dbdocs.htm)
+	list of break points, step through code. query variables. current UID object.
+
+GM PAges in the console and web pages.
+
+Radius loop script
+
+--------------------------------------------------
+Low Priority:
+
+
+--------------------------------------------------
+UNKNOWN Priority:
+
+instant trash if in pack ?
+
+gumps for equippable items not used:
+
+Male black leather 0000C506
+black leather gountlets 0000C508
+black leather mask 0000C509
+old loin cloth 0000C512
+old fancy shirt 0000C565
+old fancy pants 0000C566
+WHIP 0000C5DA
+Female leather outfit 0000EC16
+F Black leather gauntlets 0000EC18
+mask 0000EC19
+OLD femal underear 0000EC22
+Old Female fancy shirt 0000EC75
+fancy pants 0000EC76
+
+no torch on ground anim.
+
+--------------------------------------------------
+
+Test Plan:
+
+All Skills
+Magery:
+	Polymorph
+
+
+--------------------------------------------------
+
+Better org of the config pages.
+
+-Basic Sphere Info.
+	SERVNAME
+	ADMINEMAIL
+	URL
+	TIMEZONE
+
+-System configuration
+	SERVIP
+	SERVPORT
+	NTSERVICE
+
+-File System
+	WORLDSAVE
+	SCPFILES
+	SCPINBOXDIR
+	ACCTFILES
+	MULFILES
+
+-Listing the sphere.
+	REGISTERFLAG
+	REGPASS
+	NOTES
+	LANG
+
+-In Game Environment
+	LIGHTDAY
+	LIGHTNIGHT
+	DUNGEONLIGHT
+	GAMEMINUTELENGTH
+	ARRIVEDEPARTMSG
+	NOWEATHER
+	CHARTAGS
+
+-In Game Physics
+	STAMINALOSSATWEIGHT
+	RUNNINGPENALTY
+	BANKMAXITEMS
+	BANKMAXWEIGHT
+	FLIPDROPPEDITEMS
+	AUTONEWBIEKEYS
+	PLAYERGHOSTSOUNDS
+	CLIENTLINGER
+	HITPOINTPERCENTONREZ
+	MAXBASESKILL
+
+-In Game NPC control
+	VENDORMAXSELL
+	MONSTERFEAR
+	MONSTERFIGHT
+	NPCTRAINMAX
+	NPCTRAINPERCENT
+
+-In Game Magic
+	WOPPLAYER
+	WOPSTAFF
+	REAGENTLOSSFAIL
+	REAGENTSREQUIRED
+	EQUIPPEDCAST
+	MAGICUNLOCKDOOR
+
+-In Game Decay
+	CORPSENPCDECAY
+	CORPSEPLAYERDECAY
+	DECAYTIMER
+
+-Account Policy
+	ACCAPP
+	REQUIREEMAIL
+	MINCHARDELETETIME
+	MAXCHARSPERACCOUNT
+	GUESTSMAX
+	CLIENTMAX
+	LOCALIPADMIN
+
+-Criminal Fame Karma Murder System
+	SNOOPCRIMINAL
+	PLAYERNEUTRAL
+	MURDERDECAYTIME
+	MURDERMINCOUNT
+	CRIMINALTIMER
+	GUARDLINGER
+	GUARDSINSTANTKILL
+	HELPINGCRIMINALSISACRIME
+	LOOTINGISACRIME
+
+-Game Save
+	SAVEBACKGROUND
+	SAVEPERIOD
+	WRITENUMIDS
+	BACKUPLEVELS
+
+-Logging
+	VERBOSE
+	LOG
+	LOGMASK
+	HEARALL
+
+-Debug and Optimization
+	USEIRC
+	SECTORSLEEP
+	SECURE
+	PROFILE
+	MAPCACHETIME
+	FREEZERESTARTTIME
+	MAXCOMPLEXITY
+	DEBUGFLAGS
+	FORCEGARBAGECOLLECT
+	DEADSOCKETTIME
+
+-Listing other spheres
+	POLLSERVERS
+
+
+-------------------------
+
+faldon http://www.oglibrary.net/faldon/
+openrpg.com
+
+http://freebyte.com/programming/ - c interp / compiler ?
+ 
+http://www.f10.parsimony.net/forum15628/index.htm
+ 
+http://www.geometriccomputing.com/gallery/gallery.html
+convert 2d to 3d ?
+http://www2.links2go.com/more/www.atomic.com/
+3drad.com
+ 
+3d game studio - http://www.rocketdownload.com/Details/Prog/gsdemoshot.htm
+    http://www.conitec.net/a4info.htm
+ 
+list of publishers : http://www.extremecodes.com/publishers/n-t/index.html
+Gathering Of developers tips
+ 
+unreal engine licensing ?
+darkstone engine ?
+ 
