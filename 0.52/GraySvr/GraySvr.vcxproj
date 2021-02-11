@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>"$/GraySvr", FCAAAAAA</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <ProjectGuid>{9F35F446-79BA-4CAD-9E78-674D4E3552E3}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level1</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;GRAY_SVR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\GraySvr.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <CallingConvention>FastCall</CallingConvention>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Release\GraySvr.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\GraySvr.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <OutputFile>.\Release\GraySvr.exe</OutputFile>
+      <AdditionalDependencies>wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Version>0.10</Version>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level1</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;GRAY_SVR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\GraySvr.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <AdditionalOptions> /J</AdditionalOptions>
+      <CallingConvention>StdCall</CallingConvention>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Debug\GraySvr.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\GraySvr.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <OutputFile>.\Debug\GraySvr.exe</OutputFile>
+      <AdditionalDependencies>wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Version>0.12</Version>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\public_html\gray\dev.htm" />
+    <CustomBuild Include="..\public_html\gray\ideas.htm" />
+    <CustomBuild Include="..\public_html\gray\index.html" />
+    <CustomBuild Include="..\public_html\gray\readme.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\carray.cpp" />
+    <ClCompile Include="..\common\ccrypt.cpp" />
+    <ClCompile Include="..\common\cexpression.cpp" />
+    <ClCompile Include="..\common\cfile.cpp" />
+    <ClCompile Include="..\common\cfilelist.cpp" />
+    <ClCompile Include="..\common\cGrayData.cpp" />
+    <ClCompile Include="..\common\cgrayinst.cpp" />
+    <ClCompile Include="..\common\cGrayMap.cpp" />
+    <ClCompile Include="..\common\cregion.cpp" />
+    <ClCompile Include="..\common\cscript.cpp" />
+    <ClCompile Include="..\common\cstring.cpp" />
+    <ClCompile Include="..\common\graycom.cpp" />
+    <ClCompile Include="CAccount.cpp" />
+    <ClCompile Include="CBackTask.cpp" />
+    <ClCompile Include="cbase.cpp" />
+    <ClCompile Include="CChar.cpp" />
+    <ClCompile Include="CCharBase.cpp" />
+    <ClCompile Include="CCharFight.cpp" />
+    <ClCompile Include="CCharNPC.cpp" />
+    <ClCompile Include="CCharNPCAct.cpp" />
+    <ClCompile Include="CCharNPCFood.cpp" />
+    <ClCompile Include="CCharNPCPet.cpp" />
+    <ClCompile Include="CCharNPCStatus.cpp" />
+    <ClCompile Include="ccharskill.cpp" />
+    <ClCompile Include="CCharStatus.cpp" />
+    <ClCompile Include="ccharuse.cpp" />
+    <ClCompile Include="CChat.cpp" />
+    <ClCompile Include="CClient.cpp" />
+    <ClCompile Include="cclientevent.cpp" />
+    <ClCompile Include="CClientLog.cpp" />
+    <ClCompile Include="CClientMsg.cpp" />
+    <ClCompile Include="cclienttarg.cpp" />
+    <ClCompile Include="CContain.cpp" />
+    <ClCompile Include="cfragment.cpp" />
+    <ClCompile Include="CItem.cpp" />
+    <ClCompile Include="CItemBase.cpp" />
+    <ClCompile Include="CItemSp.cpp" />
+    <ClCompile Include="CItemStone.cpp" />
+    <ClCompile Include="CMail.cpp" />
+    <ClCompile Include="csector.cpp" />
+    <ClCompile Include="CServer.cpp" />
+    <ClCompile Include="cvendoritem.cpp" />
+    <ClCompile Include="CWorld.cpp" />
+    <ClCompile Include="cworldimport.cpp" />
+    <ClCompile Include="cworldmap.cpp" />
+    <ClCompile Include="graysvr.cpp" />
+    <ClCompile Include="ntservice.cpp" />
+    <ClCompile Include="ntwindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="REVISIONS.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\carray.h" />
+    <ClInclude Include="..\common\cassoc.h" />
+    <ClInclude Include="..\common\cexpression.h" />
+    <ClInclude Include="..\common\cfile.h" />
+    <ClInclude Include="..\common\cgrayinst.h" />
+    <ClInclude Include="..\common\cGrayMap.h" />
+    <ClInclude Include="..\common\common.h" />
+    <ClInclude Include="..\common\cregion.h" />
+    <ClInclude Include="..\common\cscript.h" />
+    <ClInclude Include="..\common\cstring.h" />
+    <ClInclude Include="..\common\graybase.h" />
+    <ClInclude Include="..\common\graycom.h" />
+    <ClInclude Include="..\common\graymul.h" />
+    <ClInclude Include="..\common\grayproto.h" />
+    <ClInclude Include="graysvr.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="graysvr.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="GraySvr.ico" />
+    <Image Include="spheresvr.ico" />
+    <Image Include="TUSSvr.ico" />
+    <Image Include="TusSvr2.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
