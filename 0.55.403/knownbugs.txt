@@ -1,0 +1,8 @@
+Here is the list of known issues in the current Sphere Revisions project.
+Some of them are subject of change in future versions, some will stay just in knowledge base ;) forever.
+Please, do not report them as bugs.
+
+- (Unix) Used memory information is not working.
+- (Unix) Threading makes spheresvr unstable.
+- (All)  Resync bug - object definitions not removed while resynching the file
+         leading to errors when moved from script or removed totaly.

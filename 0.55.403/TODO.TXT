@@ -1,0 +1,69 @@
+- Add @PartyJoin, @PartyLeave and @PartyInvite.
+- Add SERV.MAPTILE(x, y).  ( k: there is already SERV.MAP(x,y) ? )
+- Add LIGHT to control light independantly for characters. (Radiant: done 12-04-2004, might need to be changed to use local light packet instead)
+- newequip (creates a new item, equips it), newloot (creates a new item or loot template, sticks it on a corpse in @death events), 
+- equipprops (example equipprops 10.0 magery, 10 dex - would give 10.0 magery and 10 dex on equip, remove it on unequip, placed in @Create on an item)
+  ( k: doable by adding a simple resourcegroup field to items/itemdefs )
+- precasting
+- try to get STAT_MEMORY_INFO from system process information routines to get rid of overloaded operators
+- get TRIGGER=@trigger to work in EVENTS (seph said they dont, confirmed)
+- database support via libmysql. at least accounts information should be able to lay configurable in db or base
+  in the future, move all the rest other to sql (configurable). it will remove the need of saves (or not if each sql
+  save will slow down), but will make almost impossible for rollback without previous save
+  could also be ODBC, but it is much slower and odbc has some bad limitations
+- new map support
+- useful 99/1.0 features (maybe some are already in, just copy-pasted, my comment in brackets - Vjaka):
+  profiles saved (means that middle)
+  Regions on diff map plane but with same area is ok. (not conflict) (useful for new map)
+  ON=@UserClick (differnet from @Click)
+  MOUNTID for chars that have mount objects
+  VAR.X1 = VAR.X[1] for array name parsing
+  CHAR.TAG.PARTY_CANLOOTME
+  blocking ip range
+  Script error will jump out of current block. (should simulate endif)
+  TAG.CORPSEID for CHARDEF to change the corpse.
+  NPC's will use DISPEL if they have it.
+  Each summon spell type can have it's own timer DURATION.
+  try not to cast useless evil spells
+  allow NPC to accidently hurt it's pets.
+  Allow NPC to summon pets.
+  gold weighs 1/100 of a stone.
+  .Add multi directly? (i_multi_cannon_s)
+  HTTPPORT = put http requests on another port.
+  X loot from blue says you need to steal ?
+- Magicresistance not working
+- Provocation not working
+- Check guild system to be usable and fully powerful
+- NPC AI system
+  pathfinding (at least limited to 180 degrees or like that)
+  some npc ai code is #if 0 - cause of Npc_SearchFood problems. need to fix that stuff
+  npc should eat food if have some on ticking food
+  npc should be able to search for food on ticking food around of it
+- Make threads working on Unix and then
+  move socket operations (at least packets receiving) to another thread. could cause some problems with non-volatiles, but
+    it is a must
+- Need investigation what exactly causes sphere not being very fast
+- sector/region.clients - number of clients in (same in region)
+- Arrays for tags/vars variable[x] = ... (no need of EVAL in brackets)
+- Having CONSUME consume more than 65k of an item at once
+- Working ON=@SUCCESS Trigger on all skills. Skills on which it doesn't work right now : 
+  Parrying 
+  Camping 
+  Archery / Swordsmanship / Fencing / Macefightning / Wrestling / Tactics 
+  Tracking 
+  Meditation (It works, but while meditating, it gets triggered every 1/10 second.) 
+  Stealth (Gets triggered, just like hiding, but doesn't get triggered when one successfully walks hidden) 
+- ON=@Kill trigger for weapons/chars
+- Logs the uid of every added items, actually: 00:33:5c:'staff_nalfgar' commands 'add i_robe'=1 UID : <UID>
+- I'd like to see a fixed rainchance=0 /coldchance=0. although i set these values in every region, it still ains/snows sometimes. 
+- SERV.ALLNPCS, SERV.ALLREGIONS, SERV.ALLITEMS, SERV.ALLOBJS, SERV.ALLPLAYERS
+- damtype for itemdef base = 0002 | 0010 // physical & fire
+- ON=@CharDCLICK
+- ON=@CREATE for player chars
+- TIMER2 for chars with ON=@Timer triggeting
+- New script system with scripts precompiled on loading and only the binary execution will take place
+  it will cause some language changes.
+- interesting bug with .xstone: when you try to unstone an NPC on 203 client it crashes
+- in dialog "try LOCAL... " does not work. dunno know why since dialogs do not have local vars? shit happens :)
+- TAB in a console should be used for auto-proceeding the paths useful for serv.load ... etc
+- If VERSION=xxx is set in save files where xxx is not numeric (like R3rc3) the saves will corupt the server when load.

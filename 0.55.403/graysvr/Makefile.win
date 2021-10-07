@@ -1,0 +1,275 @@
+# Project: GraySvr
+# Makefile created by Dev-C++ 4.9.8.0
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = GraySvr_private.res
+OBJ  = CAccount.o CBackTask.o CBase.o CChar.o CCharact.o CCharBase.o CCharFight.o CCharNPC.o CCharNPCAct.o CCharNPCFood.o CCharNPCPet.o CCharNPCStatus.o CCharSkill.o CCharSpell.o CCharStatus.o CCharUse.o CChat.o CClient.o CClientEvent.o CClientGMPage.o CClientLog.o CClientMsg.o CClientTarg.o CClientUse.o CContain.o CGMPage.o CIRCServer.o CItem.o CItemBase.o CItemMulti.o CItemSp.o CItemStone.o CItemVend.o CLog.o CMail.o CObjBase.o CPathFinder.o CProfileData.o CQuest.o CResource.o CResourceCalc.o CResourceDef.o CResourceTest.o CSector.o CServer.o CServRef.o CServResource.o CWebPage.o CWorld.o CWorldImport.o CWorldMap.o graysvr.o ntservice.o ntwindow.o ../common/calc.o ../common/carray.o ../common/cassoc.o ../common/catom.o ../common/ccrypt.o ../common/ccrypt2.o ../common/ccryptbase.o ../common/ccryptnew.o ../common/cexpression.o ../common/cfile.o ../common/cfilelist.o ../common/cGrayData.o ../common/cgrayinst.o ../common/cGrayMap.o ../common/CMD5.o ../common/cQueue.o ../common/crect.o ../common/cregion.o ../common/cresourcebase.o ../common/cscript.o ../common/CScriptObj.o ../common/cSectorTemplate.o ../common/cstring.o ../common/cstring2.o ../common/cthread.o ../common/CTime.o ../common/cwindow.o ../common/graycom.o $(RES)
+LINKOBJ  = CAccount.o CBackTask.o CBase.o CChar.o CCharact.o CCharBase.o CCharFight.o CCharNPC.o CCharNPCAct.o CCharNPCFood.o CCharNPCPet.o CCharNPCStatus.o CCharSkill.o CCharSpell.o CCharStatus.o CCharUse.o CChat.o CClient.o CClientEvent.o CClientGMPage.o CClientLog.o CClientMsg.o CClientTarg.o CClientUse.o CContain.o CGMPage.o CIRCServer.o CItem.o CItemBase.o CItemMulti.o CItemSp.o CItemStone.o CItemVend.o CLog.o CMail.o CObjBase.o CPathFinder.o CProfileData.o CQuest.o CResource.o CResourceCalc.o CResourceDef.o CResourceTest.o CSector.o CServer.o CServRef.o CServResource.o CWebPage.o CWorld.o CWorldImport.o CWorldMap.o graysvr.o ntservice.o ntwindow.o ../common/calc.o ../common/carray.o ../common/cassoc.o ../common/catom.o ../common/ccrypt.o ../common/ccrypt2.o ../common/ccryptbase.o ../common/ccryptnew.o ../common/cexpression.o ../common/cfile.o ../common/cfilelist.o ../common/cGrayData.o ../common/cgrayinst.o ../common/cGrayMap.o ../common/CMD5.o ../common/cQueue.o ../common/crect.o ../common/cregion.o ../common/cresourcebase.o ../common/cscript.o ../common/CScriptObj.o ../common/cSectorTemplate.o ../common/cstring.o ../common/cstring2.o ../common/cthread.o ../common/CTime.o ../common/cwindow.o ../common/graycom.o $(RES)
+LIBS =  -L"d:/usr/dev-cpp/lib" -mwindows -lwsock32 -lkernel32 -luser32 -lgdi32 -ladvapi32 -lshell32
+INCS =  -I"d:/usr/dev-cpp/include" 
+CXXINCS =  -I"d:/usr/dev-cpp/include/c++"  -I"d:/usr/dev-cpp/include/c++/mingw32"  -I"d:/usr/dev-cpp/include/c++/backward"  -I"d:/usr/dev-cpp/include" 
+BIN  = GraySvr.exe
+CXXFLAGS = $(CXXINCS)-D__GNUWIN32__ -W -fexceptions -DWIN32 -DNDEBUG -D_WINDOWS -DGRAY_SVR 
+CFLAGS = $(INCS)-D__GNUWIN32__ -W -fexceptions -DWIN32 -DNDEBUG -D_WINDOWS -DGRAY_SVR 
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before GraySvr.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(LINKOBJ)
+	$(CPP) $(LINKOBJ) -o "GraySvr.exe" $(LIBS)
+
+CAccount.o: CAccount.cpp
+	$(CPP) -c CAccount.cpp -o CAccount.o $(CXXFLAGS)
+
+CBackTask.o: CBackTask.cpp
+	$(CPP) -c CBackTask.cpp -o CBackTask.o $(CXXFLAGS)
+
+CBase.o: CBase.cpp
+	$(CPP) -c CBase.cpp -o CBase.o $(CXXFLAGS)
+
+CChar.o: CChar.cpp
+	$(CPP) -c CChar.cpp -o CChar.o $(CXXFLAGS)
+
+CCharact.o: CCharact.cpp
+	$(CPP) -c CCharact.cpp -o CCharact.o $(CXXFLAGS)
+
+CCharBase.o: CCharBase.cpp
+	$(CPP) -c CCharBase.cpp -o CCharBase.o $(CXXFLAGS)
+
+CCharFight.o: CCharFight.cpp
+	$(CPP) -c CCharFight.cpp -o CCharFight.o $(CXXFLAGS)
+
+CCharNPC.o: CCharNPC.cpp
+	$(CPP) -c CCharNPC.cpp -o CCharNPC.o $(CXXFLAGS)
+
+CCharNPCAct.o: CCharNPCAct.cpp
+	$(CPP) -c CCharNPCAct.cpp -o CCharNPCAct.o $(CXXFLAGS)
+
+CCharNPCFood.o: CCharNPCFood.cpp
+	$(CPP) -c CCharNPCFood.cpp -o CCharNPCFood.o $(CXXFLAGS)
+
+CCharNPCPet.o: CCharNPCPet.cpp
+	$(CPP) -c CCharNPCPet.cpp -o CCharNPCPet.o $(CXXFLAGS)
+
+CCharNPCStatus.o: CCharNPCStatus.cpp
+	$(CPP) -c CCharNPCStatus.cpp -o CCharNPCStatus.o $(CXXFLAGS)
+
+CCharSkill.o: CCharSkill.cpp
+	$(CPP) -c CCharSkill.cpp -o CCharSkill.o $(CXXFLAGS)
+
+CCharSpell.o: CCharSpell.cpp
+	$(CPP) -c CCharSpell.cpp -o CCharSpell.o $(CXXFLAGS)
+
+CCharStatus.o: CCharStatus.cpp
+	$(CPP) -c CCharStatus.cpp -o CCharStatus.o $(CXXFLAGS)
+
+CCharUse.o: CCharUse.cpp
+	$(CPP) -c CCharUse.cpp -o CCharUse.o $(CXXFLAGS)
+
+CChat.o: CChat.cpp
+	$(CPP) -c CChat.cpp -o CChat.o $(CXXFLAGS)
+
+CClient.o: CClient.cpp
+	$(CPP) -c CClient.cpp -o CClient.o $(CXXFLAGS)
+
+CClientEvent.o: CClientEvent.cpp
+	$(CPP) -c CClientEvent.cpp -o CClientEvent.o $(CXXFLAGS)
+
+CClientGMPage.o: CClientGMPage.cpp
+	$(CPP) -c CClientGMPage.cpp -o CClientGMPage.o $(CXXFLAGS)
+
+CClientLog.o: CClientLog.cpp
+	$(CPP) -c CClientLog.cpp -o CClientLog.o $(CXXFLAGS)
+
+CClientMsg.o: CClientMsg.cpp
+	$(CPP) -c CClientMsg.cpp -o CClientMsg.o $(CXXFLAGS)
+
+CClientTarg.o: CClientTarg.cpp
+	$(CPP) -c CClientTarg.cpp -o CClientTarg.o $(CXXFLAGS)
+
+CClientUse.o: CClientUse.cpp
+	$(CPP) -c CClientUse.cpp -o CClientUse.o $(CXXFLAGS)
+
+CContain.o: CContain.cpp
+	$(CPP) -c CContain.cpp -o CContain.o $(CXXFLAGS)
+
+CGMPage.o: CGMPage.cpp
+	$(CPP) -c CGMPage.cpp -o CGMPage.o $(CXXFLAGS)
+
+CIRCServer.o: CIRCServer.cpp
+	$(CPP) -c CIRCServer.cpp -o CIRCServer.o $(CXXFLAGS)
+
+CItem.o: CItem.cpp
+	$(CPP) -c CItem.cpp -o CItem.o $(CXXFLAGS)
+
+CItemBase.o: CItemBase.cpp
+	$(CPP) -c CItemBase.cpp -o CItemBase.o $(CXXFLAGS)
+
+CItemMulti.o: CItemMulti.cpp
+	$(CPP) -c CItemMulti.cpp -o CItemMulti.o $(CXXFLAGS)
+
+CItemSp.o: CItemSp.cpp
+	$(CPP) -c CItemSp.cpp -o CItemSp.o $(CXXFLAGS)
+
+CItemStone.o: CItemStone.cpp
+	$(CPP) -c CItemStone.cpp -o CItemStone.o $(CXXFLAGS)
+
+CItemVend.o: CItemVend.cpp
+	$(CPP) -c CItemVend.cpp -o CItemVend.o $(CXXFLAGS)
+
+CLog.o: CLog.cpp
+	$(CPP) -c CLog.cpp -o CLog.o $(CXXFLAGS)
+
+CMail.o: CMail.cpp
+	$(CPP) -c CMail.cpp -o CMail.o $(CXXFLAGS)
+
+CObjBase.o: CObjBase.cpp
+	$(CPP) -c CObjBase.cpp -o CObjBase.o $(CXXFLAGS)
+
+CPathFinder.o: CPathFinder.cpp
+	$(CPP) -c CPathFinder.cpp -o CPathFinder.o $(CXXFLAGS)
+
+CProfileData.o: CProfileData.cpp
+	$(CPP) -c CProfileData.cpp -o CProfileData.o $(CXXFLAGS)
+
+CQuest.o: CQuest.cpp
+	$(CPP) -c CQuest.cpp -o CQuest.o $(CXXFLAGS)
+
+CResource.o: CResource.cpp
+	$(CPP) -c CResource.cpp -o CResource.o $(CXXFLAGS)
+
+CResourceCalc.o: CResourceCalc.cpp
+	$(CPP) -c CResourceCalc.cpp -o CResourceCalc.o $(CXXFLAGS)
+
+CResourceDef.o: CResourceDef.cpp
+	$(CPP) -c CResourceDef.cpp -o CResourceDef.o $(CXXFLAGS)
+
+CResourceTest.o: CResourceTest.cpp
+	$(CPP) -c CResourceTest.cpp -o CResourceTest.o $(CXXFLAGS)
+
+CSector.o: CSector.cpp
+	$(CPP) -c CSector.cpp -o CSector.o $(CXXFLAGS)
+
+CServer.o: CServer.cpp
+	$(CPP) -c CServer.cpp -o CServer.o $(CXXFLAGS)
+
+CServRef.o: CServRef.cpp
+	$(CPP) -c CServRef.cpp -o CServRef.o $(CXXFLAGS)
+
+CServResource.o: CServResource.cpp
+	$(CPP) -c CServResource.cpp -o CServResource.o $(CXXFLAGS)
+
+CWebPage.o: CWebPage.cpp
+	$(CPP) -c CWebPage.cpp -o CWebPage.o $(CXXFLAGS)
+
+CWorld.o: CWorld.cpp
+	$(CPP) -c CWorld.cpp -o CWorld.o $(CXXFLAGS)
+
+CWorldImport.o: CWorldImport.cpp
+	$(CPP) -c CWorldImport.cpp -o CWorldImport.o $(CXXFLAGS)
+
+CWorldMap.o: CWorldMap.cpp
+	$(CPP) -c CWorldMap.cpp -o CWorldMap.o $(CXXFLAGS)
+
+graysvr.o: graysvr.cpp
+	$(CPP) -c graysvr.cpp -o graysvr.o $(CXXFLAGS)
+
+ntservice.o: ntservice.cpp
+	$(CPP) -c ntservice.cpp -o ntservice.o $(CXXFLAGS)
+
+ntwindow.o: ntwindow.cpp
+	$(CPP) -c ntwindow.cpp -o ntwindow.o $(CXXFLAGS)
+
+../common/calc.o: ../common/calc.cpp
+	$(CPP) -c ../common/calc.cpp -o ../common/calc.o $(CXXFLAGS)
+
+../common/carray.o: ../common/carray.cpp
+	$(CPP) -c ../common/carray.cpp -o ../common/carray.o $(CXXFLAGS)
+
+../common/cassoc.o: ../common/cassoc.cpp
+	$(CPP) -c ../common/cassoc.cpp -o ../common/cassoc.o $(CXXFLAGS)
+
+../common/catom.o: ../common/catom.cpp
+	$(CPP) -c ../common/catom.cpp -o ../common/catom.o $(CXXFLAGS)
+
+../common/ccrypt.o: ../common/ccrypt.cpp
+	$(CPP) -c ../common/ccrypt.cpp -o ../common/ccrypt.o $(CXXFLAGS)
+
+../common/ccrypt2.o: ../common/ccrypt2.cpp
+	$(CPP) -c ../common/ccrypt2.cpp -o ../common/ccrypt2.o $(CXXFLAGS)
+
+../common/ccryptbase.o: ../common/ccryptbase.cpp
+	$(CPP) -c ../common/ccryptbase.cpp -o ../common/ccryptbase.o $(CXXFLAGS)
+
+../common/ccryptnew.o: ../common/ccryptnew.cpp
+	$(CPP) -c ../common/ccryptnew.cpp -o ../common/ccryptnew.o $(CXXFLAGS)
+
+../common/cexpression.o: ../common/cexpression.cpp
+	$(CPP) -c ../common/cexpression.cpp -o ../common/cexpression.o $(CXXFLAGS)
+
+../common/cfile.o: ../common/cfile.cpp
+	$(CPP) -c ../common/cfile.cpp -o ../common/cfile.o $(CXXFLAGS)
+
+../common/cfilelist.o: ../common/cfilelist.cpp
+	$(CPP) -c ../common/cfilelist.cpp -o ../common/cfilelist.o $(CXXFLAGS)
+
+../common/cGrayData.o: ../common/cGrayData.cpp
+	$(CPP) -c ../common/cGrayData.cpp -o ../common/cGrayData.o $(CXXFLAGS)
+
+../common/cgrayinst.o: ../common/cgrayinst.cpp
+	$(CPP) -c ../common/cgrayinst.cpp -o ../common/cgrayinst.o $(CXXFLAGS)
+
+../common/cGrayMap.o: ../common/cGrayMap.cpp
+	$(CPP) -c ../common/cGrayMap.cpp -o ../common/cGrayMap.o $(CXXFLAGS)
+
+../common/CMD5.o: ../common/CMD5.cpp
+	$(CPP) -c ../common/CMD5.cpp -o ../common/CMD5.o $(CXXFLAGS)
+
+../common/cQueue.o: ../common/cQueue.cpp
+	$(CPP) -c ../common/cQueue.cpp -o ../common/cQueue.o $(CXXFLAGS)
+
+../common/crect.o: ../common/crect.cpp
+	$(CPP) -c ../common/crect.cpp -o ../common/crect.o $(CXXFLAGS)
+
+../common/cregion.o: ../common/cregion.cpp
+	$(CPP) -c ../common/cregion.cpp -o ../common/cregion.o $(CXXFLAGS)
+
+../common/cresourcebase.o: ../common/cresourcebase.cpp
+	$(CPP) -c ../common/cresourcebase.cpp -o ../common/cresourcebase.o $(CXXFLAGS)
+
+../common/cscript.o: ../common/cscript.cpp
+	$(CPP) -c ../common/cscript.cpp -o ../common/cscript.o $(CXXFLAGS)
+
+../common/CScriptObj.o: ../common/CScriptObj.cpp
+	$(CPP) -c ../common/CScriptObj.cpp -o ../common/CScriptObj.o $(CXXFLAGS)
+
+../common/cSectorTemplate.o: ../common/cSectorTemplate.cpp
+	$(CPP) -c ../common/cSectorTemplate.cpp -o ../common/cSectorTemplate.o $(CXXFLAGS)
+
+../common/cstring.o: ../common/cstring.cpp
+	$(CPP) -c ../common/cstring.cpp -o ../common/cstring.o $(CXXFLAGS)
+
+../common/cstring2.o: ../common/cstring2.cpp
+	$(CPP) -c ../common/cstring2.cpp -o ../common/cstring2.o $(CXXFLAGS)
+
+../common/cthread.o: ../common/cthread.cpp
+	$(CPP) -c ../common/cthread.cpp -o ../common/cthread.o $(CXXFLAGS)
+
+../common/CTime.o: ../common/CTime.cpp
+	$(CPP) -c ../common/CTime.cpp -o ../common/CTime.o $(CXXFLAGS)
+
+../common/cwindow.o: ../common/cwindow.cpp
+	$(CPP) -c ../common/cwindow.cpp -o ../common/cwindow.o $(CXXFLAGS)
+
+../common/graycom.o: ../common/graycom.cpp
+	$(CPP) -c ../common/graycom.cpp -o ../common/graycom.o $(CXXFLAGS)
+
+GraySvr_private.res: GraySvr_private.rc GraySvr.rc 
+	$(WINDRES) -i GraySvr_private.rc -I rc -o GraySvr_private.res -O coff 
