@@ -1,0 +1,669 @@
+---- SphereServer R3.11 -------------------------------------------------------------------------
+
+NOTE :	EF flags change from version to version, so make SURE you're using only the EF
+	flags you want, if any.
+
+SUMMARY of flags for Sphere.ini:
+OptionFlags=	// Flags for options that affect server behaviour but not compatibility
+	0001		// OF_Magic_IgnoreAR
+	0002		// OF_Magic_CanHarmSelf
+	0004		// OF_Magic_StackStats			(Do NOT set this yet)
+	0008		// OF_Skill_DiffFirst
+	0010		// OF_Archery_CanMove
+	0020		// OF_Magic_PreCast
+
+Experimental=	// Flags for options that affect server behaviour and which might affect compatibility
+	0001		// EF_XCMD_Spy
+	0002		// EF_UNICODE
+	0004		// EF_CanSeeLOS
+	0008		// EF_ReturnString
+	Suggested value: EXPERIMENTAL=01
+
+
+
+24-12-2003, Kell
+- Fixed TYPEDEFS section in spherefs.scp loosing values when resynced.
+- Added <CANMOVE dir>, takes a direction as argument (like WALK), returns the area ID we're moving to,
+  or 0 if no move is possible.
+- Added <MOVE dir>, takes a direction as argument (like WALK), returns the TILE flags for that position.
+  Notice that flag 04 is walkable. Here's a list of flags, you can copy&paste it into spheredefs.scp. This
+  keyword might change in the future.
+
+
+[DEFNAME tile_flags]			// by Shadowlord
+tilef_background	01		// No idea. None whatsoever. Maybe it's the blackness.
+tilef_weapon		02		// I smack thee with this here ... club?
+tilef_transparent	04		// Yeah. So we can see through it?
+tilef_translucent	08		// Okay...
+tilef_wall		010		// Hey look, we can't walk through it!
+tilef_damaging		020		// Lava, perhaps? Fires, hmm!
+tilef_impassable	040		// Mountains and stuff, I'll wager.
+tilef_wet		080		// Water? Or mud? Or a slick road in a rainstorm? Probably the first.
+tilef_unknown		0100		// Uh...
+tilef_surface		0200		// Tables or something?
+tilef_bridge		0400		// I wonder why they'd have a flag for that.
+tilef_stackable		0800	
+tilef_window		01000		// So we can see/shoot out?
+tilef_noshoot		02000		// ? We can't shoot out or something? So, like a glass window maybe?
+tilef_prefixA		04000		// A card
+tilef_prefixAn		08000		// An apple
+tilef_internal		010000		// hair, beards, etc
+tilef_foliage		020000		// Probably bushes and tree leaves and stuff.
+tilef_partialHue	040000		// semi-glowy?
+tilef_unknown_1		080000		// Well, gee. I should see if it's used on anything...
+tilef_map		0100000		// Sounds good to me.
+tilef_container		0200000		// They flag these!?
+tilef_wearable		0400000		// Omigod!
+tilef_lightSource	0800000		// I'm getting tired of typing repetitive shiznit now.
+tilef_animated		01000000	// Like fire again. And stuff. Those spinny propeller thingies!
+tilef_noDiagonal	02000000	// !?!???!!?
+tilef_unknown_2		04000000	// I really hope some of these unknowns are n/w/s/e facing flags.
+tilef_armor		08000000	// Armor, okay, so does that count shields? Hmmm?
+tilef_roof		010000000	// "Don't fall through me!" Or why isn't it just flagged surface or something?
+tilef_door		020000000	// Okay...
+tilef_stairBack		040000000	// Don't we have stairs that go forward or left too? This could cover both...
+tilef_stairRight	080000000	// Well, whatever, you can climb them, so, hey... Good use for a 
+
+
+
+23-12-2003, Kell
+- Added access to TERRAIN and STATICS either via P.key, MOREP.key or SERV.MAP(x,y).key, with key being one of:
+    TERRAIN	The terrain ID
+    ISDIRT	Checks the terrain ID to see if it's dirt.
+    ISGRASS	guess
+    ISROCK	dunno
+    ISWATER	guess again
+    STATICS	Number of statics in the position
+    STATICS(n)	ID of static Nth static ( eg: <SERV.MAP(200,300).STATICS(0)>. Shows no error in the console
+		if static isn't present, returning 0 - useful to test for a static w/o counting or looping.
+    STATICS.n	  same
+    STATICS(n).key	Get a key from the appropriate ITEMDEF. eg: <SERV.MAP(200,300).STATICS(0).NAME>
+
+- Added basic iterator construct, WHILE, with the following syntax:
+     WHILE ( condition )
+	// do stuff, current iteration number in <LOCAL._WHILE>
+     END // or ENDWHILE
+
+  also added FOR, terminated with either END or ENDFOR, with the following syntax:
+
+     FOR 5	// loops from 0 to 5, current iteration number in LOCAL._FOR
+  or FOR 3 5	// loops from 3 to 5, current iteration number in LOCAL._FOR
+  or FOR K 5	// loops from 0 to 5, current iteration number in LOCAL.K
+  or FOR K 3 5	// loops from 3 to 5, current iteration number in LOCAL.K
+	// do stuff
+     END  // or ENDFOR
+
+  Changing these LOCAL variables has no effect on the loop.
+- Wrote a small assembly function to access the high resolution timer. Works for both windows and Linux,
+  now being used in profiling. Profiling works on Linux now. It also looks a lot better in the console
+  thanks to the monospaced font.
+- Changed the console font under Windows to Courier, which is monospaced, so things come out aligned in
+  the console. Under Linux, the console is naturally monospaced.
+- You can now add new SKILL sections, up to 70. SERV.MAXSKILLS tells you how many skills are loaded. Notice
+  that they won't be sent to the client though, the client doesn't support them (hint: @UserSkills). There
+  is also a FLAGS key for SKILL section, with the following values:
+     [DEFNAME skill_defs]
+     SKF_SCRIPTED	01	// no hardcoded behaviour, only triggers are called.
+     // feel free to add new tags you find useful, but only above 01000 please, to make room for future
+     expansion
+  This is heavily experimental, mess with it at your own risk.
+- SKILLSELECT skill - force a button select event on the skill list
+
+
+
+22-12-2003, Kell
+- Functions can now return strings using "return". Notice that this behaves like TAGs, in that if you do
+     return 2+2
+  then "2+2" is returned, and not "4". You'll have to explicitly call "eval" on what you want
+  to return:
+     return <eval (2+2)>
+  Returning strings causes no extra lag, seeing as the old method of returning a value relied on the same
+  string which is returned (EVALed). So it is actually faster (although hardly noticeable).
+  This might pose a problem problem if you have "return rand" or similar, instead of "return <eval rand..."
+  seeing as multiple uses of the return value re-evaluate it, generating a new random number - again,
+  similar to TAGs.
+  MAKE SURE YOU HAVE "EVAL" on your "return" lines, wherever you want the result of a calculation to be
+  returned. The next version will probably not have an EF_ReturnString flag.
+
+- Modified the profiling function to keep track of average consumption over time. The average time is
+  calculated each second as 90% of the previous average time plus 10% the current time. This poses some
+  resistence to spikes. 
+- Added a new keyword to @Create / @NPCRestock and template scripts: FULLINTERP. Set FULLINTERP=1 to allow the
+  use of functions, ifs, etc. Example:
+  ON = @NPCRestock
+     ITEM=i_cape
+     FULLINTERP
+        ITEM=i_robe
+        MY_FUNCTION_CALL
+  You can use FULLINTERP 0 to disable the feature, after you've enabled it, but it's usually pointless, seeing as
+  this FULLINTERP affects only the remainder of the current script. Bear in mind that the usual restrictions apply,
+  seeing as the created NPC is not ingame yet.
+
+
+
+21-12-2003, Kell
+- Fixed a bug in that setting stats & skills via scripts wouldn't correctly parse things. For instance, numerical
+  expressions.
+- Started work on MANUAL.TXT, to detail the current state of things like triggers and their arguments, seeing as
+  reading this changelog is probably a difficult task for a lot of people.
+- Changed args in functions to be writeable. This is useful in scripts, but for triggers, the server will read
+  back the values and use the new ones wherever it makes sense. For the time being, these triggers were
+  changed:
+     @GetHit, ARGN1 is the damage being apllied, ARGN2 the damage type (as usual, but now writeable). 
+     @Hit, ARGN1 is now the raw damage being applied, prior to armour (writeable). ARGO is the weapon (if any).
+     @PersonalSpace, ARGN1 is the stamina required to move (writeable). "return 1" stops the movement, "return 0"
+     allows the movement but shows none of the hard-coded messages. Plain "return" or no return, works as standard.
+  @Hit, @HitTry and @HitMiss were also changed so that ARGO is the weapon being used (handy so you don't have to
+  be looking at layers n stuff).
+  I should add that ACTDIFF is also available, and it can be used to change the difficulty of a skill, even make
+  a skill succedd that would otherwise fail (by setting it to 0). It can also be used in @HitTry now, and if
+  set to any non-negative value, a missing hit will instead succeed.
+- Added StrEat function, which removes a word up to the space, from a string (<streat("hello there friend")>
+  or <streat hello there friend> return "there friend")
+- Added <SERV.LOOKUPSKILL skill name> which returns the skill number for some text or -1 if not found.
+- After some beta-testing, a few fixes to dialogs.
+- LOCAL.xxx within functions for LOCAL . They're a bit more efficient on servers with lots of global
+  vars due to faster lookups ). LOCAL variables always come up initially as "0".
+- ARGN1, ARGN2 and ARGN3 are set for functions with numeric arguments. So whenever possible, use these instead
+  of argv. Example: "myfunction  123 50 89" - these 3 values will be parsed into argn1, argn2 and argn3
+
+
+
+20-12-2003, Kell
+- Equal PLEVEL should be able to see each other, so they are now.
+- You can now open a dialog in a specific page, with DIALOG  d_dialog_name  pagenumber. This isn't actually
+  possible with the UO client - what it does is recalculate the dialog page/button numbers so that the selected
+  page is first. It's completly invisible though, and works perfectly.
+- Added a new command - DTEXT - to gumps, which does the handling of text ids for you (d stands for dynamic):
+     dtext x y color  Actual text comes here.
+  Text added with gumptext is actually added to the [DIALOG ... TEXT] section. If you're only using a given
+  text string once, then it's actually faster using this than using "text" and adding it to the TEXT section
+  of the dialog. Simmilar commands, DCROPPEDTEXT and DTEXTENTRY are also in, also taking text instead of an
+  index. DHTMLGUMP is also in, but notice that the syntax is like HTMLGUMP, except that you ommit the ID and add
+  the text in the end.
+  With these changes, you can completly ommit the [DIALOG ... TEXT] section of dialogs. Only those strings
+  that are commonly used throughout the dialog should you put in the [DIALOG ... TEXT] section.
+  Internally, both gumptext and textadd simply add stuff to the dialog as needed, and send normal "text"
+  commands to the client, so they're safe to use. But they free you from having to keep track of a LONG
+  list of numbers, and allow you to shape and modify your dialog w/o bothering with text ids.
+- You can now use FUNCTIONs that issue gump commands. So you actually make your own gump commands!!! Death to
+  copy & paste dialogs!
+
+
+
+19-12-2003, Kell
+- To make writing dialogs easier, added a cursor and relative coordinates:
+     dorigin 50 50	// sets the origin to x=50, y=50
+  Using "*" near a coordinate makes it relative to the origin, and displaces the origin by some amount:
+     dtext     *0    *10    0    the origin is now x=50 y=60, so is the last location
+  Using "+" near a coordinate makes it relative to the last location w/o changing the origin.
+     dtext     +10     -    0    adds 10 to X (y=150, o.y=100)
+  As an example, imagine writing a list of text with 3 columns, each seperated via 200 x and 20 space
+  between each row:
+  dorigin 10 10
+  // first row
+  dtext     *0   -    5   1:
+    dtext  +10   -    0   the text for row1, col1
+  dtext   *200   -    5   2:		// x orig = 200
+    dtext  +10   -    0   the text for row1, col2
+  dtext   *200   -    5   3:		// x orig = 400
+    dtext  +10   -    0   the text for row1, col2
+
+  And now one only has to go down one row. and the text is quite similar. This isn't too easy to explain, it's
+  there for whomever might find it useful. If you can't think of a use for it, just ignore it. ;)
+- Fixed the bug with FORCHARS/ITEMS/OBJS and keywords starting with "FOR" (like FORensics).
+- Changed textadd and gumptext to collapse equal strings of text to the same index. So if you use
+    gumptext 10 20  This is an example.
+    gumptext 10 40  This is an example.
+    gumptext 10 60  This is an example.
+  It will only generate ONE text id. This does away with the need to have a seperate TEXT section. Granted,
+  such a section is still useful for keeping strings all in one place (in this case it'd be useful), but it
+  is no longer mandatory, it becomes simply a matter of style/choice.
+
+
+
+18-12-2003, Kell
+- The main section for DIALOGs is now fully interpreted like other scripts, allowing you to add logic
+  to your dialog, use IFs, etc. The only limitation at the moment is that gump commands are only 
+  allowed right in the DIALOG section, and not within FUNCTIONs, but hei... it's better. :)
+- Dialogs will no longer conflict with each other, this allows for permanent on-screen dialogs. INPDLG
+  works too, seeing as there can be only one INPDLG window onscreen at all times.
+- Added RESOURCES.n, RESOURCES.n.KEY and RESOURCES.n.VAL to items/characters.
+
+
+
+17-12-2003, Kell
+- Functions can now receive "args" when being evaluated, as in <SRC.myfunction Say hello>
+- Added RANGE=min,max or RANGE=max (min defaults to 0) for ITEMDEF and CHARDEF. Default weapon range
+  is 1. Default character range is 1. Range is calculated as (character + weapon -1). 
+  Example: Assuming all characters are RANGE=1 (which they are), putting RANGE=2 in an halberd
+  means characters equipping it can hit 1 square further.
+
+
+
+16-12-2003, Kell
+- You can now use NEWITEM, NEWNPC and NEWDUPE in item scripts, the items will be created into "NEW". Using
+  these commands on a character will create the items in both NEW and ACT. If you want to use these
+  on a character without changing ACT, use SERV.NEWITEM, etc.
+  Example:
+    NEWITEM i_gold
+    NEW.AMOUNT 100
+    NEW.P	= <TOPOBJ.P>
+  You can also use NEW as a temporary handler, much like you can use OBJ (and to an extenct, ACT).
+
+
+
+15-12-2003, Kell
+- Changed @UserSkills so that <argn1> is the number of the skill being updated, or -1 for the skill
+  list. This allows one to stop sending of skill updates to the client.
+- NPCs will not say "Yes Master" if SPEECHPET is set in sphere.ini (you can script it in the speech
+  triggers if you want them to). If SPEECHPET isn't set, they still won't say anything unless they
+  can see their master (which is great for GMs). Players will no longer respond "Sorry".
+- Resource gathering was changed so that the SKILLMAKE of the resource item is checked. Resources
+  which fail the canmake check are ignored and aren't part of the randomization process. If for some
+  reason one wants to go back to the old style, just comment SKILLMAKE on the ore itemdefs.
+- @Step on items returning 1 will  now cancel movement to that area. Still, for coherence, all other items
+  in that location are still activated.
+- Added OF_Skill_DiffFirst = 0008. With this flag turned on, difficulty for a skill is calculated BEFORE
+  calling @Start/@SkillStart. This has the advantage of allowing the difficulty for a skill to be changed
+  via ACTDIFF within that trigger. Notice that for a skill to fail, ACTDIFF must be set above the current
+  (modified) skill. Setting ACTDIFF to a negative value means that the skill will abort, that is, @Fail
+  will not be called and no skill gain will be attempted. To always fail set ACTDIFF to a value above the
+  possible skill (say, 1001).
+  This has the sideffect of calling @SpellCast before @Start/@SkillStart. On the other hand, it is the
+  ultimate tool for implementing your own skill difficulties.
+  Here's an example of making the difficulty for arms lore AT LEAST the same value as for making the item
+  (using the primary skill). Characters with skill above ACTDIFF will always succeed.
+  ON = @Start
+   if ( <SRC.ACTDIFF> < <SRC.ACT.SKILLMAKE.1.VAL> )
+      SRC.ACTDIFF	= <SRC.ACT.SKILLMAKE.1.VAL>
+   endif
+
+
+
+14-12-2003, Kell
+- Changed ATTACK to accept as parameter the UID of the character to attack.
+- Changed TRY to make no plevel or touch/distance checks. Use TRYP if you want those checks
+  (TRYP 0 only checks for touch/distance, not plevel).
+- Added an useful keyword to scripts, that allows one to use "OBJ" as pointer to an item. It's
+  similar to ACT but it can be used anywhere. 
+  Example:
+     OBJ	= <UID>
+     SAY You are <OBJ.NAME>, with uid <OBJ.UID>.
+- Changed MEMORY to allow an UID as parameter, so you can now find the memory related to a specific
+  UID. If no argument is used, it uses SRC's UID as usual. Also changed it to be read/write.
+  Example:
+     MEMORY <SRC.UID> 0200	// set memory 
+     SAY Memory flag regarding <UID> is <MEMORY.<SRC.UID>>.
+
+
+13-12-2003, Kell
+- Added "RELEASE" to character verbs, does the same as "release" when spoke to a pet.
+- Added @NPCFollow trigger, called when an NPC is following someone.
+
+
+
+12-12-2003, Kell
+- You can now use @color,font in SYSMESSAGE and MESSAGE. font ranges from 0 to 9, and I quote:
+      FONT_BOLD,	// 0 - Bold Text = Large plain filled block letters.
+      FONT_SHAD,	// 1 - Text with shadow = small gray
+      FONT_BOLD_SHAD,	// 2 - Bold+Shadow = Large Gray block letters.
+      FONT_NORMAL,	// 3 - Normal (default) = Filled block letters.
+      FONT_GOTH,	// 4 - Gothic = Very large blue letters.
+      FONT_ITAL,	// 5 - Italic Script
+      FONT_SM_DARK,	// 6 - Small Dark Letters = small Blue
+      FONT_COLOR,	// 7 - Colorful Font (Buggy?) = small Gray (hazy)
+      FONT_RUNE,	// 8 - Rune font (Only use capital letters with this!)
+      FONT_SM_LITE,	// 9 - Small Light Letters = small roman gray font.
+- Changed SKILLMAKE to allow getting an individual resource in the list. SKILLMAKE.1 gets the first,
+  SKILLMAKE.1.VAL gets the value and SKILLMAKE.1.KEY gets the associated resource key.
+
+11-12-2003, Kell
+- Added OF_Magic_CanHarmSelf = 0002, so that spells with SPELLFLAG_HARM will still affect the
+  caster (useful for SPELLEFFECT in scripts)
+- Changed rand(x) to allow a 2nd parameter rand(x,y) and return a random number between x and y,
+  if y is present.
+
+10-12-2003, Kell
+- Added OptionFlags to sphere.ini, to set multiple options. These will be named OF_
+- Added OF_Magic_IgnoreAR = 0001, so that AR doesn't count to stop damage spells.
+- Added ACTDIFF to characters to obtain the current action difficulty.
+  Suggestion: One can use ACTDIFF to modify difficulty within skill Start triggers.
+- Added a 6th parameter to the EFFECT command, the hue for the effect.
+- Added @Effect trigger to spells, triggered after @SpellEffect
+- <TAG0.xxx> can now be used to assume "0" as the default value for a tag.
+- TAG0.xxx = yyy can now be used, if yyy is 0, then no tag will be recorded (same as setting
+  to a zero length string)
+  Using TAG0, you can thus have tags that are only recorded if they are not 0. This is great
+  for tags that are usually 0 and are often used (e.g. tags that must exist on all characters).
+- Added VAR0 (same functionality as TAG0, but for VAR).
+
+
+09-12-2003
+- Added TAGs to CHARDEF/ITEMDEF sections. If a TAG does exists at an instance it overrides
+  the def value.
+
+
+---- 55 R2a -------------------------------------------------------------------------
+
+02-12-2003, Kell
+- Fixed REAPAMOUNT / AMOUNT. It can now take multi-point values in a format similar to
+  ADVANCE for skills.
+- Added SPEECHSELF= to sphere.ini, to allow setting the name of the speech trigger that
+  should be called to intercept player speech. Suggested: SPEECHSELF=spk_player
+  "return 1" in said trigger stops the player from actually talking.
+- Removed hard coded "home home home" - one can just use the default spk_player speech if
+  that feature is desired (but mostly it's not)
+- Added SPEECHPET= to sphere.ini, to allow setting the name of the speech trigger that
+  is called when a pet listens to its master. "return 1" in said trigger stops the pet
+  from listenning.
+
+01-12-2003, Kell
+- Added @EquipTest and @ItemEquipTest (return 1 cancels equiping).
+- Changed @SkillItemMake so that "return 1" only deletes the item if it's container hasn't
+  been set.
+- Fixed bug with skills apparently not finishing (also fixes cartography).
+- Fixed summoning bug (Linux only). This has to do with doing propper memory initialization
+  prior to using points.
+- Removed all specific handling for SERV.xxx(y).zzz and made it generic. You can now use
+  either syntax: SERV.xxx(y).zzz or SERV.xxx.y.zzz.
+- Changed default release options for speed optimization.
+
+
+30-11-2003, Zorm
+- Fixed text going all uppercase sometimes and gm body commands.
+
+---- 55 R2 ----------------------------------------------------------------------------
+
+27-11-2003, Kell
+- On the brink of release, fixed a serious problem inherited from .55j where unknown
+  keywords being evaluated would *silently* come out untouched. As an example,
+  '<SERV.NONEXISTANT>' would silently come out as '<SERV.NONEXISTANT>' instead of ''
+  as in .55i. If used with tags, it could end up getting weird values and make it hard
+  to catch the error, as no error was being shown. It now returns '' for stuff it can't
+  evaluate, BUT also prints an error in the console. I believe this is the best possible
+  behaviour.
+- Linux version is now declared stable. A minor problem still exists, in that pressing
+  CTRL-C in the console is not a good way to terminate the server, and will very likely
+  get it into a loop. This is a minor problem though, still trying to solve it. Test
+  servers report uptimes of 2-3 days with 10-20 players online (that's all the testing
+  I could do).
+- Added CANMAKESKILL to test ONLY for the ability to make an item skillwise (it ONLY
+  tests the SKILLMAKE line), not resources.
+- Added "fval", which works exactly like "eval", but formats the output in x.x format.
+- There seems to be an issue with skills that use @Success to cancel a skill, in that
+  sometimes the skill won't be registered as finished, and using the skill again will
+  show the "you must wait" message. Players can just double-tap TAB to overcome this,
+  or you can use ACTION=-1 to force skill termination. Need some feedback on this, as
+  this behaviour might actually be due to bad scripts, so feel free to post comments.
+- Many issues with the default 
+
+26-11-2003, Kell
+- Changed SERV.SPELL and SERV.SKILL so that they accept either number or defname
+  (SKILL also accepts plain names, like <SERV.SKILL(Magery).TITLE>)
+- SERV.ITEMDEF(x).yyy to access data from ITEMDEF sections (similar to the above)
+- SERV.CHARDEF(x).yyy to access data from CHARDEF sections (similar to the above)
+
+
+25-11-2003, Kell
+- Changed it so NPCs with SPIRITSPEAK equal or above 100.0 are able to see dead players,
+  like healers can. That allows one to use ON = @NPCSeeNewPlayer and an human brain to
+  implement NPCs that interact with the dead, without having to put up with healer's
+  default behaviour.
+- Added flag NORESROBE to sphere.ini. If set to 1, players will not be given a robe
+  when resurrected.
+
+
+24-11-2003, Kell
+- SERV.SPELL(x).yyy, where x is the number of the spell and yyy is a key from the
+  SPELLs section, such as MANAUSE or RESOURCES. You can also use RESCAST for a
+  descriptive name of resources (much like RESMAKE works for items).
+- SERV.SKILL(x).yyy, where x is the skill number and yyy is a key from the SKILLs
+  section, such as KEY or TITLE.
+- Experimented with breaking SKILL and SPELL sections to seperate files, loading them
+  off-order and reloading, no problems found. Notice however that files containing
+  SPELL sections must load after the base items (like spheretable_x does).
+
+
+23-11-2003, Zorm
+- Experimental Precasting support, enable with experimental flag EF_Precast (flag 020),
+  this is not well tested - it's a work in progress. Included here just for the sake of
+  getting feedback.
+
+
+22-11-2003, Kell
+- LOSTNPCTELEPORT now checks for homedist, and won't teleport if the NPCs are still
+  within home-distance. This allows you to have low values.
+- Further stability fixes for Linux version, it should now work fine with background
+  world saves.
+
+
+22-11-2003, Zorm
+- Added login crypt keys for clients up to 3.0.3, must add support for packets up to
+  0xCC or atleast lengths.
+- I think I fixed unicode speech now
+
+
+22-11-2003, Kell
+- Attempted to fix the bug where setting ACT in a @Hit trigger stops
+  the swing, by restoring it after the trigger.
+- Added SKIPDIFFICULTY (0 by default, or 1) to SKILL sections. Setting it to 1
+  skips the hardcoded difficulty check and allows one to do their own skill difficulty
+  checks in @Success, and "return 1" in there for a failure.
+- Fixed @Select triggers which return 1 leaving the character waiting for an action.
+
+
+21-11-2003, Kell
+- Linux version now works with secondary threads (FREEZERESTARTTIME not 0),
+  and is able to restart the main loop if it freezes.
+- Added a toggle to sphere.ini, "EXPERIMENTAL", to allow setting flags
+  which enable several experimental features. You will see these referenced
+  in the changelog as EF 0x????.
+- EF 0x0001 enables a packet fix for Linux servers, for XCMD_Spy. Enable this
+  if your clients get a login error.
+- EF 0x0002 enables new UNICODE fixes.
+- EF 0x0004 enables zorm CanSeeLOS fix. This is required, seeing as that fix
+  won't allow you to cast uphill - a minor problem, but worth having a flag to
+  toggle that behaviour.
+- EF 0x0008 disables interruption of fight skills if the ACT changes. This
+  fixes scripts that re-implement combat, and cases where combat with multiple
+  enemies would break swings.
+- EF 0x0010 enables the INTERRUPT field in SPELL sections. INTERRUPT=100.0 100.0
+  SHOULD yield the standard always fail behaviour, as should not having an 
+  INTERRUPT line at all. But seeing as this wasn't fully tested, you MUST enable
+  this flag to make any use of the interrupt values.
+- Suggested value for EXPERIMENTAL field in sphere.ini is:
+  EXPERIMENTAL=013
+
+
+20-11-2003, Kell
+- Added INTERRUPT=X,Y to SPELL sections in spheretable_x.scp. This controls
+  the chance to fizzle a spell when hit in combat, at different Magery levels.
+  Default is 100.0, 100.0 (always fizzle). With a setting of "100.0 50.0" a GM
+  mage would only fizzle half the times.
+- NPCs equipping stuff that is too heavy for them on @NPCRestock won't
+  spit hundreds of errors to the console.
+- Added LOSTNPCTELEPORT=X to sphere.ini. If X is greater than 0, NPCs that have
+  a HOME point set will now teleport home if the distance to their HOME is above
+  X. This fixes it when they go through portals, then get lost in the map.
+- Fixed problem with mounted NPCs dying and leaving a lingering object which
+  could leak later.
+- FINALLY made it crash resistant under Linux - it is now trapping most
+  signals AND launching exceptions correcly. Tested with a single thread
+  (FREEZERESTARTTIME=0 in sphere.ini) and no background saving. More tests
+  to come.
+- Changed the loading procedure so sphere.ini is loaded prior to any message
+  being printed to the log file. This allows the LOG= line to be parsed and
+  log files to be created in the appropriate folder, so to make sure, LOG=
+  line should be among the first in sphere.ini
+- Changed the Linux makefile to include the necessary exception flags.
+- "return 1" from a skill's @Start or @Success trigger doesn't trigger @Fail. If you
+  do want @Fail triggered, set ACTION=-1. This is compatible with .55i scripts, because
+  seeing as "return 1" didn't work there, scripts which did mean for @Fail to be triggered
+  should already be using ACTION=-1
+   
+
+19-11-2003, DarkStorm
+- Added MD5 Password support via MD5PASSWORDS=1 in sphere.ini. If you activate
+  this, accounts will be saved with the password encoded (existing non-encoded
+  password will be converted). WARNING: disabling it afterwards won't restore
+  the passwords to plain text, and thus you won't be able to login with those
+  accounts. Once enabled, and the accounts file saved this setting should not be
+  changed (unless you set the passwords by hand).
+- Removed the ScriptEngine Folder from the VC++6 project and wrapped an #if
+  defined() around the three functions that used it. It seems unused in the
+  productive gameserver, so i think we can remove the additional 400kb of
+  possibly error prone code.
+- Removed the ScriptEngine Folder from the VC++ 7 project too
+- Changed the VC++ 6 projects to use the shared CRT. (It's shipped with windows
+  since 95)
+- Rewrote the new[], new, delete and delete[] operators and removed the memory
+  footprinting. 
+- Tuned the optimizations for VS.NET 2003 Release mode a bit.
+- Removed the StatusReports from ntservice.cpp before it loads the ini for now
+  Reporting as a service if you aren't a service isn't supposed to be happening,
+  there needs to be a better fix than mine (maybe a -service argument?)
+- added a check to CAccount to filter out accounts named "eof"
+- fixed the help provided by .serv.accounts
+
+19-11-2003, Kell
+- Added a .DBG command, to put test code in. At the moment it'll be used to try
+  and crash the server in various ways, to see how it behaves on Linux.
+
+18-11-2003, Zorm
+- Fixed commands going to npcs, as well as more problems with unicode speech
+  support - BROKEN
+- CGTypedArray, SetCount, DestroyElements, crashes on shutdown. Needs more
+  work to fix
+- Fame gain fixed
+
+18-11-2003, Kell
+- Moved tags to CObjBase so all types of objects can have tags. Removed special
+  handling of TAGs from characters, script items and multi items.
+- Fixed problem when resycing SKILL sections (spheretables.scp) would mess up
+  Skill_ defnames ( and the ACTION field on characters ). One no longer needs
+  to use workarounds like my FIXACTION function. Memory corruption problems
+  when resyncing SPELL tables should also be fixed.
+
+18-11-2003, DarkStorm
+- Started fixing some issues preventing sphere to compile on linux (CSocket.h)
+- Managed to make it compile on Linux, comitted all the changes neccesary and
+  made sure it still compiles on windows.
+- Implemented some code changes to remove the ncurses dependency on linux and
+  activated the console again. 
+- Implemented Colors on the Linux Console
+
+17-11-2003, Kell
+- Hopefully fixed the bug with resyncing SPELL sections.
+- Added triggers to SPELL sections, so you can now independently code spells:
+  @Select ( "return 1" cancels, "return 0" skip checks, "return" default behaviour)
+  @Start  ( "return 1" cancels )
+  @Fail   ( "return 1" cancels the fizzle effect).
+  @Success
+- Changed SERV.LOG to allow writing of messages to the log. New syntax is:
+  serv.log @enable   -- enables logging
+  serv.log @disable  -- disable logging
+  serv.log @toggle   -- toggles logging
+  serv.log text      -- log text to console and file
+
+16-11-2003, Kell
+- Identified problem regarding vanishing horses. Apparently, they stop acting as ridden, so instead
+  of deleting them I will just try and restart their behaviour again. If this fails, they still
+  shouldn't be deleted, and a new message should be printed out. To test, try creating a horse, mount
+  and then worldsave.
+- Made sure that ABORTED skills don't hand out experience for failure. Only those that actually fail do.
+  ( this fixes lumberjacking / mining exploits ).
+- Added support for TAG.NAME.HUE (name colour)
+- Added @SkillSelect to character events, and @Select  to SKILLDEFs ("return 1" aborts).
+- Added support for FORCHARS/FORITEMS/FOROBJS the correct way: SRC is retained and the default object
+  within the FOR block is the object being looped through.
+- Added @SkillSuccess to character events, and @Success to SKILLDEFs ("return 1" aborts).
+- Changed @SkillStart so that "return 1" actually aborts the skill (same for @Start in SKILLDEFs).
+- Changed @Login so that "return 1" disallows logging in.
+- Added @UserSkills ("return 1" cancels the skill window being displayed).
+- Added @UserStats  ( user requested stats update, return value is ignored )
+- DBG: Added @SkillMakeItem to character events, triggered after the item has been created:
+  "return 1" deletes the item
+  "return 0" bounces the item as usual, but with no extra messages (potion, quality message)
+  "return"   bounces the item as usual.
+
+15-11-2003, Zorm
+- Added LOS check for taming
+- Changed m_defense from BYTE to WORD, thus fixing the bug with AR > 255
+- CanSeeLOS fixed, now checks if target object z is greater then myz + 14 if so blocks
+- Kill count decay should be fixed
+- Can no longer steal from trade windows or game boards
+- ATTR_OWNED items may no longer be magic locked
+- Added @DeathCorpse, argn1 = corpse?
+- Trade window items are now dumped to back before corpse is made
+- Now checks accounts when first sent
+- Added @start in skilldefs
+- Provoking players disabled
+
+14-11-2003, Kell
+- Fixed parsing of <<args>> or any other nested <var> btw. Also fixed parsing of numerical commands
+  (skills) so that <7> actually works for accessing skill #7 (this didn't make it to .55R1).
+- Fixed dumb log file being created out of place. Will still happen when Sphere is run as
+  an NT service though.
+
+---- 55 R1 ----------------------------------------------------------------------------
+
+14-11-2003, Zorm
+- Fixed client 1.26.x, it may now log on a 55i server
+- Updated addbark, addbarkunicode, addbarkspeechtable to follow OSI better
+
+13-11-2003, Kell
+- Player characters with conjured flag get unmounted and the flag removed on death. Useful
+to leave no corpse behind ( under ON=@Death : flags = <flags> | statf_conjured ). This would
+be better as a server setting.
+- Fixed spider webs remaining for days, and spider silk too (increased item count too much)
+
+12-11-2003, Kell
+- Added @CallGuards as a propper trigger, "return 1" cancels guards being called
+- Changed @Logout so that "return 1" disallows instalogout.
+- Added support for the following TAGs on characters:
+  TAG.NAME.ALT (alternate name, good for incognito effects)
+  TAG.NAME.PREFIX (alternate prefix, if not set, defaults to Notoriety prefix - lady/lord)
+  TAG.NAME.SUFFIX (suffix for the name)
+  Note that a space isn't added for prefix or suffix on purpose, to allow text to be
+  glued to the name. You can add a space by using quotes, as in: TAG.NAME.SUFFIX="text "
+- Using open door macro now triggers double click event.
+- @DClick is now triggered on NPCs BEFORE attempting to mount, paperdoll or open
+backpack ("return 1" cancels)
+- If REAPAMOUNT isn't present, AMOUNT/3 will be used (it won't just default to 1).
+
+11-11-2003, Zorm
+Fixed dye anything, now has to be a dye tub
+Added checking to strings to prevent exploits
+Candle dupe has been fixed
+Layer_horse can no longer be picked up by players
+Messages in message boards can no longer be picked up by players
+Stats max on create character raised from 66 to 80, allows new prof.txt
+Now checking colors for pants and shirt when creating a character
+Added more checking to a players name when creating characters
+Teleport effects should no longer harm players
+Pets now clear all old owners when getting a new one
+Fixed showing of hp to other players
+Administrator account is no longer auto admin
+If you attempt a command and can't use it it comes out as normal speech
+death menu option is no longer sent
+guild mates no longer give you a kill count/karma/fame when you kill them
+speech support improved. If you send unicode text it is handled throughout as unicode
+non unicode text is sent back out as unicode text
+
+
+-- Before EVOLUTION toke place ------------------------------------------------------
+
+
+.55j
+uid.x.name is broken
+i_multi_house_wheat_cottage
+UNICODE to UTF8 convert for LINUX
+syntax error with "	if ((<morey><0) || (<morey>>1000))"
+port +1000 for the accounts ?
+
+REGIONRESOURCE replace AMOUNT_LO,AMOUNt_HI with AMOUNT=lo,hi
+REGIONRESOURCE replace SKILL_LO,SKILL_HI with SKILL=lo,hi
+REGIONRESOURCE add REAPAMOUNT = range of amount to find in 1 try.
+
+

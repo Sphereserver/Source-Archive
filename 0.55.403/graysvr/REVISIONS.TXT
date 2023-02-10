@@ -1,0 +1,327 @@
+-------- SphereServer 55R4.0.1 -------------------------------------------------
+
+30-05-2004, Kell
+- Little fixes to allow compile under Linux (use strcmpi() for caseless string
+  comparison, and add casts to (LPCTSTR) on CGStrings).
+- Changed version number. I suggest using R4.x.y where xx is increased when
+  something major is done and yy is for little changes. Set to R4.0.1.
+  (ps: some people never quite understood what RC* means. After the 20th it
+   stops being a release candidate, it's more like a candidate to a release
+   candidate. So after the "powers that be" have adopted and turned that
+   numbering scheme into a mockery, I suggest we change to something less
+   confusing.
+
+31-05-2004, Furio
+- Added FORCONT loop, format is FORCONT uid_of_container max_sub_containers. It
+  will loop on every item present in the container. If max_sub_containers is not
+  present it will search in all subcontainers. If max_sub_containers = 0 - it
+  will search only in this container. (Thx to Balkon for the base code for
+  container loops)
+
+07-06-2004, Furio
+- Made a blank REVISIONS.TXT because it was getting pretty big.
+- Added XOR (^) operator to expressions.
+
+-------- SphereServer 55R4.0.2 -------------------------------------------------
+
+12-06-2004, Furio
+- Added two new INI value USECRYPT and USENOCRYPT. The first if 0 don't allow at
+  encrypted client to login otherwise allow them to log (default is 1). The
+  second if 0 don't allow at unencrypted client to login otherwise
+  if 1 -> allow and suppose that the clientversion is >= 2.0.0
+  if 2 -> n/a
+  if 3 -> allow and suppose that the clientversion is >= 3.0.0
+- Added the most requested security-by-obscurity feature DISGUISEVERSION in
+  sphere.ini. If set change the version outputted to clients, ircserver,
+  webserver, listserver, telnetserver to its value otherwise the default build 
+  value is used. (Mind that the version in savefile and in console startup is 
+  the default build version)
+- Fixed (i hope) bug with Mozilla/Firefox browser with the status page
+- Fixed a buffer overrun bug that could be exploited to crash or run arbitrary
+  code, in the log system.
+
+20-06-2004, kuch
+- Added ClearTags function (removes all the tags from the char/item/account);
+  Revital did most of the work, but I get the credit.
+
+28-06-2004, Furio
+- Fixed multiple gump exploits. In order to do this now memory 08000 is used as
+  internal memory (is called MEMORY_GUMPRECORD).
+- Fixed and refined things for disguise version feature.
+
+02-07-04, kuch
+- Added MODMAXWEIGHT: allows you to increase/decrease max carrying capacity of a
+  char.
+- Added MODAR: allows you to increase/decrease the overall AR of a char
+  NOTE: there are no oStat equivalents (ie oModAr or oModMaxWeight) for the
+  above.
+- Also added the following to avoid possible confusion:
+  * MAXWEIGHT - same as WEIGHTMAX
+  * AR - same as AC
+  * MODAC - same as MODAR
+  * MODWEIGHTMAX - same as MODMAXWEIGHT
+  
+03-07-04, kuch
+- Added 135 more strings (mostly from skills) to sphere_msg.scp
+- Added new .ini option: WOOLGROWTHTIME: how long in minutes it takes for wool
+  on sheared sheep to regrow.
+- Added new .ini option: SKILLPRACTICEMAX: how high can you train a skill on
+  dummy/archery_target.
+
+04-07-04, kuch
+- Added 93 more strings: NPC speech and skill msgs; there are now 329 string 
+  messages in sphere_msgs.scp.
+- Added TAGCOUNT function (works on regions/items/chars/accounts) - returns the
+  number of tags on that obj
+- Fixed CLEARTAGS (now also works on regions)
+
+06-07-04, kuch
+- Fixed some weird bug in jobmage.scp and jobnoble.scp 
+- Added a lot more strings to sphere_msgs.scp; If you find any bugs with them,
+  kuchervano@hotmail.com me immediately!
+
+07-07-04, Furio
+- Fixed DISTANCEWHISPER not working correctly.
+
+07-07-04, kuch
+- Added DEFFOOD value to sphere_defs.scp - this is a template of items you want
+  to get by casting the create food spell; Yes it does not give you a great deal
+  of control over what you get (ie skillbased for example), but its better than
+  nothing
+  
+09-07-04, Furio
+- Fixed bug with ^ operator.
+
+16-07-04, Vjaka
+- Fixed bug with armor/weapon when hits were above to hitsmax.
+- Cosmetic fix to report Client out overflow error line once per dialog instead
+  of tons of them.
+- Added trigger function f_onchar_delete triggered before client is going to
+  delete a character. SRC is char, return 1 denyes deletion.
+- Added trigger function f_onaccount_login triggered after client entered the
+  password, ARGS is account name, return 1 disconnects.
+- Added spell flag SPELLFLAG_PLAYERONLY 020000 which denies spell being cast by
+  npc ai (no more npcs casting shrink if not wished to).
+
+17-07-04, Vjaka
+- Added @NPCLostTeleport to trigger before NPC is going to be teleported back to
+  its spawn (by LostNPCTeleport sphere.ini setting), ARGN1 is the distance from
+  the spawn.
+- Added INI switch PAYFROMPACKONLY (default: 0). If set to 1, then buying stuff
+  from vendors will search pack only for the gold.
+- Added @Hunger to trigger before char is going to loss a food level. ARGN1 is
+  the food level that will be set, return 1 cancels.
+
+19-07-04, Vjaka
+- Removed IRC server from default build settings. It is buggy, has holes inside 
+  and probably should not used by anyone.
+- Reverted memory information profiling in Win32 version (stability testings).
+- Fixed NoMessages and Quick login mode (ARNG1/2 in @Login) now skips sphere
+  version information and Welcome back.. prompt.
+- Fixed some exceptions for ticking events. Some division by zero removed, and
+  the exceptions are made less critical (actualy the way they should be - quite
+  local). It means that the server should be more stable now. Also they gives
+  usualy more information on when the error occured.
+- Added @StepStealth triggering on each step made by person in stealth. ARGN1
+  (in and out) - whatever to reveal him or not.
+- Added isnumber(something) - returns 1 if it is a number (only number of radix
+  10 suits). Useful in argtxt validation.
+
+19-07-04, Furio
+- Fixed compatibility issues with Linux for isnumber(something).
+- Added TAG.DIALOG_NAME to MEMORY_GUMPRECORD. The tag contains the name of the 
+  dialog opened. Special case are the .admin gump (clientlist), the hair dye
+  gump (hairdye), a guild hardcoded gump (guild) and if no name is found
+  (undef). Hope that this will help in checking what gumps are opened on client
+  screen.
+- Added SDIALOG command. It works like DIALOG with the difference that it'll
+  open a dialog only if it's not present on the client screen.
+- Fixed a thing in DISGUISEVERSION. Now .[x]show version shows the disguised
+  version.
+
+20-07-04, Vjaka
+- Fixed compatibility issues with Unix for exceptions
+- Added MODAR (MODAC) working on items as well. Now it is for both items and
+  chars.
+- Fixed startup sequence - now tryes to bind a socket before loading the world
+  saving time on running multiply instances.
+- Fixed Windows version buffered output flushing. Also removed log file
+  buffering.
+
+21-07-04, Kell
+- Fixed some compilation issues under Linux (just missing some (DWORD) casts).
+
+22-07-04, Furio
+- If PAYFROMPACKONLY (default: 0). is enabled, in the char status only gold from
+  pack is displayed.
+- Fixed minor things on default messages.
+
+22-07-04, Vjaka
+- Added server state functions f_onserver_save, f_onserver_save_ok and
+  f_onserver_save_fail. Arguments are ARGN1 - force save? and ARGN2 - save stage
+  (for background saves). For f_onserver_save the ARGN1 is writeable and return
+  1 cancels the save.
+  Please note, that if background saves are enabled, these functions will be run
+  tons of times during the worldsave process (at least 6144 [sectors amount]
+  times).
+- Added f_onserver_start function triggered server start.
+- Created knownbugs.txt file to be distributed with sphere revisions.
+
+-------- SphereServer 55R4.0.3 -------------------------------------------------
+
+23-07-04, Vjaka
+- Added some more exceptions debugging. It is going deeper and deeper to engine.
+- Added MAXITEMCOMPLEXITY (default: 25) - the amount of items in one tile so
+  start showing "too many items here".
+- Added MAXSECTORCOMPLEXITY (default: 1024) - the amount of items in one sector
+  to start showing "x items too complex".
+
+24-07-04, Vjaka
+- Removed instant logout in guarded areas. use REGION_FLAG_INSTA_LOGOUT instead 
+  if you wish instant logout.
+- Added console commands history of 5 latest commands in Windows version. You 
+  can scroll them using UP key.
+- Added one second delay after take of an item from trade window before 
+  accepting the deal.
+
+25-07-04, Vjaka
+- Added smsg/smsgu shortcuts for sysmessage/sysmessageua (note, that msg already
+  existed as a shortcut to message)
+- Added SKILLCLASS properties - if written like SRC.SKILLCLASS.NAME, returns 
+  <SERV.SKILLCLASS.<SRC.SKILLCLASS>.NAME>
+- Started doing ARGVCOUNT and realised that <ARGV> is the amount of ARGV[x] 
+  variables. Noting that as not found in revisions.
+- If player speech longer 5 chars and has 75% capital letters inside, it will 
+  come out in lower case. Works for english chars only. And as for unicode - if
+  EF_UNICODE is set.
+- Added GUILD properties: <SRC.GUILD> returns 0 or guildstone UID,
+  <SRC.GUILD.NAME> returns guild name
+- Removed all old PLOT bit stuff. Use EVENTS instead
+- Changed CLEARTAGS - it takes optional argument, clearing tags only if matching
+  the string (does not support wildcards)
+- Added HITS and MAXHITS to items (same as MORE1L and MORE1H). Note: this is
+  valid for armor and weapon object.
+- Telnet has a username. So, Administrator or RemoteAdmin login left for local 
+  logins (127.0.0.1) if LOCALIPADMIN enabled
+
+25-07-04, Furio
+- Hopefully tracked down and fixed the arrow bug, and similar problem derived 
+  from NEW (big thx to Handred that finded the point where start looking at for
+  the fix).
+
+26-07-04, Vjaka
+- Fixed broken TEVENTS read method on chars.
+- Added QVAL(test1,test2,res1,res2,res3) in addition to current <QVAL?:>
+  variant. It is useful if dealing with numbers without many IF-s. Sample 
+  <eval qval(<VAR.X>,<VAR.Y>,<VAR.ONE>,<VAR.TWO>,<VAR.THREE>)> will return
+  <VAR.ONE> if <VAR.X> < <VAR.Y>, <VAR.TWO> if they are equal, and <VAR.THREE>
+  if the it is greater. If some of the arguments are omited like qval(1,2,,3) it
+  will default to zero.
+- Changed REGISTERSERVER to default an empty string. If you wish to register to
+  list.sphereserver.net, specify REGISTERSERVER=1 or it's host.
+- Added TELEPORTEFFECTSTAFF, TELEPORTEFFECTPLAYERS, the teleport effect for
+  staff (use hex id of object or 0 here) (default: 03709 for staff, 0372a for
+  players).
+
+27-07-04, Furio
+- Fixed an issue with MOVE/XMOVE command.
+
+27-07-04, Vjaka
+- Added command line switch -Gpath/to/saves/ to defrag sphere server UIDs. It
+  is done because sphere UID management routines has flows which makes not to
+  reuse empty uids, but generate new, higher. Howewer, space for lower unused
+  objects is still reserved. It saved 400Mb me (from 600Mb on start to 180Mb)
+  working for 2.5 hours, but caused all mounts to disappear, maybe some more
+  flaws. So, use on your own risk. In future versions for 4.0.x Furio is going
+  to improve the uid subsystem and this will not be needed anymore.
+
+28-07-04, Vjaka
+- Changed FILELINES to close the file and READFILE if line number is too big.
+- Added DISMOUNT verb on char to dismount him, MOUNT to get UID of ridden one.
+- Fixed an issue with SERV.CLIENT.x. causing exceptions.
+- Removed 0.55R from version. It is a complicated notation. It's 4.0.x now.
+- Fixed MODAR not updating armor class if changed on char or equipped item.
+
+29-07-04, Vjaka
+- Limited allshow to MAXCHARCOMPLEXITY*4.
+- Fixed issue when telnet connection could not do resync load after pausing.
+- Account now has TAG.LastLogged with his previous login date. It is shown upon
+  login if quick/no-messages login not selected (by @Login trigger).
+- Fixed msg_criminal to be shown only if person is not a criminal yet (lags).
+- Added read-only COMP reference for multis. Returns amount of components when
+  called with no params, and has attributes: ID,D,DX,DY,DZ (D mean delta).
+- NPC wishes gold and vendable items (not limited to desires listing).
+- Added ARGN2 to @NPCLookAtItem (writeable) - the percent level the the NPC
+  wish this item. If set high, he can loot the item.
+- Added GMPAGES and GMPAGE.* verb to access gm pages from scripts. You can
+  give arguments like you do to .page command, and use 2 specials - DELETE to
+  delete even not-taken one, and HANDLE [uid] to mark gmpage for character.
+  Also GMPAGE.x.HANDLED field returns UID of person taken the gmpage.
+
+30-07-2004, Kell
+- Added ACCOUNT.NAME
+
+30-07-04, Vjaka
+- Speed optimisation working with strings & possible some stack overflow out.
+
+31-07-04, Vjaka
+- Fixed several spells (like mark) casting in not allowed region when running.
+- Fixed KILLS removal using multi-uo client.
+- Changed @Logoff to take 2 writeable arguments: ARGN1 - linger time and ARGN2
+  instant logoff flag. Return 1 in logoff is now obsolete.
+
+01-08-04, Vjaka
+- Added triggers @MurderDecay (ARGN1 - murder count that will be set, ARGN2 -
+  decay time to set for the next kill) and @MurderMark (ARGN1 - murder count
+  that will be set, ARGN2 - set criminal flag?). The names are descriptive.
+- NPC is now trying to move objects blocking his walkpath. He also investigate
+  the possibility to loot this item in several cases. Triggers look@item not
+  called since if there are tons of items in the spot, it will be very laggy.
+- Added @Rename trigger (ARGS - new name, ARGO - target char) when renaming a
+  pet. Return 1 cancels. Also triggered when creating character.
+- Items with ATTR_STATIC are now saved to spherestatics.scp and NOT SAVED by
+  standart world save. So, you need to call .serv.savestatics to save them.
+- NPC is now trying to cast good spells as on self and his combat friends also.
+
+02-08-04, Vjaka
+- Calling guards are now more speed optimised.
+- Defrag mode now supports spherestatics.scp and is much faster.
+- Changed FACE and SALUTE to take an optional argument - target object.
+- Characters on the way do not disallow GM to place a house anymore.
+- Items gets stacked one on the other witheen some height if possible.
+
+03-08-04, Vjaka
+- Exceptions catching fixed, some stack information added.
+- Added CLEARVARS being same as CLEARTAGS.
+- Fixed CLEARTAGS to work normal without arguments.
+- Now VENDORMARKUP is taken from region tags if not found on a vendor.
+
+04-08-04, Vjaka
+- Default messages working optimised for speed. Removed OF_SkipUndefMsgs.
+- Removed OF_Skill_DiffFirst since the actdiff is calculated in any case.
+- Started implementing EF_Pathfinding.
+
+05-08-04, Vjaka
+- Fixed SERV.ITEMDEF reference to object not being currently in the world.
+
+06-08-04, Vjaka
+- Added SERV.resync to resync scripts without the resync delay.
+- Now adding a new account automaticaly fills (FIRST/LAST)CONNECTDATE.
+- Added @SkillMenu to trigger BEFORE calling any hardcoded skillmenu. So, you
+  can return 1 to cancel the action. ARGS - the name of the menu, is one of:
+  sm_polymorph, sm_carpentry, sm_bowcraft, sm_tailor_leather, sm_tailor_cloth,
+  sm_bolts, sm_carpentry, sm_cartography, sm_tinker, sm_summon, sm_blacksmith,
+  sm_alchemy, sm_cartography, sm_inscription.
+
+07-08-04, kuch
+- Finished the conversions of default messages into the new format: this should
+  greately improve the execution speed.  Also updated sphere_msg.scp to fit new
+  format.  Read the comments inside the file to get more more infomation.
+
+09-08-04, Vjaka
+- Added DISGUISENAME to alter the name of the server.
+- Added REPLYPEERCONNECTS (default 1) to allow masterserver and peer connects.
+- Fixed duplicating hungry messages search.
+
+10-08-04, Vjaka
+- Fixed NPC moving some items not actualy blocking their way.
